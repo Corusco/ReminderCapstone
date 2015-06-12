@@ -8,11 +8,14 @@
 
 #import "WebLoginViewController.h"
 #import "Defines.h"
+#import "User.h"
+#import "MainFeedViewController.h"
+#import "UserController.h"
 @import WebKit;
 
 @interface WebLoginViewController ()
 
-@property (strong, nonatomic) WKWebView *webView;
+@property (strong, nonatomic) UIWebView *webView;
 
 @end
 
@@ -21,16 +24,14 @@
 - (void)viewWillAppear:(BOOL)animated {
     NSString *instagramLoginURL = [kInstagramBaseURL stringByAppendingFormat:kInstagramAuthenticationURL, kInstagramClientID, kInstagramRedirectURI];
     NSURLRequest *instagramRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:instagramLoginURL]];
-    
+    self.webView.delegate = self;
     [self.webView loadRequest:instagramRequest];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.webView = [[WKWebView alloc] initWithFrame:self.view.frame];
-    
-    
+    self.webView = [[UIWebView alloc] initWithFrame:self.view.frame];
     
     [self.view addSubview:self.webView];
 }
@@ -39,6 +40,51 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+//Get instagram user access token
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+    
+    NSString *urlString = [[request URL] absoluteString];
+    NSURL *url = [request URL];
+    NSArray *urlParts = [url pathComponents];
+    
+    if ([urlParts count] == 1) {
+        
+        NSRange tokenParam = [urlString rangeOfString: kInstagramAccessToken];
+        if (tokenParam.location != NSNotFound) {
+            
+            NSString *token = [urlString substringFromIndex: NSMaxRange(tokenParam)];
+            
+            // If there are more args, don't include them in the token:
+            NSRange endRange = [token rangeOfString: @"&"];
+            
+            if (endRange.location != NSNotFound)
+                token = [token substringToIndex: endRange.location];
+            
+            if ([token length] > 0 ) {
+                [[UserController sharedInstance] getUserInstagramWithAccessToken:token completion:^{
+                    [self showMainView];
+                }];
+            }
+        } else {
+            NSLog(@"rejected case, user denied request");
+        }
+        return NO;
+    }
+    return YES;
+}
+
+- (void)showMainView {
+    
+    
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    MainFeedViewController *newMainFeedViewController = [storyboard instantiateViewControllerWithIdentifier:@"MainFeedViewController"];
+//    [self presentViewController:newMainFeedViewController animated:YES completion:nil];
+    [self showViewController:newMainFeedViewController sender:self];
+}
+
 
 /*
 #pragma mark - Navigation

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WebLoginViewController : UIViewController
+@interface WebLoginViewController : UIViewController <UIWebViewDelegate>
+
+- (void)showMainView;
 
 @end
