@@ -81,8 +81,8 @@
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     MainFeedViewController *newMainFeedViewController = [storyboard instantiateViewControllerWithIdentifier:@"MainFeedViewController"];
-//    [self presentViewController:newMainFeedViewController animated:YES completion:nil];
-    [self showViewController:newMainFeedViewController sender:self];
+    [self presentViewController:newMainFeedViewController animated:YES completion:nil];
+//    [self showViewController:newMainFeedViewController sender:self];
 }
 
 

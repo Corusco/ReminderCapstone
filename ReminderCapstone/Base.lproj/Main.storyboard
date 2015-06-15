@@ -77,7 +77,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAINFEEDVIEW" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBi-kh-zDp">
-                                <rect key="frame" x="207" y="150" width="224" height="299"/>
+                                <rect key="frame" x="188" y="137" width="224" height="299"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="224" id="O2J-nv-2JH"/>
                                     <constraint firstAttribute="height" constant="299" id="QWB-LJ-9Dh"/>
@@ -89,8 +89,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="yBi-kh-zDp" secondAttribute="centerX" constant="-19" id="Qrx-ib-AVf"/>
-                            <constraint firstAttribute="centerY" secondItem="yBi-kh-zDp" secondAttribute="centerY" constant="0.5" id="o0W-ep-VRT"/>
+                            <constraint firstAttribute="centerY" secondItem="yBi-kh-zDp" secondAttribute="centerY" constant="13.5" id="Cxp-sd-KCv"/>
+                            <constraint firstAttribute="centerX" secondItem="yBi-kh-zDp" secondAttribute="centerX" id="Wuf-4C-gRt"/>
                         </constraints>
                     </view>
                 </viewController>
