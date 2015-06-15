@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 CVLCD. All rights reserved.
 //
 
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import "WebLoginViewController.h"
 #import "Defines.h"
 #import "User.h"
@@ -32,6 +34,10 @@
     [super viewDidLoad];
     
     self.webView = [[UIWebView alloc] initWithFrame:self.view.frame];
+    
+    if ([FBSDKAccessToken currentAccessToken]) {
+        
+    }
     
     [self.view addSubview:self.webView];
 }
@@ -75,15 +81,16 @@
     return YES;
 }
 
+
+
 - (void)showMainView {
-    
-    
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     MainFeedViewController *newMainFeedViewController = [storyboard instantiateViewControllerWithIdentifier:@"MainFeedViewController"];
     [self presentViewController:newMainFeedViewController animated:YES completion:nil];
 //    [self showViewController:newMainFeedViewController sender:self];
 }
+
 
 
 /*

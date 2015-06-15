@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T0l-EM-MwZ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T0l-EM-MwZ">
                                 <rect key="frame" x="228" y="232" width="144" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="Connect with Instagram">
@@ -27,19 +27,21 @@
                                     <segue destination="z6q-ep-9ZQ" kind="presentation" id="lcQ-nb-Rfp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zkj-Qj-JhI">
-                                <rect key="frame" x="219" y="348" width="163" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <state key="normal" title="Connect with Facebook">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="facebookLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ahd-UF-ewI"/>
-                                    <segue destination="z6q-ep-9ZQ" kind="presentation" id="ugh-76-IBG"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WvN-Iw-e12" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="150" y="361" width="300" height="38"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WvN-Iw-e12" firstAttribute="top" secondItem="T0l-EM-MwZ" secondAttribute="bottom" constant="101" id="516-ed-Esp"/>
+                            <constraint firstAttribute="centerX" secondItem="T0l-EM-MwZ" secondAttribute="centerX" id="E5N-kn-f9e"/>
+                            <constraint firstAttribute="centerX" secondItem="WvN-Iw-e12" secondAttribute="centerX" id="Gya-YA-ug6"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WvN-Iw-e12" secondAttribute="bottom" constant="201" id="Kox-fY-mzd"/>
+                            <constraint firstItem="WvN-Iw-e12" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="150" id="tvi-0K-Ahq"/>
+                            <constraint firstItem="T0l-EM-MwZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="212" id="vwr-IE-BZS"/>
+                            <constraint firstItem="T0l-EM-MwZ" firstAttribute="centerY" secondItem="WvN-Iw-e12" secondAttribute="centerY" constant="-134" id="zlh-wb-zwj"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -99,7 +101,4 @@
             <point key="canvasLocation" x="1585" y="339"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="lcQ-nb-Rfp"/>
-    </inferredMetricsTieBreakers>
 </document>
