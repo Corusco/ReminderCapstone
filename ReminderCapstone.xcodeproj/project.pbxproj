@@ -16,7 +16,6 @@
 		D020FF991B2784CD0046282D /* ReminderCapstoneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D020FF981B2784CD0046282D /* ReminderCapstoneTests.m */; };
 		D020FFA41B2785B90046282D /* ConceptModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D020FFA31B2785B90046282D /* ConceptModel.m */; };
 		D020FFAA1B2786900046282D /* MainFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D020FFA91B2786900046282D /* MainFeedViewController.m */; };
-		D020FFAD1B2786B70046282D /* UserFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D020FFAC1B2786B70046282D /* UserFeedViewController.m */; };
 		D020FFB01B27912C0046282D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D020FFAF1B27912C0046282D /* LoginViewController.m */; };
 		D02FE4891B2A183D00847DC8 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = D02FE4881B2A183D00847DC8 /* User.m */; };
 		D02FE48C1B2A1C5F00847DC8 /* UserController.m in Sources */ = {isa = PBXBuildFile; fileRef = D02FE48B1B2A1C5F00847DC8 /* UserController.m */; };
@@ -28,6 +27,11 @@
 		D0979DF11B2F601B0034FECD /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0979DEE1B2F601B0034FECD /* FBSDKCoreKit.framework */; };
 		D0979DF21B2F601B0034FECD /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0979DEF1B2F601B0034FECD /* FBSDKLoginKit.framework */; };
 		D0979DF31B2F601B0034FECD /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0979DF01B2F601B0034FECD /* FBSDKShareKit.framework */; };
+		D0E12F591B389BF2001BC006 /* GlobalFeedChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E12F581B389BF2001BC006 /* GlobalFeedChildViewController.m */; };
+		D0E12F5C1B389C3F001BC006 /* FriendFeedChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E12F5B1B389C3F001BC006 /* FriendFeedChildViewController.m */; };
+		D0E12F631B389D7C001BC006 /* FLKAutoLayoutPredicateList.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E12F5E1B389D7C001BC006 /* FLKAutoLayoutPredicateList.m */; };
+		D0E12F641B389D7C001BC006 /* UIView+FLKAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E12F601B389D7C001BC006 /* UIView+FLKAutoLayout.m */; };
+		D0E12F651B389D7C001BC006 /* UIView+FLKAutoLayoutPredicate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E12F621B389D7C001BC006 /* UIView+FLKAutoLayoutPredicate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,8 +63,6 @@
 		D020FFA31B2785B90046282D /* ConceptModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConceptModel.m; sourceTree = "<group>"; };
 		D020FFA81B2786900046282D /* MainFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainFeedViewController.h; sourceTree = "<group>"; };
 		D020FFA91B2786900046282D /* MainFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainFeedViewController.m; sourceTree = "<group>"; };
-		D020FFAB1B2786B70046282D /* UserFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserFeedViewController.h; sourceTree = "<group>"; };
-		D020FFAC1B2786B70046282D /* UserFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserFeedViewController.m; sourceTree = "<group>"; };
 		D020FFAE1B27912C0046282D /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		D020FFAF1B27912C0046282D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		D02FE4871B2A183D00847DC8 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -79,6 +81,16 @@
 		D0979DEE1B2F601B0034FECD /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = /Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<absolute>"; };
 		D0979DEF1B2F601B0034FECD /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = /Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<absolute>"; };
 		D0979DF01B2F601B0034FECD /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = /Documents/FacebookSDK/FBSDKShareKit.framework; sourceTree = "<absolute>"; };
+		D0E12F571B389BF2001BC006 /* GlobalFeedChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalFeedChildViewController.h; sourceTree = "<group>"; };
+		D0E12F581B389BF2001BC006 /* GlobalFeedChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalFeedChildViewController.m; sourceTree = "<group>"; };
+		D0E12F5A1B389C3F001BC006 /* FriendFeedChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendFeedChildViewController.h; path = ../FriendFeedChildViewController.h; sourceTree = "<group>"; };
+		D0E12F5B1B389C3F001BC006 /* FriendFeedChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendFeedChildViewController.m; path = ../FriendFeedChildViewController.m; sourceTree = "<group>"; };
+		D0E12F5D1B389D7C001BC006 /* FLKAutoLayoutPredicateList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLKAutoLayoutPredicateList.h; sourceTree = "<group>"; };
+		D0E12F5E1B389D7C001BC006 /* FLKAutoLayoutPredicateList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLKAutoLayoutPredicateList.m; sourceTree = "<group>"; };
+		D0E12F5F1B389D7C001BC006 /* UIView+FLKAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FLKAutoLayout.h"; sourceTree = "<group>"; };
+		D0E12F601B389D7C001BC006 /* UIView+FLKAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FLKAutoLayout.m"; sourceTree = "<group>"; };
+		D0E12F611B389D7C001BC006 /* UIView+FLKAutoLayoutPredicate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FLKAutoLayoutPredicate.h"; sourceTree = "<group>"; };
+		D0E12F621B389D7C001BC006 /* UIView+FLKAutoLayoutPredicate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FLKAutoLayoutPredicate.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,10 +197,12 @@
 				D020FFAF1B27912C0046282D /* LoginViewController.m */,
 				D020003C1B28D5EA0046282D /* WebLoginViewController.h */,
 				D020003D1B28D5EA0046282D /* WebLoginViewController.m */,
-				D020FFAB1B2786B70046282D /* UserFeedViewController.h */,
-				D020FFAC1B2786B70046282D /* UserFeedViewController.m */,
 				D020FFA81B2786900046282D /* MainFeedViewController.h */,
 				D020FFA91B2786900046282D /* MainFeedViewController.m */,
+				D0E12F5A1B389C3F001BC006 /* FriendFeedChildViewController.h */,
+				D0E12F5B1B389C3F001BC006 /* FriendFeedChildViewController.m */,
+				D0E12F571B389BF2001BC006 /* GlobalFeedChildViewController.h */,
+				D0E12F581B389BF2001BC006 /* GlobalFeedChildViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -236,11 +250,25 @@
 		D0979DF41B2F60230034FECD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D0E12F661B389D8A001BC006 /* FLKAutoLayout */,
 				D0979DEE1B2F601B0034FECD /* FBSDKCoreKit.framework */,
 				D0979DEF1B2F601B0034FECD /* FBSDKLoginKit.framework */,
 				D0979DF01B2F601B0034FECD /* FBSDKShareKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D0E12F661B389D8A001BC006 /* FLKAutoLayout */ = {
+			isa = PBXGroup;
+			children = (
+				D0E12F5D1B389D7C001BC006 /* FLKAutoLayoutPredicateList.h */,
+				D0E12F5E1B389D7C001BC006 /* FLKAutoLayoutPredicateList.m */,
+				D0E12F5F1B389D7C001BC006 /* UIView+FLKAutoLayout.h */,
+				D0E12F601B389D7C001BC006 /* UIView+FLKAutoLayout.m */,
+				D0E12F611B389D7C001BC006 /* UIView+FLKAutoLayoutPredicate.h */,
+				D0E12F621B389D7C001BC006 /* UIView+FLKAutoLayoutPredicate.m */,
+			);
+			name = FLKAutoLayout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,16 +375,20 @@
 				D0979DAC1B2B80A10034FECD /* WebServiceManager.m in Sources */,
 				D0979DA51B2B7B530034FECD /* CustomUIUtils.m in Sources */,
 				D0979DB11B2B80F40034FECD /* UILoadingView.m in Sources */,
+				D0E12F641B389D7C001BC006 /* UIView+FLKAutoLayout.m in Sources */,
 				D020003E1B28D5EA0046282D /* WebLoginViewController.m in Sources */,
 				D020FF821B2784CD0046282D /* AppDelegate.m in Sources */,
 				D020FFA41B2785B90046282D /* ConceptModel.m in Sources */,
-				D020FFAD1B2786B70046282D /* UserFeedViewController.m in Sources */,
+				D0E12F591B389BF2001BC006 /* GlobalFeedChildViewController.m in Sources */,
+				D0E12F631B389D7C001BC006 /* FLKAutoLayoutPredicateList.m in Sources */,
 				D020FFB01B27912C0046282D /* LoginViewController.m in Sources */,
 				D020FF7F1B2784CD0046282D /* main.m in Sources */,
 				D02FE48C1B2A1C5F00847DC8 /* UserController.m in Sources */,
+				D0E12F651B389D7C001BC006 /* UIView+FLKAutoLayoutPredicate.m in Sources */,
 				D0540A9C1B2B525600D8586E /* UIPrefix.m in Sources */,
 				D020FFAA1B2786900046282D /* MainFeedViewController.m in Sources */,
 				D02FE4891B2A183D00847DC8 /* User.m in Sources */,
+				D0E12F5C1B389C3F001BC006 /* FriendFeedChildViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

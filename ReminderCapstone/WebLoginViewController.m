@@ -35,6 +35,8 @@
     
     self.webView = [[UIWebView alloc] initWithFrame:self.view.frame];
     
+    
+    //Add code for keeping user logged in to facebook when loading app
     if ([FBSDKAccessToken currentAccessToken]) {
         
     }

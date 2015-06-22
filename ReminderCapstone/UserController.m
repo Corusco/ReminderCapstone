@@ -33,8 +33,6 @@
     if (![CustomUIUtils checkNetworkConnection])
         return;
     
-//    [_gAppDelegate showLoadingView:YES];
-    
     NSString* userInfoUrl = [NSString stringWithFormat:@"%@/v1/users/self?access_token=%@", kInstagramAPIBaseURL,
                              accessToken];
     
