@@ -41,29 +41,32 @@
     [self.segmentView alignLeading:@"0" trailing:@"0" toView:self.view];
     [self.segmentView constrainHeight:@"44"];
     
-    self.segmentedControl = [[UISegmentedControl alloc] initWithItems:@[@"Your Network", @"Global Inspiration"]];
+    self.segmentedControl = [[UISegmentedControl alloc] initWithItems:@[@"From Your Friends", @"Global Inspiration"]];
     [self.segmentView addSubview:self.segmentedControl];
     [self.segmentedControl alignCenterWithView:self.segmentView];
     [self.segmentedControl addTarget:self
                               action:@selector(segmentedControlChanged:)
                     forControlEvents:UIControlEventValueChanged];
     
+    
+    
     self.friendFeedChild = [[FriendFeedChildViewController alloc] init];
     [self addChildViewController:self.friendFeedChild];
-    self.friendFeedChild.view.backgroundColor = [UIColor lightGrayColor];
     [self.view addSubview:self.friendFeedChild.view];
     [self.friendFeedChild.view constrainTopSpaceToView:self.segmentView predicate:@"0"];
     [self.friendFeedChild.view alignLeading:@"0" trailing:@"0" toView:self.view];
     [self.friendFeedChild.view alignBottomEdgeWithView:self.view predicate:@"0"];
     
-    self.currentChild = self.friendFeedChild;
-    
     self.globalFeedChild = [[GlobalFeedChildViewController alloc] init];
+    self.globalFeedChild.view.hidden = YES;
     [self.view addSubview:self.globalFeedChild.view];
     [self.globalFeedChild.view constrainTopSpaceToView:self.segmentView predicate:@"0"];
     [self.globalFeedChild.view alignLeading:@"0" trailing:@"0" toView:self.view];
     [self.globalFeedChild.view alignBottomEdgeWithView:self.view predicate:@"0"];
+    
+    self.currentChild = self.friendFeedChild;
 }
+
 
 
 - (void)showFriendFeedChild {
@@ -71,7 +74,6 @@
         return;
     } else {
         [self addChildViewController:self.friendFeedChild];
-        self.friendFeedChild.view.backgroundColor = [UIColor grayColor];
         
         [self transitionFromViewController:self.currentChild
                           toViewController:self.friendFeedChild
@@ -95,7 +97,6 @@
         return;
     } else {
         [self addChildViewController:self.globalFeedChild];
-        self.globalFeedChild.view.backgroundColor = [UIColor grayColor];
         
         [self transitionFromViewController:self.currentChild
                           toViewController:self.globalFeedChild
@@ -105,6 +106,7 @@
                                 completion:^(BOOL finished) {
                                     [self.currentChild removeFromParentViewController];
                                     [self.globalFeedChild didMoveToParentViewController:self];
+                                    self.globalFeedChild.view.hidden = NO;
                                     [self.globalFeedChild.view constrainTopSpaceToView:self.segmentView predicate:@"0"];
                                     [self.globalFeedChild.view alignLeading:@"0" trailing:@"0" toView:self.view];
                                     [self.globalFeedChild.view alignBottomEdgeWithView:self.view predicate:@"0"];
@@ -116,7 +118,6 @@
 - (void)segmentedControlChanged:(UISegmentedControl *)paramSender {
     if ([paramSender isEqual: self.segmentedControl]) {
         
-//        NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
         if (self.segmentedControl.selectedSegmentIndex == 0) {
             [self showFriendFeedChild];
             NSLog(@"Tab One Selected");
