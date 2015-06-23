@@ -1,0 +1,3 @@
+[submodule "ReminderCapstone/AFNetworking"]
+	path = ReminderCapstone/AFNetworking
+	url = https://corusco@github.com/AFNetworking/AFNetworking
