@@ -11,6 +11,7 @@
 @interface MainFeedViewController ()
 
 @property (strong, nonatomic) UIView *headerView;
+@property (strong, nonatomic) UILabel *headerTheme;
 @property (strong, nonatomic) UIView *segmentView;
 @property (strong, nonatomic) UISegmentedControl *segmentedControl;
 @property (strong, nonatomic) FriendFeedChildViewController *friendFeedChild;
@@ -32,6 +33,16 @@
     [self.headerView alignLeading:0 trailing:0 toView:self.view];
     [self.headerView alignTopEdgeWithView:self.view predicate:@"0"];
     [self.headerView constrainHeight:@"200"];
+    
+    self.headerTheme = [[UILabel alloc] init];
+    self.headerTheme.textColor = [UIColor whiteColor];
+    self.headerTheme.font = [UIFont fontWithName:@"Arial-BoldMT" size:40];
+//    self.headerTheme.font = [UIFont systemFontOfSize:25];
+    self.headerTheme.text = @"Life can't wait";
+    [self.headerView addSubview:self.headerTheme];  
+    [self.headerTheme constrainWidth:@"600" height:@"40"];
+    [self.headerTheme alignLeadingEdgeWithView:self.headerView predicate:@"20"];
+    [self.headerTheme alignBottomEdgeWithView:self.headerView predicate:@"-20"];
     
     self.segmentView = [[UIView alloc] init];
     self.segmentView.backgroundColor = UIColorFromRGB(0x2D6842);
