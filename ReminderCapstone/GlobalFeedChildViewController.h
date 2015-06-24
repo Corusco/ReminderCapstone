@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "UIView+FLKAutoLayout.h"
-#import "GlobalFeedDataSource.h"
+#import "GlobalPhotoQueryController.h"
 
 @interface GlobalFeedChildViewController : UIViewController
 

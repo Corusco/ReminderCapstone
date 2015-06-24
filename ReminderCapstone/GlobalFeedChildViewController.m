@@ -17,13 +17,13 @@
 @implementation GlobalFeedChildViewController
 
 - (void)viewWillLoad {
-    [[GlobalFeedDataSource sharedInstance] searchForInstagramPhotosWithTheme:@"lifewontwait"];
+    [[GlobalPhotoQueryController sharedInstance] searchForInstagramPhotosWithTheme:@"lifewontwait"];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [[GlobalFeedDataSource sharedInstance] searchForInstagramPhotosWithTheme:@"lifewontwait"];
+    [[GlobalPhotoQueryController sharedInstance] searchForInstagramPhotosWithTheme:@"lifewontwait"];
     
     self.viewDesignator = [UILabel new];
     self.viewDesignator.text = @"GLOBAL\nFEED";

@@ -1,5 +1,5 @@
 //
-//  GlobalFeedDataSource.h
+//  GlobalPhotoQueryController.h
 //  ReminderCapstone
 //
 //  Created by Justin Huntington on 6/23/15.
@@ -10,7 +10,9 @@
 #import "APIServiceManager.h"
 #import "Defines.h"
 
-@interface GlobalFeedDataSource : NSObject
+@interface GlobalPhotoQueryController : NSObject
+
+@property (strong, nonatomic) NSArray *responseArray;
 
 + (instancetype)sharedInstance;
 

@@ -33,7 +33,7 @@
 		D0E12F641B389D7C001BC006 /* UIView+FLKAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E12F601B389D7C001BC006 /* UIView+FLKAutoLayout.m */; };
 		D0E12F651B389D7C001BC006 /* UIView+FLKAutoLayoutPredicate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E12F621B389D7C001BC006 /* UIView+FLKAutoLayoutPredicate.m */; };
 		D0E12FA91B39D42D001BC006 /* FriendFeedDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E12FA61B39D42D001BC006 /* FriendFeedDataSource.m */; };
-		D0E12FAA1B39D42D001BC006 /* GlobalFeedDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E12FA81B39D42D001BC006 /* GlobalFeedDataSource.m */; };
+		D0E12FAA1B39D42D001BC006 /* GlobalPhotoQueryController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E12FA81B39D42D001BC006 /* GlobalPhotoQueryController.m */; };
 		D0E12FAE1B39D5BB001BC006 /* APIServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E12FAD1B39D5BB001BC006 /* APIServiceManager.m */; };
 		D0E12FB41B39F111001BC006 /* photoQueryResult.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E12FB31B39F111001BC006 /* photoQueryResult.m */; };
 		D0E12FDB1B3A026E001BC006 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E12FB71B3A026E001BC006 /* AFHTTPRequestOperation.m */; };
@@ -114,8 +114,8 @@
 		D0E12F621B389D7C001BC006 /* UIView+FLKAutoLayoutPredicate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FLKAutoLayoutPredicate.m"; sourceTree = "<group>"; };
 		D0E12FA51B39D42D001BC006 /* FriendFeedDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendFeedDataSource.h; sourceTree = "<group>"; };
 		D0E12FA61B39D42D001BC006 /* FriendFeedDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendFeedDataSource.m; sourceTree = "<group>"; };
-		D0E12FA71B39D42D001BC006 /* GlobalFeedDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalFeedDataSource.h; sourceTree = "<group>"; };
-		D0E12FA81B39D42D001BC006 /* GlobalFeedDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalFeedDataSource.m; sourceTree = "<group>"; };
+		D0E12FA71B39D42D001BC006 /* GlobalPhotoQueryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalPhotoQueryController.h; sourceTree = "<group>"; };
+		D0E12FA81B39D42D001BC006 /* GlobalPhotoQueryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalPhotoQueryController.m; sourceTree = "<group>"; };
 		D0E12FAC1B39D5BB001BC006 /* APIServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIServiceManager.h; sourceTree = "<group>"; };
 		D0E12FAD1B39D5BB001BC006 /* APIServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIServiceManager.m; sourceTree = "<group>"; };
 		D0E12FB21B39F111001BC006 /* photoQueryResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = photoQueryResult.h; sourceTree = "<group>"; };
@@ -348,8 +348,8 @@
 			children = (
 				D0E12FA51B39D42D001BC006 /* FriendFeedDataSource.h */,
 				D0E12FA61B39D42D001BC006 /* FriendFeedDataSource.m */,
-				D0E12FA71B39D42D001BC006 /* GlobalFeedDataSource.h */,
-				D0E12FA81B39D42D001BC006 /* GlobalFeedDataSource.m */,
+				D0E12FA71B39D42D001BC006 /* GlobalPhotoQueryController.h */,
+				D0E12FA81B39D42D001BC006 /* GlobalPhotoQueryController.m */,
 			);
 			name = DataSources;
 			path = ..;
@@ -529,7 +529,7 @@
 				D0E12FE61B3A026E001BC006 /* UIAlertView+AFNetworking.m in Sources */,
 				D020FFB01B27912C0046282D /* LoginViewController.m in Sources */,
 				D0E12FE31B3A026E001BC006 /* AFURLSessionManager.m in Sources */,
-				D0E12FAA1B39D42D001BC006 /* GlobalFeedDataSource.m in Sources */,
+				D0E12FAA1B39D42D001BC006 /* GlobalPhotoQueryController.m in Sources */,
 				D0E12FDC1B3A026E001BC006 /* AFHTTPRequestOperationManager.m in Sources */,
 				D0E12FDD1B3A026E001BC006 /* AFHTTPSessionManager.m in Sources */,
 				D0E12FAE1B39D5BB001BC006 /* APIServiceManager.m in Sources */,
