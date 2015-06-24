@@ -30,6 +30,7 @@
     [self.webView loadRequest:instagramRequest];
 }
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -42,11 +43,6 @@
     }
     
     [self.view addSubview:self.webView];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
@@ -90,7 +86,6 @@
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     MainFeedViewController *newMainFeedViewController = [storyboard instantiateViewControllerWithIdentifier:@"MainFeedViewController"];
     [self presentViewController:newMainFeedViewController animated:YES completion:nil];
-//    [self showViewController:newMainFeedViewController sender:self];
 }
 
 

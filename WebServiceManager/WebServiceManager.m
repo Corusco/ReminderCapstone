@@ -14,36 +14,29 @@
 
 @implementation WebServiceManager
 
-+ (NSURLRequest*) requestWithService:(NSString*)service
-{
++ (NSURLRequest*) requestWithService:(NSString*)service{
 	NSString* urlString = [kServerUrl stringByAppendingString:service];
 	return [WebServiceManager requestWithUrlString:urlString];
 }
 
-+ (NSMutableURLRequest*) requestWithUrlString:(NSString*)urlString // in case base url are not same
-{
+
++ (NSMutableURLRequest*) requestWithUrlString:(NSString*)urlString {
 	NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlString]];
     [request setHTTPMethod:@"GET"];
-	
-//	[request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-//	[request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-	
-	//    [request setValue:@"application/x-www-form-urlencoded charset=utf-8" forHTTPHeaderField:@"Content-Type"];
     
     return (NSMutableURLRequest*)request;
 }
 
+
 + (NSURLRequest*) postRequestWithService:(NSString*)service
-							  postString:(NSString*)postString
-{
+							  postString:(NSString*)postString {
 	NSString* urlString = [kServerUrl stringByAppendingString:service];
 	
 	return [WebServiceManager postRequestWithUrlString:urlString postString:postString];
 }
 
 + (NSMutableURLRequest*) postRequestWithUrlString:(NSString*)urlString
-								postString:(NSString*)postString
-{
+                                       postString:(NSString*)postString {
 	NSData*	postData = [postString dataUsingEncoding:NSUTF8StringEncoding];
     NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[postData length]];
     
@@ -58,8 +51,7 @@
 #pragma mark - Send Request
 
 + (void) sendRequest:(NSURLRequest*)request
-		  completion:(void (^)(NSData*, NSError*)) callback
-{
+		  completion:(void (^)(NSData*, NSError*)) callback {
 	if ([CustomUIUtils isConnectedToNetwork] == NO)
 	{
 		callback(nil, [NSError errorWithDomain:@"Network is not available!" code:0 userInfo:nil]);
@@ -88,25 +80,16 @@
 	 }];
 }
 
-//+ (NSXMLElement*) xmlRootElement:(NSData*)data
-//{
-//	_Assert(data);
-//	
-//	NSXMLDocument* xmlDoc = [[[NSXMLDocument alloc] initWithData:data options:0 error:nil] autorelease];
-//	return (xmlDoc) ? [xmlDoc rootElement] : nil;
-//}
 
-+ (id) JSONData:(NSData*)data
-{
++ (id) JSONData:(NSData*)data {
 	_Assert(data);
     NSString* str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    // str = [str stringByReplacingOccurrencesOfString:@"NaN" withString:@"0.0"];
-
+    
     NSError* error = nil;
     id response = [NSJSONSerialization JSONObjectWithData:[str dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
     if (error)
     {
-       // DLog(@"%@", [error description]);
+       
     }
 	return response;
 }

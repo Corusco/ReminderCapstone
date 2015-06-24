@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "APIServiceManager.h"
+#import "Defines.h"
 
 @interface GlobalFeedDataSource : NSObject
+
++ (instancetype)sharedInstance;
+
+- (void)searchForInstagramPhotosWithTheme:(NSString *)theme;
 
 @end

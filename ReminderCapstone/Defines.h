@@ -35,6 +35,9 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 #define kInstagramUserPostFeed @"/v1/users/%@/media/recent/?%@" //use with a user ID and access token key. may use self for owner
 #define kInstagramUserSearch @"/v1/users/search?q=%@&%@" //use with a user ID to search and access token
 
+#pragma mark - Instagram Tag Requests
+
+#define kInstagramSearchTag @"/v1/tags/%@/media/recent" //get all photos with a given tag
 
 
 //****Facebook****
