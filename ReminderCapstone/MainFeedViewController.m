@@ -37,8 +37,7 @@
     self.headerTheme = [[UILabel alloc] init];
     self.headerTheme.textColor = [UIColor whiteColor];
     self.headerTheme.font = [UIFont fontWithName:@"Arial-BoldMT" size:40];
-//    self.headerTheme.font = [UIFont systemFontOfSize:25];
-    self.headerTheme.text = @"Life can't wait";
+    self.headerTheme.text = @"Life won't wait";
     [self.headerView addSubview:self.headerTheme];  
     [self.headerTheme constrainWidth:@"600" height:@"40"];
     [self.headerTheme alignLeadingEdgeWithView:self.headerView predicate:@"20"];
@@ -53,29 +52,29 @@
     [self.segmentView constrainHeight:@"44"];
     
     self.segmentedControl = [[UISegmentedControl alloc] initWithItems:@[@"From Your Friends", @"Global Inspiration"]];
+    self.segmentedControl.selectedSegmentIndex = 1;
     [self.segmentView addSubview:self.segmentedControl];
     [self.segmentedControl alignCenterWithView:self.segmentView];
     [self.segmentedControl addTarget:self
                               action:@selector(segmentedControlChanged:)
                     forControlEvents:UIControlEventValueChanged];
     
-    
-    
     self.friendFeedChild = [[FriendFeedChildViewController alloc] init];
-    [self addChildViewController:self.friendFeedChild];
     [self.view addSubview:self.friendFeedChild.view];
+    self.friendFeedChild.view.hidden = YES;
     [self.friendFeedChild.view constrainTopSpaceToView:self.segmentView predicate:@"0"];
     [self.friendFeedChild.view alignLeading:@"0" trailing:@"0" toView:self.view];
     [self.friendFeedChild.view alignBottomEdgeWithView:self.view predicate:@"0"];
     
     self.globalFeedChild = [[GlobalFeedChildViewController alloc] init];
-    self.globalFeedChild.view.hidden = YES;
+    [self addChildViewController:self.globalFeedChild];
+    self.globalFeedChild.view.hidden = NO;
     [self.view addSubview:self.globalFeedChild.view];
     [self.globalFeedChild.view constrainTopSpaceToView:self.segmentView predicate:@"0"];
     [self.globalFeedChild.view alignLeading:@"0" trailing:@"0" toView:self.view];
     [self.globalFeedChild.view alignBottomEdgeWithView:self.view predicate:@"0"];
     
-    self.currentChild = self.friendFeedChild;
+    self.currentChild = self.globalFeedChild;
 }
 
 

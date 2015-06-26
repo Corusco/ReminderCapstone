@@ -13,14 +13,14 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary fromSource:(NSString *)source {
     self = [super init];
     if ([source isEqualToString:@"instagram"]) {
-        self.photo =  [UIImage imageWithData:[NSData dataWithContentsOfFile:@"[images[standard_resolution[url]]]"]];
-        self.thumbnailURL = @"";
+        self.photoURL = [dictionary valueForKeyPath:@"images.standard_resolution.url"];
+        self.thumbnailURL = [dictionary valueForKeyPath:@"images.thumbnail.url"];
         self.source = @"Instagram";
-        self.user = @"";
-        self.likes = @"";
-        self.date = @"";
-        self.comments = @"";
-        self.tags = @"";
+        self.user = [dictionary valueForKeyPath:@"user.username"];
+        self.likes = [dictionary valueForKeyPath:@"likes.count"];
+        self.date = [dictionary valueForKeyPath:@"created_time"];
+        self.comments =[dictionary valueForKeyPath:@"comments"];
+        self.tags = dictionary[@"tags"];
         
         return self;
         
@@ -31,7 +31,7 @@
         self.user = @"";
         self.likes = @"";
         self.date = @"";
-        self.comments = @"";
+        self.comments = nil;
         self.tags = @"";
         
         return self;

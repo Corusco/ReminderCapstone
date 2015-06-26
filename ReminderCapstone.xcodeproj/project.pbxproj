@@ -17,6 +17,7 @@
 		D020FFA41B2785B90046282D /* ConceptModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D020FFA31B2785B90046282D /* ConceptModel.m */; };
 		D020FFAA1B2786900046282D /* MainFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D020FFA91B2786900046282D /* MainFeedViewController.m */; };
 		D020FFB01B27912C0046282D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D020FFAF1B27912C0046282D /* LoginViewController.m */; };
+		D026A73B1B3DD259006DE87F /* PhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D026A73A1B3DD259006DE87F /* PhotoDetailViewController.m */; };
 		D02FE4891B2A183D00847DC8 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = D02FE4881B2A183D00847DC8 /* User.m */; };
 		D02FE48C1B2A1C5F00847DC8 /* UserController.m in Sources */ = {isa = PBXBuildFile; fileRef = D02FE48B1B2A1C5F00847DC8 /* UserController.m */; };
 		D0540A9C1B2B525600D8586E /* UIPrefix.m in Sources */ = {isa = PBXBuildFile; fileRef = D0540A971B2B525600D8586E /* UIPrefix.m */; };
@@ -32,10 +33,10 @@
 		D0E12F631B389D7C001BC006 /* FLKAutoLayoutPredicateList.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E12F5E1B389D7C001BC006 /* FLKAutoLayoutPredicateList.m */; };
 		D0E12F641B389D7C001BC006 /* UIView+FLKAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E12F601B389D7C001BC006 /* UIView+FLKAutoLayout.m */; };
 		D0E12F651B389D7C001BC006 /* UIView+FLKAutoLayoutPredicate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E12F621B389D7C001BC006 /* UIView+FLKAutoLayoutPredicate.m */; };
-		D0E12FA91B39D42D001BC006 /* FriendFeedDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E12FA61B39D42D001BC006 /* FriendFeedDataSource.m */; };
+		D0E12FA91B39D42D001BC006 /* FriendPhotoQueryController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E12FA61B39D42D001BC006 /* FriendPhotoQueryController.m */; };
 		D0E12FAA1B39D42D001BC006 /* GlobalPhotoQueryController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E12FA81B39D42D001BC006 /* GlobalPhotoQueryController.m */; };
 		D0E12FAE1B39D5BB001BC006 /* APIServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E12FAD1B39D5BB001BC006 /* APIServiceManager.m */; };
-		D0E12FB41B39F111001BC006 /* photoQueryResult.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E12FB31B39F111001BC006 /* photoQueryResult.m */; };
+		D0E12FB41B39F111001BC006 /* PhotoQueryResult.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E12FB31B39F111001BC006 /* PhotoQueryResult.m */; };
 		D0E12FDB1B3A026E001BC006 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E12FB71B3A026E001BC006 /* AFHTTPRequestOperation.m */; };
 		D0E12FDC1B3A026E001BC006 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E12FB91B3A026E001BC006 /* AFHTTPRequestOperationManager.m */; };
 		D0E12FDD1B3A026E001BC006 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E12FBB1B3A026E001BC006 /* AFHTTPSessionManager.m */; };
@@ -53,6 +54,7 @@
 		D0E12FE91B3A026E001BC006 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E12FD61B3A026E001BC006 /* UIProgressView+AFNetworking.m */; };
 		D0E12FEA1B3A026E001BC006 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E12FD81B3A026E001BC006 /* UIRefreshControl+AFNetworking.m */; };
 		D0E12FEB1B3A026E001BC006 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E12FDA1B3A026E001BC006 /* UIWebView+AFNetworking.m */; };
+		D0F264021B3B5E2400DB6821 /* GlobalFeedCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F264011B3B5E2400DB6821 /* GlobalFeedCollectionViewDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,8 @@
 		D020FFA91B2786900046282D /* MainFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainFeedViewController.m; sourceTree = "<group>"; };
 		D020FFAE1B27912C0046282D /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		D020FFAF1B27912C0046282D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		D026A7391B3DD259006DE87F /* PhotoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoDetailViewController.h; sourceTree = "<group>"; };
+		D026A73A1B3DD259006DE87F /* PhotoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoDetailViewController.m; sourceTree = "<group>"; };
 		D02FE4871B2A183D00847DC8 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		D02FE4881B2A183D00847DC8 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		D02FE48A1B2A1C5F00847DC8 /* UserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserController.h; sourceTree = "<group>"; };
@@ -112,14 +116,14 @@
 		D0E12F601B389D7C001BC006 /* UIView+FLKAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FLKAutoLayout.m"; sourceTree = "<group>"; };
 		D0E12F611B389D7C001BC006 /* UIView+FLKAutoLayoutPredicate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FLKAutoLayoutPredicate.h"; sourceTree = "<group>"; };
 		D0E12F621B389D7C001BC006 /* UIView+FLKAutoLayoutPredicate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FLKAutoLayoutPredicate.m"; sourceTree = "<group>"; };
-		D0E12FA51B39D42D001BC006 /* FriendFeedDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendFeedDataSource.h; sourceTree = "<group>"; };
-		D0E12FA61B39D42D001BC006 /* FriendFeedDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendFeedDataSource.m; sourceTree = "<group>"; };
+		D0E12FA51B39D42D001BC006 /* FriendPhotoQueryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendPhotoQueryController.h; sourceTree = "<group>"; };
+		D0E12FA61B39D42D001BC006 /* FriendPhotoQueryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendPhotoQueryController.m; sourceTree = "<group>"; };
 		D0E12FA71B39D42D001BC006 /* GlobalPhotoQueryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalPhotoQueryController.h; sourceTree = "<group>"; };
 		D0E12FA81B39D42D001BC006 /* GlobalPhotoQueryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalPhotoQueryController.m; sourceTree = "<group>"; };
 		D0E12FAC1B39D5BB001BC006 /* APIServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIServiceManager.h; sourceTree = "<group>"; };
 		D0E12FAD1B39D5BB001BC006 /* APIServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIServiceManager.m; sourceTree = "<group>"; };
-		D0E12FB21B39F111001BC006 /* photoQueryResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = photoQueryResult.h; sourceTree = "<group>"; };
-		D0E12FB31B39F111001BC006 /* photoQueryResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = photoQueryResult.m; sourceTree = "<group>"; };
+		D0E12FB21B39F111001BC006 /* PhotoQueryResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoQueryResult.h; sourceTree = "<group>"; };
+		D0E12FB31B39F111001BC006 /* PhotoQueryResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoQueryResult.m; sourceTree = "<group>"; };
 		D0E12FB61B3A026E001BC006 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		D0E12FB71B3A026E001BC006 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		D0E12FB81B3A026E001BC006 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -156,6 +160,8 @@
 		D0E12FD81B3A026E001BC006 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		D0E12FD91B3A026E001BC006 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		D0E12FDA1B3A026E001BC006 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		D0F264001B3B5E2400DB6821 /* GlobalFeedCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalFeedCollectionViewDataSource.h; sourceTree = "<group>"; };
+		D0F264011B3B5E2400DB6821 /* GlobalFeedCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalFeedCollectionViewDataSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,6 +278,8 @@
 				D0E12F5B1B389C3F001BC006 /* FriendFeedChildViewController.m */,
 				D0E12F571B389BF2001BC006 /* GlobalFeedChildViewController.h */,
 				D0E12F581B389BF2001BC006 /* GlobalFeedChildViewController.m */,
+				D026A7391B3DD259006DE87F /* PhotoDetailViewController.h */,
+				D026A73A1B3DD259006DE87F /* PhotoDetailViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -288,8 +296,8 @@
 		D0540AA11B2B635F00D8586E /* Model Objects */ = {
 			isa = PBXGroup;
 			children = (
-				D0E12FB21B39F111001BC006 /* photoQueryResult.h */,
-				D0E12FB31B39F111001BC006 /* photoQueryResult.m */,
+				D0E12FB21B39F111001BC006 /* PhotoQueryResult.h */,
+				D0E12FB31B39F111001BC006 /* PhotoQueryResult.m */,
 				D02FE4871B2A183D00847DC8 /* User.h */,
 				D02FE4881B2A183D00847DC8 /* User.m */,
 				D020FFA21B2785B90046282D /* ConceptModel.h */,
@@ -346,10 +354,12 @@
 		D0E12FAB1B39D455001BC006 /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
-				D0E12FA51B39D42D001BC006 /* FriendFeedDataSource.h */,
-				D0E12FA61B39D42D001BC006 /* FriendFeedDataSource.m */,
+				D0E12FA51B39D42D001BC006 /* FriendPhotoQueryController.h */,
+				D0E12FA61B39D42D001BC006 /* FriendPhotoQueryController.m */,
 				D0E12FA71B39D42D001BC006 /* GlobalPhotoQueryController.h */,
 				D0E12FA81B39D42D001BC006 /* GlobalPhotoQueryController.m */,
+				D0F264001B3B5E2400DB6821 /* GlobalFeedCollectionViewDataSource.h */,
+				D0F264011B3B5E2400DB6821 /* GlobalFeedCollectionViewDataSource.m */,
 			);
 			name = DataSources;
 			path = ..;
@@ -456,6 +466,7 @@
 				TargetAttributes = {
 					D020FF781B2784CD0046282D = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = CFVTXS6NX7;
 					};
 					D020FF911B2784CD0046282D = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -509,11 +520,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0E12FE71B3A026E001BC006 /* UIButton+AFNetworking.m in Sources */,
-				D0E12FB41B39F111001BC006 /* photoQueryResult.m in Sources */,
+				D0E12FB41B39F111001BC006 /* PhotoQueryResult.m in Sources */,
 				D0979DAC1B2B80A10034FECD /* WebServiceManager.m in Sources */,
 				D0979DA51B2B7B530034FECD /* CustomUIUtils.m in Sources */,
 				D0E12FE91B3A026E001BC006 /* UIProgressView+AFNetworking.m in Sources */,
-				D0E12FA91B39D42D001BC006 /* FriendFeedDataSource.m in Sources */,
+				D0E12FA91B39D42D001BC006 /* FriendPhotoQueryController.m in Sources */,
 				D0E12FE01B3A026E001BC006 /* AFURLConnectionOperation.m in Sources */,
 				D0E12FEA1B3A026E001BC006 /* UIRefreshControl+AFNetworking.m in Sources */,
 				D0979DB11B2B80F40034FECD /* UILoadingView.m in Sources */,
@@ -526,6 +537,7 @@
 				D0E12FDB1B3A026E001BC006 /* AFHTTPRequestOperation.m in Sources */,
 				D0E12F631B389D7C001BC006 /* FLKAutoLayoutPredicateList.m in Sources */,
 				D0E12FDE1B3A026E001BC006 /* AFNetworkReachabilityManager.m in Sources */,
+				D026A73B1B3DD259006DE87F /* PhotoDetailViewController.m in Sources */,
 				D0E12FE61B3A026E001BC006 /* UIAlertView+AFNetworking.m in Sources */,
 				D020FFB01B27912C0046282D /* LoginViewController.m in Sources */,
 				D0E12FE31B3A026E001BC006 /* AFURLSessionManager.m in Sources */,
@@ -546,6 +558,7 @@
 				D02FE4891B2A183D00847DC8 /* User.m in Sources */,
 				D0E12FE51B3A026E001BC006 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				D0E12F5C1B389C3F001BC006 /* FriendFeedChildViewController.m in Sources */,
+				D0F264021B3B5E2400DB6821 /* GlobalFeedCollectionViewDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -673,6 +686,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Documents/FacebookSDK,
@@ -680,6 +694,7 @@
 				INFOPLIST_FILE = ReminderCapstone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -687,6 +702,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Documents/FacebookSDK,
@@ -694,6 +710,7 @@
 				INFOPLIST_FILE = ReminderCapstone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
