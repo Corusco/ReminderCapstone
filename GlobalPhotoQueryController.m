@@ -24,7 +24,9 @@
 
 - (void)searchForInstagramPhotosWithTheme:(NSString *)theme {
     [APIServiceManager getWithClientID:@"/v1/tags/lifewontwait/media/recent" parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-        NSLog(@"%@", responseObject[@"data"]);
+        self.responseArray = responseObject[@"data"];
+        NSLog(@"Items returned by search: %lu", (unsigned long)[self.responseArray count]);
+        NSLog(@"%@", self.responseArray);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         NSLog(@"%@", error);
     }];

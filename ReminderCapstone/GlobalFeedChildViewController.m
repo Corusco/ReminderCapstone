@@ -8,17 +8,14 @@
 
 #import "GlobalFeedChildViewController.h"
 
-@interface GlobalFeedChildViewController ()
+static NSString * const cellIDkey = @"cellID";
 
-@property (strong, nonatomic) UILabel *viewDesignator;
+@interface GlobalFeedChildViewController ()
 
 @end
 
 @implementation GlobalFeedChildViewController
 
-- (void)viewWillLoad {
-    [[GlobalPhotoQueryController sharedInstance] searchForInstagramPhotosWithTheme:@"lifewontwait"];
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,13 +31,45 @@
     self.viewDesignator.adjustsFontSizeToFitWidth = NO;
     [self.viewDesignator alignCenterWithView:self.view];
     self.viewDesignator.numberOfLines = 2;
+    
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+    self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:flowLayout];
+    self.datasource = [[GlobalFeedCollectionViewDataSource alloc] init];
+    self.collectionView.dataSource = self.datasource;
+    self.collectionView.delegate = self;
 
+    self.collectionView.contentSize = CGSizeMake(self.view.frame.size.width/2, self.view.frame.size
+                                                  .width/2);
+    
+    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:cellIDkey];
+    
+    self.collectionView.backgroundColor = [UIColor colorWithWhite:.5 alpha:.5];
+    
+    [self.view addSubview:self.collectionView];
+
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [self.collectionView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return CGSizeMake(self.view.frame.size.width/2.0, self.view.frame.size.width/2.0);
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
+    return 2;
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
+    return 2;
+}
+
 
 /*
 #pragma mark - Navigation

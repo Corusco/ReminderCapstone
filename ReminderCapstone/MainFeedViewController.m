@@ -122,6 +122,11 @@
                                     [self.globalFeedChild.view alignLeading:@"0" trailing:@"0" toView:self.view];
                                     [self.globalFeedChild.view alignBottomEdgeWithView:self.view predicate:@"0"];
                                     self.currentChild = self.globalFeedChild;
+                                    
+                                    [self.globalFeedChild.collectionView constrainBottomSpaceToView:self.globalFeedChild.bottomLayoutGuide predicate:@"0"];
+                                    
+                                    [self.globalFeedChild.collectionView constrainHeightToView:self.globalFeedChild.view predicate:@"0"];
+                                    [self.globalFeedChild.collectionView constrainWidthToView:self.globalFeedChild.view predicate:@"0"];
                                 }];
     }
 }
