@@ -6,13 +6,14 @@
 //  Copyright (c) 2015 CVLCD. All rights reserved.
 //
 
-#import "photoQueryResult.h"
+#import "PhotoQueryResult.h"
 
-@implementation photoQueryResult
+@implementation PhotoQueryResult
 
-- (void)initWithDictionary:(NSDictionary *)dictionary fromSource:(NSString *)source {
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary fromSource:(NSString *)source {
+    self = [super init];
     if ([source isEqualToString:@"instagram"]) {
-        self.photoURL = @"";
+        self.photo =  [UIImage imageWithData:[NSData dataWithContentsOfFile:@"[images[standard_resolution[url]]]"]];
         self.thumbnailURL = @"";
         self.source = @"Instagram";
         self.user = @"";
@@ -21,8 +22,10 @@
         self.comments = @"";
         self.tags = @"";
         
+        return self;
+        
     } else if ([source isEqualToString:@"facebook"]) {
-        self.photoURL = @"";
+        self.photo = [UIImage new];
         self.thumbnailURL = @"";
         self.source = @"";
         self.user = @"";
@@ -31,8 +34,10 @@
         self.comments = @"";
         self.tags = @"";
         
+        return self;
+        
     } else {
-        return;
+        return self;
     }
 }
 

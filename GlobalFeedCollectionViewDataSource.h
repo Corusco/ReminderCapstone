@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface GlobalFeedCollectionViewDataSource : NSObject
+@interface GlobalFeedCollectionViewDataSource : NSObject <UICollectionViewDataSource>
 
 @end

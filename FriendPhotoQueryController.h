@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "APIServiceManager.h"
 
-@interface FriendFeedDataSource : NSObject
+@interface FriendPhotoQueryController : NSObject
 
 
 @end

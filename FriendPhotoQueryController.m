@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 CVLCD. All rights reserved.
 //
 
-#import "FriendFeedDataSource.h"
+#import "FriendPhotoQueryController.h"
 
-@implementation FriendFeedDataSource
+@implementation FriendPhotoQueryController
 
 @end
