@@ -10,4 +10,11 @@
 
 @interface PhotoDetailViewController : UIViewController
 
+@property (strong, nonatomic) UIImageView *photoView;
+@property (strong, nonatomic) UILabel *userLabel;
+@property (strong, nonatomic) UILabel *likesLabel;
+@property (strong, nonatomic) UILabel *commentsLabel;
+@property (strong, nonatomic) UIButton *likeButton;
+
+
 @end

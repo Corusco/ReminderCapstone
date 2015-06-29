@@ -188,7 +188,6 @@
 		D020FF701B2784CD0046282D = {
 			isa = PBXGroup;
 			children = (
-				D0E12FC91B3A026E001BC006 /* UIKit+AFNetworking */,
 				D020FF7B1B2784CD0046282D /* ReminderCapstone */,
 				D020FF951B2784CD0046282D /* ReminderCapstoneTests */,
 				D020FF7A1B2784CD0046282D /* Products */,
@@ -329,6 +328,7 @@
 		D0979DF41B2F60230034FECD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D0E12FC91B3A026E001BC006 /* UIKit+AFNetworking */,
 				D0E12FB51B3A026D001BC006 /* AFNetworking */,
 				D0E12F661B389D8A001BC006 /* FLKAutoLayout */,
 				D0979DEE1B2F601B0034FECD /* FBSDKCoreKit.framework */,
