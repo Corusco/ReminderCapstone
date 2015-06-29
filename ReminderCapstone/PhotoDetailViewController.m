@@ -16,7 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.photoView = 
+    
+    
+   // self.photoView =
 }
 
 - (void)didReceiveMemoryWarning {

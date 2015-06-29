@@ -70,6 +70,18 @@ static NSString * const cellIDkey = @"cellID";
     return 4;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+    
+//    UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
+    
+    PhotoDetailViewController *photoDetailView = [[PhotoDetailViewController alloc] init];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:photoDetailView];
+    photoDetailView.detailPhotoIndex = indexPath.row;
+    
+    [self presentViewController:navController animated:YES completion:nil];
+}
+
 
 /*
 #pragma mark - Navigation

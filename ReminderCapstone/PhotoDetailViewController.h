@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PhotoQueryResult.h"
 
 @interface PhotoDetailViewController : UIViewController
 
+@property (assign, nonatomic) NSInteger detailPhotoIndex;
 @property (strong, nonatomic) UIImageView *photoView;
 @property (strong, nonatomic) UILabel *userLabel;
 @property (strong, nonatomic) UILabel *likesLabel;
