@@ -10,6 +10,8 @@
 
 @interface MainFeedViewController ()
 
+@property (strong, nonatomic) UIButton *settingsButton;
+@property (strong, nonatomic) UILabel *introLabel;
 @property (strong, nonatomic) UIView *headerView;
 @property (strong, nonatomic) UILabel *headerTheme;
 @property (strong, nonatomic) UIView *segmentView;
@@ -28,23 +30,42 @@
     [super viewDidLoad];
     
     self.headerView = [[UIView alloc] init];
-    self.headerView.backgroundColor = UIColorFromRGB(0x2D6842);
+    self.headerView.backgroundColor = UIColorFromRGB(0x7FADAD);
     [self.view addSubview:self.headerView];
     [self.headerView alignLeading:0 trailing:0 toView:self.view];
     [self.headerView alignTopEdgeWithView:self.view predicate:@"0"];
-    [self.headerView constrainHeight:@"200"];
+    [self.headerView constrainHeight:@"140"];
+    
+    self.settingsButton = [[UIButton alloc] init];
+    UIImage *buttonImage = [UIImage imageNamed:@"basic-settings-iconWhite.png"];
+    [self.settingsButton setImage:buttonImage forState:UIControlStateNormal];
+    [self.headerView addSubview:self.settingsButton];
+    [self.settingsButton constrainHeight:@"24"];
+    [self.settingsButton constrainAspectRatio:@"1"];
+    [self.settingsButton alignTrailingEdgeWithView:self.headerView predicate:@"-10"];
+    [self.settingsButton alignTopEdgeWithView:self.headerView predicate:@"25"];
     
     self.headerTheme = [[UILabel alloc] init];
     self.headerTheme.textColor = [UIColor whiteColor];
-    self.headerTheme.font = [UIFont fontWithName:@"Arial-BoldMT" size:40];
-    self.headerTheme.text = @"Life won't wait";
+    self.headerTheme.font = [UIFont fontWithName:@"Lobster 1.4" size:40];
+    self.headerTheme.text = @"Life Won't Wait";
     [self.headerView addSubview:self.headerTheme];  
-    [self.headerTheme constrainWidth:@"600" height:@"40"];
+    [self.headerTheme constrainWidth:@"400" height:@"44"];
     [self.headerTheme alignLeadingEdgeWithView:self.headerView predicate:@"20"];
     [self.headerTheme alignBottomEdgeWithView:self.headerView predicate:@"-20"];
     
+    self.introLabel = [[UILabel alloc] init];
+    self.introLabel.text = @"Today's theme is:";
+    self.introLabel.font = [UIFont fontWithName:@"Raleway-Regular" size:15];
+    self.introLabel.textColor = [UIColor whiteColor];
+    [self.headerView addSubview:self.introLabel];
+    [self.introLabel constrainBottomSpaceToView:self.headerTheme predicate:@"4"];
+    [self.introLabel constrainWidth:@"200"];
+    [self.introLabel constrainHeight:@"20"];
+    [self.introLabel alignLeadingEdgeWithView:self.headerTheme predicate:@"0"];
+    
     self.segmentView = [[UIView alloc] init];
-    self.segmentView.backgroundColor = UIColorFromRGB(0x2D6842);
+    self.segmentView.backgroundColor = UIColorFromRGB(0x7FADAD);
     self.segmentView.tintColor = [UIColor whiteColor];
     [self.view addSubview:self.segmentView];
     [self.segmentView constrainTopSpaceToView:self.headerView predicate:@"0"];
@@ -60,6 +81,7 @@
                     forControlEvents:UIControlEventValueChanged];
     
     self.friendFeedChild = [[FriendFeedChildViewController alloc] init];
+//    [self addChildViewController:self.friendFeedChild];
     [self.view addSubview:self.friendFeedChild.view];
     self.friendFeedChild.view.hidden = YES;
     [self.friendFeedChild.view constrainTopSpaceToView:self.segmentView predicate:@"0"];
@@ -92,6 +114,7 @@
                                 animations:nil
                                 completion:^(BOOL finished) {
                                     [self.currentChild removeFromParentViewController];
+                                    [self.globalFeedChild removeFromParentViewController];
                                     [self.friendFeedChild didMoveToParentViewController:self];
                                     [self.friendFeedChild.view constrainTopSpaceToView:self.segmentView predicate:@"0"];
                                     [self.friendFeedChild.view alignLeading:@"0" trailing:@"0" toView:self.view];
@@ -115,6 +138,7 @@
                                 animations:nil
                                 completion:^(BOOL finished) {
                                     [self.currentChild removeFromParentViewController];
+                                    [self.friendFeedChild removeFromParentViewController];
                                     [self.globalFeedChild didMoveToParentViewController:self];
                                     self.globalFeedChild.view.hidden = NO;
                                     [self.globalFeedChild.view constrainTopSpaceToView:self.segmentView predicate:@"0"];
@@ -135,10 +159,8 @@
         
         if (self.segmentedControl.selectedSegmentIndex == 0) {
             [self showFriendFeedChild];
-            NSLog(@"Tab One Selected");
         } else if (self.segmentedControl.selectedSegmentIndex == 1) {
             [self showGlobalFeedChild];
-            NSLog(@"Tab Two Selected");
         }
     }
 }

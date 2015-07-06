@@ -23,6 +23,8 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [[UserController alloc] init];
+        
+        [sharedInstance loadUserFromDefaults];
     });
                  
     return sharedInstance;
@@ -43,11 +45,11 @@
      {
          if (responseData)
          {
-             NSDictionary* dict = [WebServiceManager JSONData:responseData];
-             NSDictionary* userDict = [dict objectForKey:@"data"];
-             if (userDict)
+             NSDictionary* dictionary = [WebServiceManager JSONData:responseData];
+             NSDictionary* userDictionary = [dictionary objectForKey:@"data"];
+             if (userDictionary)
              {
-                 User *userInstagramInfo = [[User alloc] initWithDictionaryInstagram:userDict];
+                 User *userInstagramInfo = [[User alloc] initWithDictionaryInstagram:userDictionary];
                  userInstagramInfo.instagramAccessToken = accessToken;
              }
              callback ();
@@ -57,6 +59,14 @@
              [CustomUIUtils messageAlert:@"Could not connect to server" title:@"Please Try Again" delegate:nil];
          }
      }];
+}
+
+- (void)saveUserToDefaults {
+    
+}
+
+- (void)loadUserFromDefaults {
+    
 }
 
 

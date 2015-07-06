@@ -8,15 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import "PhotoQueryResult.h"
+#import "GlobalPhotoQueryController.h"
+#import "UIView+FLKAutoLayout.h"
+#import "UIKit+AFNetworking.h"
 
 @interface PhotoDetailViewController : UIViewController
 
-@property (assign, nonatomic) NSInteger detailPhotoIndex;
+@property (assign, nonatomic) NSIndexPath *detailPhotoIndex;
 @property (strong, nonatomic) UIImageView *photoView;
 @property (strong, nonatomic) UILabel *userLabel;
 @property (strong, nonatomic) UILabel *likesLabel;
 @property (strong, nonatomic) UILabel *commentsLabel;
 @property (strong, nonatomic) UIButton *likeButton;
-
 
 @end

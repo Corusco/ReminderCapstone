@@ -10,6 +10,8 @@
 
 @interface UserController : NSObject
 
+@property (assign, nonatomic) BOOL User;
+
 + (instancetype)sharedInstance;
 
 - (void) getUserInstagramWithAccessToken:(NSString*)accessToken completion:(void(^)(void))callback;

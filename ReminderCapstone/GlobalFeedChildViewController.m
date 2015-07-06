@@ -22,16 +22,6 @@ static NSString * const cellIDkey = @"cellID";
     
     [[GlobalPhotoQueryController sharedInstance] searchForInstagramPhotosWithTheme:@"lifewontwait"];
     
-    self.viewDesignator = [UILabel new];
-    self.viewDesignator.text = @"GLOBAL\nFEED";
-    self.viewDesignator.textColor = [UIColor grayColor];
-    self.viewDesignator.font = [UIFont systemFontOfSize:45];
-    self.viewDesignator.textAlignment = NSTextAlignmentCenter;
-    [self.view addSubview:self.viewDesignator];
-    self.viewDesignator.adjustsFontSizeToFitWidth = NO;
-    [self.viewDesignator alignCenterWithView:self.view];
-    self.viewDesignator.numberOfLines = 2;
-    
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:flowLayout];
     self.datasource = [[GlobalFeedCollectionViewDataSource alloc] init];
@@ -43,7 +33,7 @@ static NSString * const cellIDkey = @"cellID";
     
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:cellIDkey];
     
-    self.collectionView.backgroundColor = [UIColor colorWithWhite:.5 alpha:.5];
+    self.collectionView.backgroundColor = [UIColor colorWithWhite:1 alpha:1];
     
     [self.view addSubview:self.collectionView];
 
@@ -73,13 +63,12 @@ static NSString * const cellIDkey = @"cellID";
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
     
-//    UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
+    PhotoDetailViewController *detailView = [[PhotoDetailViewController alloc] init];
     
-    PhotoDetailViewController *photoDetailView = [[PhotoDetailViewController alloc] init];
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:photoDetailView];
-    photoDetailView.detailPhotoIndex = indexPath.row;
     
-    [self presentViewController:navController animated:YES completion:nil];
+    detailView.detailPhotoIndex = indexPath;
+    
+    [self presentViewController:detailView animated:YES completion:nil];
 }
 
 

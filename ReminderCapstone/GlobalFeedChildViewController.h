@@ -12,6 +12,7 @@
 #import "GlobalFeedCollectionViewDataSource.h"
 #import "PhotoQueryResult.h"
 #import "PhotoDetailViewController.h"
+#import "PhotoDetailNavController.h"
 
 @interface GlobalFeedChildViewController : UIViewController <UICollectionViewDelegateFlowLayout>
 
