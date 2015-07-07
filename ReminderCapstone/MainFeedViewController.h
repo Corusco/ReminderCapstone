@@ -12,6 +12,7 @@
 #import "GlobalFeedChildViewController.h"
 #import "FriendFeedChildViewController.h"
 #import "UIView+FLKAutoLayout.h"
+#import "SettingsViewController.h"
 
 
 @interface MainFeedViewController : UIViewController

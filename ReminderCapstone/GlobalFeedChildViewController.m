@@ -65,7 +65,6 @@ static NSString * const cellIDkey = @"cellID";
     
     PhotoDetailViewController *detailView = [[PhotoDetailViewController alloc] init];
     
-    
     detailView.detailPhotoIndex = indexPath;
     
     [self presentViewController:detailView animated:YES completion:nil];

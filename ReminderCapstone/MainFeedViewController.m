@@ -38,6 +38,7 @@
     
     self.settingsButton = [[UIButton alloc] init];
     UIImage *buttonImage = [UIImage imageNamed:@"basic-settings-iconWhite.png"];
+    [self.settingsButton addTarget:self action:@selector(settingsButtonTapped) forControlEvents:UIControlEventTouchUpInside];
     [self.settingsButton setImage:buttonImage forState:UIControlStateNormal];
     [self.headerView addSubview:self.settingsButton];
     [self.settingsButton constrainHeight:@"24"];
@@ -113,6 +114,7 @@
                                    options:UIViewAnimationOptionTransitionNone
                                 animations:nil
                                 completion:^(BOOL finished) {
+                                    [self.globalFeedChild willMoveToParentViewController:nil];
                                     [self.currentChild removeFromParentViewController];
                                     [self.globalFeedChild removeFromParentViewController];
                                     [self.friendFeedChild didMoveToParentViewController:self];
@@ -137,6 +139,10 @@
                                    options:UIViewAnimationOptionTransitionNone
                                 animations:nil
                                 completion:^(BOOL finished) {
+                                    [self.friendFeedChild willMoveToParentViewController:nil];
+                                    [self.currentChild willMoveToParentViewController:nil];
+                                    [self.currentChild.view removeFromSuperview];
+                                    [self.friendFeedChild.view removeFromSuperview];
                                     [self.currentChild removeFromParentViewController];
                                     [self.friendFeedChild removeFromParentViewController];
                                     [self.globalFeedChild didMoveToParentViewController:self];
@@ -163,6 +169,13 @@
             [self showGlobalFeedChild];
         }
     }
+}
+
+- (void)settingsButtonTapped {
+    
+    SettingsViewController *settingsViewController = [[SettingsViewController alloc] init];
+    
+    [self showViewController:settingsViewController sender:nil];
 }
 
 @end

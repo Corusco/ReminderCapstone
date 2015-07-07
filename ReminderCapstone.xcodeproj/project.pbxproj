@@ -22,6 +22,7 @@
 		D02FE4891B2A183D00847DC8 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = D02FE4881B2A183D00847DC8 /* User.m */; };
 		D02FE48C1B2A1C5F00847DC8 /* UserController.m in Sources */ = {isa = PBXBuildFile; fileRef = D02FE48B1B2A1C5F00847DC8 /* UserController.m */; };
 		D0540A9C1B2B525600D8586E /* UIPrefix.m in Sources */ = {isa = PBXBuildFile; fileRef = D0540A971B2B525600D8586E /* UIPrefix.m */; };
+		D08ED2DE1B4B1C9600AB2078 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D08ED2DD1B4B1C9600AB2078 /* SettingsViewController.m */; };
 		D0979DA51B2B7B530034FECD /* CustomUIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D0979DA41B2B7B530034FECD /* CustomUIUtils.m */; };
 		D0979DAC1B2B80A10034FECD /* WebServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D0979DAB1B2B80A10034FECD /* WebServiceManager.m */; };
 		D0979DB11B2B80F40034FECD /* UILoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0979DAF1B2B80F40034FECD /* UILoadingView.m */; };
@@ -119,6 +120,8 @@
 		D02FE48B1B2A1C5F00847DC8 /* UserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserController.m; sourceTree = "<group>"; };
 		D0540A961B2B525600D8586E /* UIPrefix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPrefix.h; sourceTree = "<group>"; };
 		D0540A971B2B525600D8586E /* UIPrefix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPrefix.m; sourceTree = "<group>"; };
+		D08ED2DC1B4B1C9600AB2078 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		D08ED2DD1B4B1C9600AB2078 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		D0979DA31B2B7B530034FECD /* CustomUIUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomUIUtils.h; sourceTree = "<group>"; };
 		D0979DA41B2B7B530034FECD /* CustomUIUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomUIUtils.m; sourceTree = "<group>"; };
 		D0979DAA1B2B80A10034FECD /* WebServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServiceManager.h; sourceTree = "<group>"; };
@@ -311,12 +314,12 @@
 		D0540A9F1B2B632500D8586E /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D020FFA81B2786900046282D /* MainFeedViewController.h */,
+				D020FFA91B2786900046282D /* MainFeedViewController.m */,
 				D020FFAE1B27912C0046282D /* LoginViewController.h */,
 				D020FFAF1B27912C0046282D /* LoginViewController.m */,
 				D020003C1B28D5EA0046282D /* WebLoginViewController.h */,
 				D020003D1B28D5EA0046282D /* WebLoginViewController.m */,
-				D020FFA81B2786900046282D /* MainFeedViewController.h */,
-				D020FFA91B2786900046282D /* MainFeedViewController.m */,
 				D0E12F5A1B389C3F001BC006 /* FriendFeedChildViewController.h */,
 				D0E12F5B1B389C3F001BC006 /* FriendFeedChildViewController.m */,
 				D0E12F571B389BF2001BC006 /* GlobalFeedChildViewController.h */,
@@ -325,6 +328,8 @@
 				D026A73D1B41BEFF006DE87F /* PhotoDetailNavController.m */,
 				D026A7391B3DD259006DE87F /* PhotoDetailViewController.h */,
 				D026A73A1B3DD259006DE87F /* PhotoDetailViewController.m */,
+				D08ED2DC1B4B1C9600AB2078 /* SettingsViewController.h */,
+				D08ED2DD1B4B1C9600AB2078 /* SettingsViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -655,6 +660,7 @@
 				D0E12FDD1B3A026E001BC006 /* AFHTTPSessionManager.m in Sources */,
 				D0E12FAE1B39D5BB001BC006 /* APIServiceManager.m in Sources */,
 				D0E12FE21B3A026E001BC006 /* AFURLResponseSerialization.m in Sources */,
+				D08ED2DE1B4B1C9600AB2078 /* SettingsViewController.m in Sources */,
 				D0E12FE11B3A026E001BC006 /* AFURLRequestSerialization.m in Sources */,
 				D020FF7F1B2784CD0046282D /* main.m in Sources */,
 				D0E12FE81B3A026E001BC006 /* UIImageView+AFNetworking.m in Sources */,
