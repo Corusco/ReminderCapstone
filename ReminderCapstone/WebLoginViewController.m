@@ -68,7 +68,7 @@
             
             if ([token length] > 0 ) {
                 [[UserController sharedInstance] getUserInstagramWithAccessToken:token completion:^{
-                    [self showMainView];
+                    [self dismissViewControllerAnimated:YES completion:nil];
                 }];
             }
         } else {

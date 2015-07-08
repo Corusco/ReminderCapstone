@@ -7,10 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "User.h"
+#import "Defines.h"
+#import "WebLoginViewController.h"
+#import "WebServiceManager.h"
+#import "UIPrefix.h"
+#import "CustomUIUtils.h"
+#import "WebLoginViewController.h"
 
 @interface UserController : NSObject
 
-@property (assign, nonatomic) BOOL User;
+@property (strong, nonatomic) User *currentUser;
+
+@property (strong, nonatomic) NSDictionary *userDictionary;
 
 + (instancetype)sharedInstance;
 

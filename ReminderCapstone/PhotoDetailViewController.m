@@ -25,7 +25,7 @@
     [navBar constrainHeight:@"64"];
     [navBar alignTopEdgeWithView:self.view predicate:@"0"];
     
-    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"< Feed" style:UIBarButtonItemStylePlain target:self action:@selector(backButtonTapped)];
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Feed" style:UIBarButtonItemStyleDone target:self action:@selector(backButtonTapped)];
     backButton.tintColor = [UIColor whiteColor];
     
     UINavigationItem *navigationItem = [[UINavigationItem alloc] init];

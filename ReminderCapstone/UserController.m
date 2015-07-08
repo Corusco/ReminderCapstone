@@ -7,13 +7,6 @@
 //
 
 #import "UserController.h"
-#import "User.h"
-#import "Defines.h"
-#import "WebLoginViewController.h"
-#import "WebServiceManager.h"
-#import "UIPrefix.h"
-#import "CustomUIUtils.h"
-#import "WebLoginViewController.h"
 
 @implementation UserController
 
@@ -49,8 +42,9 @@
              NSDictionary* userDictionary = [dictionary objectForKey:@"data"];
              if (userDictionary)
              {
-                 User *userInstagramInfo = [[User alloc] initWithDictionaryInstagram:userDictionary];
-                 userInstagramInfo.instagramAccessToken = accessToken;
+                 self.currentUser = [[User alloc] initWithDictionaryInstagram:userDictionary];
+                 self.currentUser.instagramAccessToken = accessToken;
+                 self.currentUser.loggedInInstagram = YES;
              }
              callback ();
          }
@@ -62,6 +56,10 @@
 }
 
 - (void)saveUserToDefaults {
+    NSMutableDictionary *userDictionary = [[NSMutableDictionary alloc] init];
+    
+    
+    
     
 }
 
@@ -69,5 +67,12 @@
     
 }
 
+- (void)logoutFromInstagram {
+    
+}
+
+- (void)logoutFromFacebook {
+    
+}
 
 @end

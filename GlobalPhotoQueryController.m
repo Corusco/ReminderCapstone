@@ -26,7 +26,9 @@
     [APIServiceManager getWithClientID:@"/v1/tags/lifewontwait/media/recent" parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         self.responseArray = responseObject[@"data"];
         NSLog(@"Items returned by search: %lu", (unsigned long)[self.responseArray count]);
-        NSLog(@"%@", self.responseArray);
+//        NSLog(@"%@", self.responseArray);
+        NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+        [nc postNotificationName:kInstagramSearchFinished object:self];
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         NSLog(@"%@", error);
     }];

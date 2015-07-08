@@ -16,6 +16,8 @@
 @property (strong, nonatomic) NSString *instagramUserName;
 @property (strong, nonatomic) NSString *instagramAccessToken;
 @property (strong, nonatomic) NSString *instagramProfilePhotoURL;
+
+@property (assign, nonatomic) BOOL loggedInInstagram;
 @property (assign, nonatomic) int instagramUserID;
 
 

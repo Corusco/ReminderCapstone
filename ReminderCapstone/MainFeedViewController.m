@@ -173,9 +173,11 @@
 
 - (void)settingsButtonTapped {
     
-    SettingsViewController *settingsViewController = [[SettingsViewController alloc] init];
+        SettingsViewController *settingsViewController = [[SettingsViewController alloc] init];
+        UINavigationController *settingsNavController = [[UINavigationController alloc] initWithRootViewController:settingsViewController];
+
     
-    [self showViewController:settingsViewController sender:nil];
+    [self showViewController:settingsNavController sender:nil];
 }
 
 @end

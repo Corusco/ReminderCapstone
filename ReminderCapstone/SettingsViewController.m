@@ -19,8 +19,13 @@ static NSString * const kCellID = @"cellID";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.navigationController.navigationBar.barTintColor = UIColorFromRGB(0x7FADAD);
+    
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Feed" style:UIBarButtonItemStyleDone target:self action:@selector(backButtonTapped)];
+    backButton.tintColor = [UIColor whiteColor];
+    self.navigationItem.leftBarButtonItem = backButton;
+    
     self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
-    [self.tableView registerClass:UITableViewCellStyleDefault forCellReuseIdentifier:kCellID];
     
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
@@ -34,10 +39,17 @@ static NSString * const kCellID = @"cellID";
     self.realNameText.placeholder = @"Full Name";
     
     self.instagramAccountCell = [[UITableViewCell alloc] init];
-    self.instagramAccountCell.backgroundColor = [UIColor lightGrayColor];
+    self.instagramAccountCell.backgroundColor = [UIColor whiteColor];
+    if ([UserController sharedInstance].currentUser.loggedInInstagram == YES) {
+        self.instagramAccountCell.imageView.image = [UIImage imageNamed:@"InstaIconLoggedInMod40"];
+        self.instagramAccountCell.textLabel.text = [UserController sharedInstance].currentUser.instagramUserName;
+    } else {
+        self.instagramAccountCell.textLabel.text = @"Tap to add Instagram Account";
+        self.instagramAccountCell.imageView.image = [UIImage imageNamed:@"InstaIconLoggedOutMod40"];
+    }
     
     self.facebookAccountCell = [[UITableViewCell alloc] init];
-    self.facebookAccountCell.backgroundColor = [UIColor lightGrayColor];
+    self.facebookAccountCell.backgroundColor = [UIColor whiteColor];
     
     self.rateAppCell = [[UITableViewCell alloc] init];
     self.rateAppCell.backgroundColor = [UIColor darkGrayColor];
@@ -47,9 +59,15 @@ static NSString * const kCellID = @"cellID";
 
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    NSLog(@"%@ tapped", indexPath);
+    
+    if (indexPath == [NSIndexPath indexPathForRow:0 inSection:1]) {
+        WebLoginViewController *webLogin = [[WebLoginViewController alloc] init];
+        [self.navigationController showViewController:webLogin sender:nil];
+    }
+    
 }
 
 #pragma mark - Datasource and Delegate Methods
@@ -108,5 +126,8 @@ static NSString * const kCellID = @"cellID";
     }
 }
 
+- (void) backButtonTapped {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 @end
