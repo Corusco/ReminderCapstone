@@ -10,6 +10,7 @@
 
 @interface MainFeedViewController ()
 
+@property (strong, nonatomic) UIButton *cameraButton;
 @property (strong, nonatomic) UIButton *settingsButton;
 @property (strong, nonatomic) UILabel *introLabel;
 @property (strong, nonatomic) UIView *headerView;
@@ -19,8 +20,6 @@
 @property (strong, nonatomic) FriendFeedChildViewController *friendFeedChild;
 @property (strong, nonatomic) GlobalFeedChildViewController *globalFeedChild;
 @property (strong, nonatomic) UIViewController *currentChild;
-
-
 
 @end
 
@@ -42,9 +41,21 @@
     [self.settingsButton setImage:buttonImage forState:UIControlStateNormal];
     [self.headerView addSubview:self.settingsButton];
     [self.settingsButton constrainHeight:@"24"];
-    [self.settingsButton constrainAspectRatio:@"1"];
+    [self.settingsButton constrainAspectRatio:@"0"];
     [self.settingsButton alignTrailingEdgeWithView:self.headerView predicate:@"-10"];
     [self.settingsButton alignTopEdgeWithView:self.headerView predicate:@"25"];
+    
+    self.cameraButton = [[UIButton alloc] init];
+    UIImage *cameraImage = [UIImage imageNamed:@"CameraIconTight40.png"];
+    [self.cameraButton addTarget:self action:@selector(launchCamera) forControlEvents:UIControlEventTouchUpInside];
+    [self.cameraButton setImage:cameraImage forState:UIControlStateNormal];
+    [self.headerView addSubview:self.cameraButton];
+    [self.cameraButton constrainHeight:@"24"];
+    [self.cameraButton constrainWidth:@"30"];
+    [self.cameraButton constrainTrailingSpaceToView:self.settingsButton predicate:@"-15"];
+    [self.cameraButton alignTopEdgeWithView:self.headerView predicate:@"25" ];
+    
+    
     
     self.headerTheme = [[UILabel alloc] init];
     self.headerTheme.textColor = [UIColor whiteColor];
@@ -169,6 +180,10 @@
             [self showGlobalFeedChild];
         }
     }
+}
+
+- (void)launchCamera {
+    
 }
 
 - (void)settingsButtonTapped {

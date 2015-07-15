@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "Defines.h"
 
 @interface PhotoQueryResult : NSObject
 
@@ -20,6 +21,8 @@
 @property (strong, nonatomic) NSString *tags;
 @property (strong, nonatomic) UIImage *photo;
 @property (strong, nonatomic) NSString *photoURL;
+@property (strong, nonatomic) NSString *postedTime;
+@property (strong, nonatomic) NSString *caption;
 
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary fromSource:(NSString *)source;

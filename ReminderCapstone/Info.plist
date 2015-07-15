@@ -6,6 +6,9 @@
 	<false/>
 	<key>UIAppFonts</key>
 	<array>
+		<string>ProximaNova-Semibold.otf</string>
+		<string>ProximaNova-Regular.otf</string>
+		<string>ProximaNova-Light.otf</string>
 		<string>Lobster 1.4.otf</string>
 		<string>Raleway-Extralight.ttf</string>
 		<string>Raleway-Bold.ttf</string>

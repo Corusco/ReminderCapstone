@@ -21,6 +21,8 @@
         self.date = [dictionary valueForKeyPath:@"created_time"];
         self.comments =[dictionary valueForKeyPath:@"comments"];
         self.tags = dictionary[@"tags"];
+        self.postedTime = [self calculatePostedTime:([dictionary valueForKeyPath:@"created_time"])];
+        self.caption = [dictionary valueForKeyPath:@"caption.text"];
         
         return self;
         
@@ -39,6 +41,50 @@
     } else {
         return self;
     }
+}
+
+- (NSString *) calculatePostedTime:(NSString *)postedTime {
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.timeStyle = NSDateIntervalFormatterNoStyle;
+    dateFormatter.dateStyle = NSDateIntervalFormatterShortStyle;
+    NSTimeInterval currentInterval = [NSDate date].timeIntervalSince1970;
+    
+    
+    if ( currentInterval - [postedTime doubleValue] < 86400) {
+        
+        NSCalendar *currentCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+        NSDate *formattedPostedTime = [NSDate dateWithTimeIntervalSince1970:[postedTime doubleValue]];
+        
+        NSDateComponents *dateComponents = [currentCalendar components:NSCalendarUnitHour | NSCalendarUnitMinute fromDate:formattedPostedTime toDate:[NSDate date] options:0];
+        
+        long hours = [dateComponents hour];
+        long minutes = [dateComponents minute];
+        
+        NSString *hourMinuteString = [NSString stringWithFormat:@"%ldh  %ldm", hours, minutes];
+        
+        return hourMinuteString;
+        
+    } else {
+        NSTimeInterval postedInterval = [postedTime doubleValue];
+        
+        NSDate *calculatedDate = [NSDate dateWithTimeIntervalSince1970:postedInterval];
+        
+        NSString *calculatedString = [dateFormatter stringFromDate:calculatedDate];
+        
+        NSLog(@"%@", calculatedString);
+        
+        return calculatedString;
+        
+    } 
+    
+    
+    
+    
+    
+    
+    
+    
 }
 
 @end

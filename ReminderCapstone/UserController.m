@@ -45,6 +45,9 @@
                  self.currentUser = [[User alloc] initWithDictionaryInstagram:userDictionary];
                  self.currentUser.instagramAccessToken = accessToken;
                  self.currentUser.loggedInInstagram = YES;
+                 
+                 NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+                 [nc postNotificationName:kInstagramLoginFinished object:self];
              }
              callback ();
          }

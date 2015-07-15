@@ -34,6 +34,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    [nc addObserver:self selector:@selector(popWebLogin) name:kInstagramLoginFinished object:nil];
+    
     self.webView = [[UIWebView alloc] initWithFrame:self.view.frame];
     
     
@@ -68,7 +71,7 @@
             
             if ([token length] > 0 ) {
                 [[UserController sharedInstance] getUserInstagramWithAccessToken:token completion:^{
-                    [self dismissViewControllerAnimated:YES completion:nil];
+                    // Spot for completion code. Shame to let it go to waste.
                 }];
             }
         } else {
@@ -79,7 +82,9 @@
     return YES;
 }
 
-
+- (void)popWebLogin {
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 
 - (void)showMainView {
     
@@ -87,17 +92,5 @@
     MainFeedViewController *newMainFeedViewController = [storyboard instantiateViewControllerWithIdentifier:@"MainFeedViewController"];
     [self presentViewController:newMainFeedViewController animated:YES completion:nil];
 }
-
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

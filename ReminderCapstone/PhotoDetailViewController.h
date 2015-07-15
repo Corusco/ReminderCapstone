@@ -14,11 +14,14 @@
 
 @interface PhotoDetailViewController : UIViewController
 
+@property (strong, nonatomic) UIScrollView *scrollView;
 @property (assign, nonatomic) NSIndexPath *detailPhotoIndex;
 @property (strong, nonatomic) UIImageView *photoView;
 @property (strong, nonatomic) UILabel *userLabel;
 @property (strong, nonatomic) UILabel *likesLabel;
 @property (strong, nonatomic) UILabel *commentsLabel;
 @property (strong, nonatomic) UIButton *likeButton;
+@property (strong, nonatomic) UILabel *captionLabel;
+@property (strong, nonatomic) UILabel *dateLabel;
 
 @end
