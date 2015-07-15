@@ -184,6 +184,7 @@
 
 - (void)launchCamera {
     
+    
 }
 
 - (void)settingsButtonTapped {
