@@ -15,6 +15,6 @@
 #import "SettingsViewController.h"
 
 
-@interface MainFeedViewController : UIViewController
+@interface MainFeedViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIDocumentInteractionControllerDelegate>
 
 @end

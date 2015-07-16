@@ -59,7 +59,7 @@
 }
 
 - (void)saveUserToDefaults {
-    NSMutableDictionary *userDictionary = [[NSMutableDictionary alloc] init];
+ //   NSMutableDictionary *userDictionary = [[NSMutableDictionary alloc] init];
     
     
     

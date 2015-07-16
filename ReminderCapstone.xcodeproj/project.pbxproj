@@ -93,7 +93,6 @@
 		D0E12FEA1B3A026E001BC006 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E12FD81B3A026E001BC006 /* UIRefreshControl+AFNetworking.m */; };
 		D0E12FEB1B3A026E001BC006 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E12FDA1B3A026E001BC006 /* UIWebView+AFNetworking.m */; };
 		D0F264021B3B5E2400DB6821 /* GlobalFeedCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F264011B3B5E2400DB6821 /* GlobalFeedCollectionViewDataSource.m */; };
-		D0FF454A1B56FCCD0074ECB5 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0FF45491B56FCCD0074ECB5 /* CameraViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -240,8 +239,6 @@
 		D0E12FDA1B3A026E001BC006 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		D0F264001B3B5E2400DB6821 /* GlobalFeedCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalFeedCollectionViewDataSource.h; sourceTree = "<group>"; };
 		D0F264011B3B5E2400DB6821 /* GlobalFeedCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalFeedCollectionViewDataSource.m; sourceTree = "<group>"; };
-		D0FF45481B56FCCD0074ECB5 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
-		D0FF45491B56FCCD0074ECB5 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -361,8 +358,6 @@
 				D026A73A1B3DD259006DE87F /* PhotoDetailViewController.m */,
 				D08ED2DC1B4B1C9600AB2078 /* SettingsViewController.h */,
 				D08ED2DD1B4B1C9600AB2078 /* SettingsViewController.m */,
-				D0FF45481B56FCCD0074ECB5 /* CameraViewController.h */,
-				D0FF45491B56FCCD0074ECB5 /* CameraViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -742,7 +737,6 @@
 				D0E12FE81B3A026E001BC006 /* UIImageView+AFNetworking.m in Sources */,
 				D02FE48C1B2A1C5F00847DC8 /* UserController.m in Sources */,
 				D0E12F651B389D7C001BC006 /* UIView+FLKAutoLayoutPredicate.m in Sources */,
-				D0FF454A1B56FCCD0074ECB5 /* CameraViewController.m in Sources */,
 				D0540A9C1B2B525600D8586E /* UIPrefix.m in Sources */,
 				D0E12FDF1B3A026E001BC006 /* AFSecurityPolicy.m in Sources */,
 				D020FFAA1B2786900046282D /* MainFeedViewController.m in Sources */,
