@@ -23,6 +23,7 @@
 @property (strong, nonatomic) UIImagePickerController *imagePicker;
 @property (strong, nonatomic) UIDocumentInteractionController *documentInteractionController;
 @property (strong, nonatomic) UIImage *imageToShare;
+@property (strong, nonatomic) NSString *dailyThemeString;
 
 @end
 
@@ -134,6 +135,12 @@
                                     [self.friendFeedChild.view alignLeading:@"0" trailing:@"0" toView:self.view];
                                     [self.friendFeedChild.view alignBottomEdgeWithView:self.view predicate:@"0"];
                                     self.currentChild = self.friendFeedChild;
+                                    
+                                    
+                                    [self.friendFeedChild.collectionView constrainBottomSpaceToView:self.friendFeedChild.bottomLayoutGuide predicate:@"0"];
+                                    
+                                    [self.friendFeedChild.collectionView constrainHeightToView:self.friendFeedChild.view predicate:@"0"];
+                                    [self.friendFeedChild.collectionView constrainWidthToView:self.friendFeedChild.view predicate:@"0"];
                                 }];
     }
 }
@@ -295,10 +302,12 @@
     [[NSFileManager defaultManager]removeItemAtPath:imageLocationString error:nil];
     [UIImagePNGRepresentation(self.imageToShare) writeToFile:imageLocationString atomically:YES];
     
-    UIDocumentInteractionController *documentInteractionController = [UIDocumentInteractionController interactionControllerWithURL:[NSURL fileURLWithPath:imageLocationString]];
-    documentInteractionController.delegate = self;
-    documentInteractionController.UTI = @"com.instagram.exclusivegram";
-    [documentInteractionController presentOpenInMenuFromRect:self.view.frame inView:self.view animated:YES];
+    self.documentInteractionController = [UIDocumentInteractionController interactionControllerWithURL:[NSURL fileURLWithPath:imageLocationString]];
+    self.documentInteractionController.delegate = self;
+    self.documentInteractionController.UTI = @"com.instagram.exclusivegram";
+    NSString *annotationString = [NSString stringWithFormat: @"#lifewontwait, #globalthread"];
+    self.documentInteractionController.annotation = [NSDictionary dictionaryWithObject:annotationString forKey:@"InstagramCaption"];
+    [self.documentInteractionController presentOpenInMenuFromRect:CGRectZero inView:self.view animated:YES];
 }
 
 @end

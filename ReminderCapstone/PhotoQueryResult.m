@@ -72,8 +72,6 @@
         
         NSString *calculatedString = [dateFormatter stringFromDate:calculatedDate];
         
-        NSLog(@"%@", calculatedString);
-        
         return calculatedString;
         
     } 
