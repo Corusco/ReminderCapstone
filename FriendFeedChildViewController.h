@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "UIView+FLKAutoLayout.h"
 #import "GlobalPhotoQueryController.h"
+#import "FriendPhotoQueryController.h"
 #import "GlobalFeedCollectionViewDataSource.h"
+#import "FriendFeedCollectionViewDataSource.h"
 #import "PhotoQueryResult.h"
 #import "PhotoDetailViewController.h"
 #import "Defines.h"
@@ -18,6 +20,6 @@
 
 @property (strong, nonatomic) UICollectionView *collectionView;
 @property (strong, nonatomic) UILabel *viewDesignator;
-@property (strong, nonatomic) GlobalFeedCollectionViewDataSource *datasource;
+@property (strong, nonatomic) FriendFeedCollectionViewDataSource *datasource;
 
 @end

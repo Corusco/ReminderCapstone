@@ -10,4 +10,29 @@
 
 @implementation FriendPhotoQueryController
 
++ (instancetype)sharedInstance
+{
+    static FriendPhotoQueryController *sharedInstance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [[FriendPhotoQueryController alloc] init];
+    });
+    
+    return sharedInstance;
+}
+
+
+- (void)searchForInstagramPhotosWithTheme:(NSString *)theme {
+    [APIServiceManager getWithClientID:@"/v1/tags/ldslife/media/recent" parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        self.responseArray = responseObject[@"data"];
+        NSLog(@"Items returned by search: %lu", (unsigned long)[self.responseArray count]);
+//        NSLog(@"%@", self.responseArray);
+        NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+        [nc postNotificationName:kInstagramSearchFinished object:self];
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        NSLog(@"%@", error);
+    }];
+}
+
+
 @end

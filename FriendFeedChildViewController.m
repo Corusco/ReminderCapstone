@@ -23,11 +23,11 @@ static NSString * const cellIDkey = @"cellID";
     NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
     [nc addObserver:self selector:@selector(reloadCollectionView) name:kInstagramSearchFinished object:nil];
     
-    [[GlobalPhotoQueryController sharedInstance] searchForInstagramPhotosWithTheme:@"ldslife"];
+    [[FriendPhotoQueryController sharedInstance] searchForInstagramPhotosWithTheme:@"ldslife"];
     
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:flowLayout];
-    self.datasource = [[GlobalFeedCollectionViewDataSource alloc] init];
+    self.datasource = [[FriendFeedCollectionViewDataSource alloc] init];
     self.collectionView.dataSource = self.datasource;
     self.collectionView.delegate = self;
     

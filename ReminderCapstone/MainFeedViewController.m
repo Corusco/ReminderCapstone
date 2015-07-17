@@ -95,9 +95,9 @@
                     forControlEvents:UIControlEventValueChanged];
     
     self.friendFeedChild = [[FriendFeedChildViewController alloc] init];
-//    [self addChildViewController:self.friendFeedChild];
+    [self addChildViewController:self.friendFeedChild];
     [self.view addSubview:self.friendFeedChild.view];
-    self.friendFeedChild.view.hidden = YES;
+    self.friendFeedChild.view.hidden = NO;
     [self.friendFeedChild.view constrainTopSpaceToView:self.segmentView predicate:@"0"];
     [self.friendFeedChild.view alignLeading:@"0" trailing:@"0" toView:self.view];
     [self.friendFeedChild.view alignBottomEdgeWithView:self.view predicate:@"0"];
@@ -128,19 +128,25 @@
                                 animations:nil
                                 completion:^(BOOL finished) {
                                     [self.globalFeedChild willMoveToParentViewController:nil];
+                                    [self.currentChild willMoveToParentViewController:nil];
+                                    [self.currentChild.view removeFromSuperview];
+                                    [self.globalFeedChild.view removeFromSuperview];
                                     [self.currentChild removeFromParentViewController];
                                     [self.globalFeedChild removeFromParentViewController];
                                     [self.friendFeedChild didMoveToParentViewController:self];
+                                    self.globalFeedChild.view.hidden = YES;
+                                    self.friendFeedChild.view.hidden = NO;
                                     [self.friendFeedChild.view constrainTopSpaceToView:self.segmentView predicate:@"0"];
                                     [self.friendFeedChild.view alignLeading:@"0" trailing:@"0" toView:self.view];
                                     [self.friendFeedChild.view alignBottomEdgeWithView:self.view predicate:@"0"];
                                     self.currentChild = self.friendFeedChild;
                                     
-                                    
                                     [self.friendFeedChild.collectionView constrainBottomSpaceToView:self.friendFeedChild.bottomLayoutGuide predicate:@"0"];
                                     
                                     [self.friendFeedChild.collectionView constrainHeightToView:self.friendFeedChild.view predicate:@"0"];
                                     [self.friendFeedChild.collectionView constrainWidthToView:self.friendFeedChild.view predicate:@"0"];
+                                    
+                                    NSLog(@"Friend Child Finished");
                                 }];
     }
 }
@@ -165,6 +171,7 @@
                                     [self.currentChild removeFromParentViewController];
                                     [self.friendFeedChild removeFromParentViewController];
                                     [self.globalFeedChild didMoveToParentViewController:self];
+                                    self.friendFeedChild.view.hidden = YES;
                                     self.globalFeedChild.view.hidden = NO;
                                     [self.globalFeedChild.view constrainTopSpaceToView:self.segmentView predicate:@"0"];
                                     [self.globalFeedChild.view alignLeading:@"0" trailing:@"0" toView:self.view];
@@ -175,6 +182,8 @@
                                     
                                     [self.globalFeedChild.collectionView constrainHeightToView:self.globalFeedChild.view predicate:@"0"];
                                     [self.globalFeedChild.collectionView constrainWidthToView:self.globalFeedChild.view predicate:@"0"];
+                                    
+                                    NSLog(@"Global Child Finished");
                                 }];
     }
 }

@@ -8,8 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import "APIServiceManager.h"
+#import "Defines.h"
+#import "FriendFeedChildViewController.h"
 
 @interface FriendPhotoQueryController : NSObject
+
+@property (strong, nonatomic) NSArray *responseArray;
+
++ (instancetype)sharedInstance;
+
+- (void)searchForInstagramPhotosWithTheme:(NSString *)theme;
 
 
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D008C6FB1B587B820082828D /* FriendFeedCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D008C6FA1B587B820082828D /* FriendFeedCollectionViewDataSource.m */; };
 		D020003E1B28D5EA0046282D /* WebLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D020003D1B28D5EA0046282D /* WebLoginViewController.m */; };
 		D020FF7F1B2784CD0046282D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D020FF7E1B2784CD0046282D /* main.m */; };
 		D020FF821B2784CD0046282D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D020FF811B2784CD0046282D /* AppDelegate.m */; };
@@ -106,6 +107,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D008C6F91B587B820082828D /* FriendFeedCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendFeedCollectionViewDataSource.h; sourceTree = "<group>"; };
+		D008C6FA1B587B820082828D /* FriendFeedCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendFeedCollectionViewDataSource.m; sourceTree = "<group>"; };
 		D02000351B28C6F10046282D /* Defines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
 		D020003C1B28D5EA0046282D /* WebLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebLoginViewController.h; sourceTree = "<group>"; };
 		D020003D1B28D5EA0046282D /* WebLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebLoginViewController.m; sourceTree = "<group>"; };
@@ -508,6 +511,8 @@
 				D0E12FA81B39D42D001BC006 /* GlobalPhotoQueryController.m */,
 				D0F264001B3B5E2400DB6821 /* GlobalFeedCollectionViewDataSource.h */,
 				D0F264011B3B5E2400DB6821 /* GlobalFeedCollectionViewDataSource.m */,
+				D008C6F91B587B820082828D /* FriendFeedCollectionViewDataSource.h */,
+				D008C6FA1B587B820082828D /* FriendFeedCollectionViewDataSource.m */,
 			);
 			name = DataSources;
 			path = ..;
@@ -707,6 +712,7 @@
 				D0E12FE71B3A026E001BC006 /* UIButton+AFNetworking.m in Sources */,
 				D0E12FB41B39F111001BC006 /* PhotoQueryResult.m in Sources */,
 				D0979DAC1B2B80A10034FECD /* WebServiceManager.m in Sources */,
+				D008C6FB1B587B820082828D /* FriendFeedCollectionViewDataSource.m in Sources */,
 				D0979DA51B2B7B530034FECD /* CustomUIUtils.m in Sources */,
 				D0E12FE91B3A026E001BC006 /* UIProgressView+AFNetworking.m in Sources */,
 				D0E12FA91B39D42D001BC006 /* FriendPhotoQueryController.m in Sources */,
