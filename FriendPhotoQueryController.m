@@ -23,7 +23,7 @@
 
 
 - (void)searchForInstagramPhotosWithTheme:(NSString *)theme {
-    [APIServiceManager getWithClientID:@"/v1/tags/ldslife/media/recent" parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+    [APIServiceManager getWithAccessToken:@"/v1/users/self/feed" parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         self.responseArray = responseObject[@"data"];
         NSLog(@"Items returned by search: %lu", (unsigned long)[self.responseArray count]);
 //        NSLog(@"%@", self.responseArray);

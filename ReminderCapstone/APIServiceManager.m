@@ -9,6 +9,7 @@
 #import "Defines.h"
 #import "APIServiceManager.h"
 #import "AFHTTPSessionManager.h"
+#import "UserController.h"
 
 @implementation APIServiceManager
 
@@ -47,5 +48,30 @@
     
 
 }
+
++ (void) getWithAccessToken:(NSString *)URLString
+              parameters:(id)parameters
+                 success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
+                 failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure {
+    
+    NSDictionary *accessTokenDictionary = [[NSDictionary alloc] initWithObjectsAndKeys:[UserController sharedInstance].currentUser.instagramAccessToken, @"access_token", nil];
+    
+    if (parameters == nil) {
+        
+        [[self instaAPI] GET:URLString parameters:accessTokenDictionary success:success failure:failure];
+        
+        
+    } else {
+        NSMutableDictionary *mutableParameters = [parameters mutableCopy];
+        [mutableParameters addEntriesFromDictionary:accessTokenDictionary];
+        
+        [[self instaAPI] GET:URLString parameters:mutableParameters success:success failure:failure];
+        
+    }
+    
+    
+}
+
+
 
 @end

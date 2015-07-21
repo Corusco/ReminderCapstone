@@ -31,12 +31,12 @@ static NSString * const kInstagramLoginFinished = @"instagramLoginFinished";
 #define kInstagramAuthenticationURL @"oauth/authorize/?client_id=%@&redirect_uri=%@&response_type=token&scope=likes+comments+basic"
 #define kInstagramClientID @"e1d2dfa004db483aa3ec1f201000cd20"
 #define kInstagramRedirectURI @"http://www.ourcavalcade.com"
-#define kInstagramAccessToken @"access_token="
+#define kInstagramAccessTokenRange @"access_token="
 
 #pragma mark - Instagram API USER
 
 #define kInstagramUserEndpoint @"/v1/users/%@/?%@" //use with userID and access token keys. may use self for key owner
-#define kInstagramUserFeed @"/v1/users/self/feed?%@" //use with access token key
+#define kInstagramUserFeed @"/v1/users/self/feed" //use with access token key
 #define kInstagramUserPostFeed @"/v1/users/%@/media/recent/?%@" //use with a user ID and access token key. may use self for owner
 #define kInstagramUserSearch @"/v1/users/search?q=%@&%@" //use with a user ID to search and access token
 

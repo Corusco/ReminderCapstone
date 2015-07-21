@@ -15,6 +15,7 @@
 #import "PhotoQueryResult.h"
 #import "PhotoDetailViewController.h"
 #import "Defines.h"
+#import "FriendFeedPhotoDetailViewController.h"
 
 @interface FriendFeedChildViewController : UIViewController <UICollectionViewDelegateFlowLayout>
 

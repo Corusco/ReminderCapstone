@@ -47,6 +47,7 @@
 		D0979DF11B2F601B0034FECD /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0979DEE1B2F601B0034FECD /* FBSDKCoreKit.framework */; };
 		D0979DF21B2F601B0034FECD /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0979DEF1B2F601B0034FECD /* FBSDKLoginKit.framework */; };
 		D0979DF31B2F601B0034FECD /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0979DF01B2F601B0034FECD /* FBSDKShareKit.framework */; };
+		D0AC80C11B5EDDD10043EB76 /* FriendFeedPhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AC80C01B5EDDD10043EB76 /* FriendFeedPhotoDetailViewController.m */; };
 		D0AE537F1B45B4C100897A95 /* Raleway-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0AE536C1B45B4C100897A95 /* Raleway-Black.ttf */; };
 		D0AE53801B45B4C100897A95 /* Raleway-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0AE536D1B45B4C100897A95 /* Raleway-BlackItalic.ttf */; };
 		D0AE53811B45B4C100897A95 /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0AE536E1B45B4C100897A95 /* Raleway-Bold.ttf */; };
@@ -166,6 +167,8 @@
 		D0979DEE1B2F601B0034FECD /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = /Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<absolute>"; };
 		D0979DEF1B2F601B0034FECD /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = /Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<absolute>"; };
 		D0979DF01B2F601B0034FECD /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = /Documents/FacebookSDK/FBSDKShareKit.framework; sourceTree = "<absolute>"; };
+		D0AC80BF1B5EDDD10043EB76 /* FriendFeedPhotoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendFeedPhotoDetailViewController.h; sourceTree = "<group>"; };
+		D0AC80C01B5EDDD10043EB76 /* FriendFeedPhotoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendFeedPhotoDetailViewController.m; sourceTree = "<group>"; };
 		D0AE536C1B45B4C100897A95 /* Raleway-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Black.ttf"; sourceTree = "<group>"; };
 		D0AE536D1B45B4C100897A95 /* Raleway-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-BlackItalic.ttf"; sourceTree = "<group>"; };
 		D0AE536E1B45B4C100897A95 /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
@@ -359,6 +362,8 @@
 				D0E12F581B389BF2001BC006 /* GlobalFeedChildViewController.m */,
 				D026A7391B3DD259006DE87F /* PhotoDetailViewController.h */,
 				D026A73A1B3DD259006DE87F /* PhotoDetailViewController.m */,
+				D0AC80BF1B5EDDD10043EB76 /* FriendFeedPhotoDetailViewController.h */,
+				D0AC80C01B5EDDD10043EB76 /* FriendFeedPhotoDetailViewController.m */,
 				D08ED2DC1B4B1C9600AB2078 /* SettingsViewController.h */,
 				D08ED2DD1B4B1C9600AB2078 /* SettingsViewController.m */,
 			);
@@ -732,6 +737,7 @@
 				D0E12FE61B3A026E001BC006 /* UIAlertView+AFNetworking.m in Sources */,
 				D020FFB01B27912C0046282D /* LoginViewController.m in Sources */,
 				D0E12FE31B3A026E001BC006 /* AFURLSessionManager.m in Sources */,
+				D0AC80C11B5EDDD10043EB76 /* FriendFeedPhotoDetailViewController.m in Sources */,
 				D0E12FAA1B39D42D001BC006 /* GlobalPhotoQueryController.m in Sources */,
 				D0E12FDC1B3A026E001BC006 /* AFHTTPRequestOperationManager.m in Sources */,
 				D0E12FDD1B3A026E001BC006 /* AFHTTPSessionManager.m in Sources */,

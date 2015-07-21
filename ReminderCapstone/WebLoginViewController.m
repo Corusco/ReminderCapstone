@@ -58,7 +58,7 @@
     
     if ([urlParts count] == 1) {
         
-        NSRange tokenParam = [urlString rangeOfString: kInstagramAccessToken];
+        NSRange tokenParam = [urlString rangeOfString: kInstagramAccessTokenRange];
         if (tokenParam.location != NSNotFound) {
             
             NSString *token = [urlString substringFromIndex: NSMaxRange(tokenParam)];
@@ -71,7 +71,7 @@
             
             if ([token length] > 0 ) {
                 [[UserController sharedInstance] getUserInstagramWithAccessToken:token completion:^{
-                    // Spot for completion code. Shame to let it go to waste.
+                    [UserController sharedInstance].currentUser.instagramAccessToken = token;
                 }];
             }
         } else {

@@ -23,7 +23,7 @@ static NSString * const kCellID = @"cellID";
     
     NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
     [nc addObserver:self selector:@selector(reloadInstagramAccountCell) name:kInstagramLoginFinished object:nil];
-    
+        
     self.navigationController.navigationBar.barTintColor = UIColorFromRGB(0x7FADAD);
     
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Feed" style:UIBarButtonItemStyleDone target:self action:@selector(backButtonTapped)];

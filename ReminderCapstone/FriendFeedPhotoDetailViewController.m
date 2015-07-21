@@ -1,23 +1,23 @@
 //
-//  PhotoDetailViewController.m
+//  FriendFeedPhotoDetailViewController.m
 //  ReminderCapstone
 //
-//  Created by Justin Huntington on 6/26/15.
+//  Created by Justin Huntington on 7/21/15.
 //  Copyright (c) 2015 CVLCD. All rights reserved.
 //
 
-#import "PhotoDetailViewController.h"
+#import "FriendFeedPhotoDetailViewController.h"
 
-@interface PhotoDetailViewController ()
+@interface FriendFeedPhotoDetailViewController ()
 
 @end
 
-@implementation PhotoDetailViewController
+@implementation FriendFeedPhotoDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    PhotoQueryResult *selectedPhoto = [[PhotoQueryResult alloc] initWithDictionary:([GlobalPhotoQueryController sharedInstance].responseArray[self.detailPhotoIndex.row]) fromSource:@"instagram"];
+    PhotoQueryResult *selectedPhoto = [[PhotoQueryResult alloc] initWithDictionary:([FriendPhotoQueryController sharedInstance].responseArray[self.detailPhotoIndex.row]) fromSource:@"instagram"];
     
     self.view.backgroundColor = [UIColor whiteColor];
     
@@ -47,7 +47,7 @@
     [self.scrollView alignLeadingEdgeWithView:self.view predicate:@"0"];
     [self.scrollView alignTrailingEdgeWithView:self.view predicate:@"0"];
     [self.scrollView alignBottomEdgeWithView:self.view predicate:@"0"];
-
+    
     self.photoView = [[UIImageView alloc] init];
     //UIImageView *photoView = [UIImageView new];
     [self.photoView setImageWithURL:[NSURL URLWithString:selectedPhoto.photoURL]];
@@ -73,7 +73,7 @@
     [self.scrollView addSubview:self.likesLabel];
     [self.likesLabel constrainTopSpaceToView:self.photoView predicate:@"5"];
     [self.likesLabel constrainLeadingSpaceToView:self.likeButton predicate:@"5"];
-//    [self.likesLabel constrainTrailingSpaceToView:self.view predicate:@"-93"];
+    //    [self.likesLabel constrainTrailingSpaceToView:self.view predicate:@"-93"];
     [self.likesLabel constrainHeight:@"44"];
     
     self.dateLabel = [[UILabel alloc] init];
@@ -87,7 +87,7 @@
     [self.dateLabel constrainTopSpaceToView:self.photoView predicate:@"5"];
     [self.dateLabel alignTrailingEdgeWithView:self.view predicate:@"-10"];
     [self.dateLabel constrainHeight:@"44"];
-
+    
     
     self.captionLabel = [[UILabel alloc] init];
     self.captionLabel.font = [UIFont fontWithName:@"Raleway-Regular" size:14];
@@ -101,13 +101,12 @@
     
     [self.scrollView alignBottomEdgeWithView:self.captionLabel predicate:@"0"];
     [self.scrollView alignTrailingEdgeWithView:self.view predicate:@"0"];
-
+    
 }
 
 - (void) backButtonTapped {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
 
 
 @end
