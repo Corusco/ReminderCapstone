@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D00785851B67C908008B3FC8 /* MainScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D00785841B67C908008B3FC8 /* MainScrollViewController.m */; };
 		D008C6FB1B587B820082828D /* FriendFeedCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D008C6FA1B587B820082828D /* FriendFeedCollectionViewDataSource.m */; };
 		D020003E1B28D5EA0046282D /* WebLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D020003D1B28D5EA0046282D /* WebLoginViewController.m */; };
 		D020FF7F1B2784CD0046282D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D020FF7E1B2784CD0046282D /* main.m */; };
@@ -108,6 +109,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D00785831B67C908008B3FC8 /* MainScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainScrollViewController.h; sourceTree = "<group>"; };
+		D00785841B67C908008B3FC8 /* MainScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainScrollViewController.m; sourceTree = "<group>"; };
 		D008C6F91B587B820082828D /* FriendFeedCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendFeedCollectionViewDataSource.h; sourceTree = "<group>"; };
 		D008C6FA1B587B820082828D /* FriendFeedCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendFeedCollectionViewDataSource.m; sourceTree = "<group>"; };
 		D02000351B28C6F10046282D /* Defines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
@@ -352,6 +355,8 @@
 			children = (
 				D020FFA81B2786900046282D /* MainFeedViewController.h */,
 				D020FFA91B2786900046282D /* MainFeedViewController.m */,
+				D00785831B67C908008B3FC8 /* MainScrollViewController.h */,
+				D00785841B67C908008B3FC8 /* MainScrollViewController.m */,
 				D020FFAE1B27912C0046282D /* LoginViewController.h */,
 				D020FFAF1B27912C0046282D /* LoginViewController.m */,
 				D020003C1B28D5EA0046282D /* WebLoginViewController.h */,
@@ -726,6 +731,7 @@
 				D0979DB11B2B80F40034FECD /* UILoadingView.m in Sources */,
 				D0E12F641B389D7C001BC006 /* UIView+FLKAutoLayout.m in Sources */,
 				D020003E1B28D5EA0046282D /* WebLoginViewController.m in Sources */,
+				D00785851B67C908008B3FC8 /* MainScrollViewController.m in Sources */,
 				D020FF821B2784CD0046282D /* AppDelegate.m in Sources */,
 				D020FFA41B2785B90046282D /* ConceptModel.m in Sources */,
 				D0E12F591B389BF2001BC006 /* GlobalFeedChildViewController.m in Sources */,

@@ -33,11 +33,11 @@
     [super viewDidLoad];
 
     self.headerView = [[UIView alloc] init];
-    self.headerView.backgroundColor = UIColorFromRGB(0x7FADAD);
+    self.headerView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:self.headerView];
     [self.headerView alignLeading:0 trailing:0 toView:self.view];
     [self.headerView alignTopEdgeWithView:self.view predicate:@"0"];
-    [self.headerView constrainHeight:@"140"];
+    [self.headerView constrainHeight:@"115"];
     
     self.settingsButton = [[UIButton alloc] init];
     UIImage *buttonImage = [UIImage imageNamed:@"basic-settings-iconWhite.png"];
