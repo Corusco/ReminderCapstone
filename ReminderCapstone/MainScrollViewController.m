@@ -16,6 +16,9 @@
 @property (strong, nonatomic) UIImagePickerController *imagePicker;
 @property (strong, nonatomic) UIDocumentInteractionController *documentInteractionController;
 @property (strong, nonatomic) UIImage *imageToShare;
+@property (strong, nonatomic) MainFeedViewController *todayFeed;
+@property (strong, nonatomic) MainFeedViewController *yesterdayFeed;
+@property (strong, nonatomic) MainFeedViewController *dayBeforeFeed;
 
 @end
 
@@ -58,24 +61,23 @@
     [self.scrollView alignTopEdgeWithView:self.view predicate:@"50"];
     [self.scrollView alignBottomEdgeWithView:self.view predicate:@"0"];
     
-    MainFeedViewController *dayBeforeFeed = [[MainFeedViewController alloc] init];
-    [self.scrollView addSubview:dayBeforeFeed.view];
-    [dayBeforeFeed.view alignLeadingEdgeWithView:self.scrollView predicate:@"0"];
-    [dayBeforeFeed.view alignTopEdgeWithView:self.scrollView predicate:@"0"];
-    [dayBeforeFeed.view constrainWidthToView:self.scrollView predicate:@"0"];
+    self.dayBeforeFeed = [[MainFeedViewController alloc] init];
+    [self.scrollView addSubview:self.dayBeforeFeed.view];
+    [self.dayBeforeFeed.view alignLeadingEdgeWithView:self.scrollView predicate:@"0"];
+    [self.dayBeforeFeed.view alignTopEdgeWithView:self.scrollView predicate:@"0"];
+    [self.dayBeforeFeed.view constrainWidthToView:self.scrollView predicate:@"0"];
+    [self.dayBeforeFeed.view constrainHeightToView:self.scrollView predicate:@"0"];
     
-    MainFeedViewController *yesterdayFeed = [[MainFeedViewController alloc] init];
-    [self.scrollView addSubview:yesterdayFeed.view];
-    [yesterdayFeed.view constrainLeadingSpaceToView:dayBeforeFeed.view predicate:@"0"];
-    [yesterdayFeed.view alignTopEdgeWithView:self.scrollView predicate:@"0"];
-    
-
-    
-    MainFeedViewController *todayFeed = [[MainFeedViewController alloc] init];
-    [self.scrollView addSubview:todayFeed.view];
-    [todayFeed.view constrainLeadingSpaceToView:yesterdayFeed.view predicate:@"0"];
-    [todayFeed.view alignTopEdgeWithView:self.scrollView predicate:@"0"];
-    
+//    MainFeedViewController *yesterdayFeed = [[MainFeedViewController alloc] init];
+//    [self.scrollView addSubview:yesterdayFeed.view];
+//    [yesterdayFeed.view constrainLeadingSpaceToView:dayBeforeFeed.view predicate:@"0"];
+//    [yesterdayFeed.view alignTopEdgeWithView:self.scrollView predicate:@"0"];
+//    
+//    MainFeedViewController *todayFeed = [[MainFeedViewController alloc] init];
+//    [self.scrollView addSubview:todayFeed.view];
+//    [todayFeed.view constrainLeadingSpaceToView:yesterdayFeed.view predicate:@"0"];
+//    [todayFeed.view alignTopEdgeWithView:self.scrollView predicate:@"0"];
+//    
     
     
     
