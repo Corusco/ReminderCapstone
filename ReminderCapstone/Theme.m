@@ -10,4 +10,15 @@
 
 @implementation Theme
 
+- (instancetype) initWithDictionary:(NSDictionary *)dictionary {
+    self = [super init];
+    if (self) {
+        self.themeString = dictionary[@"themeString"];
+        self.themeHash = dictionary[@"themeHash"];
+        self.date = dictionary[@"launchDate"];
+    }
+    
+    return self;
+}
+
 @end

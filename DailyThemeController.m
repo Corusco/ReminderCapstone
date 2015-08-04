@@ -22,8 +22,8 @@
 
 - (void)getAllThemes {
     [APIServiceManager getThemeWithParameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-        self.responseArray = responseObject;
         NSLog(@"Themes: %@", responseObject);
+        [self buildThemeArrayWithArray:responseObject];
         NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
         [nc postNotificationName:kThemesLoadFinished object:self];
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
@@ -41,5 +41,17 @@
 - (void)getThemeWithDate:(NSDate *)date{
     
 }
+
+- (void)buildThemeArrayWithArray:(NSArray *)array {
+    
+    NSMutableArray *mutableThemesArray = [self.themeArray mutableCopy];
+    for (NSDictionary *dictionary in array) {
+        [mutableThemesArray addObject:[[Theme alloc] initWithDictionary:dictionary]];
+    }
+    
+    self.themeArray = mutableThemesArray;
+}
+
+
 
 @end

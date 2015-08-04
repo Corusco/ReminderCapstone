@@ -64,6 +64,7 @@
     
     self.dayBeforeFeed = [[MainFeedViewController alloc] init];
     self.dayBeforeFeed.introLabelText = @"The day before was:";
+    [[DailyThemeController sharedInstance] getAllThemes];
     self.dayBeforeFeed.headerThemeText = @"Life Really Didn't Wait";
     self.dayBeforeFeed.view.translatesAutoresizingMaskIntoConstraints = NO;
     [self addChildViewController:self.dayBeforeFeed];

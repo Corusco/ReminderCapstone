@@ -43,7 +43,7 @@
     }
 }
 
-- (NSString *) calculatePostedTime:(NSString *)postedTime {
+- (NSString *)calculatePostedTime:(NSString *)postedTime {
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.timeStyle = NSDateIntervalFormatterNoStyle;
@@ -51,21 +51,26 @@
     NSTimeInterval currentInterval = [NSDate date].timeIntervalSince1970;
     
     
-    if ( currentInterval - [postedTime doubleValue] < 86400) {
-        
+    if (currentInterval - [postedTime doubleValue] < 86400) {
         NSCalendar *currentCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
         NSDate *formattedPostedTime = [NSDate dateWithTimeIntervalSince1970:[postedTime doubleValue]];
-        
         NSDateComponents *dateComponents = [currentCalendar components:NSCalendarUnitHour | NSCalendarUnitMinute fromDate:formattedPostedTime toDate:[NSDate date] options:0];
         
         long hours = [dateComponents hour];
         long minutes = [dateComponents minute];
         
-        NSString *hourMinuteString = [NSString stringWithFormat:@"%ldh  %ldm", hours, minutes];
-        
-        return hourMinuteString;
+        if (hours > 0) {
+            NSString *hourMinuteString = [NSString stringWithFormat:@"%ldh  %ldm", hours, minutes];
+            
+            return hourMinuteString;
+        } else {
+            NSString *minutesString = [NSString stringWithFormat:@"%ldm", minutes];
+            
+            return minutesString;
+        };
         
     } else {
+        
         NSTimeInterval postedInterval = [postedTime doubleValue];
         
         NSDate *calculatedDate = [NSDate dateWithTimeIntervalSince1970:postedInterval];
@@ -73,16 +78,7 @@
         NSString *calculatedString = [dateFormatter stringFromDate:calculatedDate];
         
         return calculatedString;
-        
-    } 
-    
-    
-    
-    
-    
-    
-    
-    
+    }
 }
 
 @end

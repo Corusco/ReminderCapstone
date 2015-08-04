@@ -9,10 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "Defines.h"
 #import "APIServiceManager.h"
+#import "Theme.h"
 
 @interface DailyThemeController : NSObject
 
 @property (strong, nonatomic) NSArray *responseArray;
+@property (strong, nonatomic) NSArray *themeArray;
 
 + (instancetype)sharedInstance;
 

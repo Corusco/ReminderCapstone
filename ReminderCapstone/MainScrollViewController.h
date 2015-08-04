@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MainFeedViewController.h"
 #import "UIView+FLKAutoLayout.h"
+#import "DailyThemeController.h"
 
 
 @interface MainScrollViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIDocumentInteractionControllerDelegate>

@@ -10,4 +10,10 @@
 
 @interface Theme : NSObject
 
+@property (strong, nonatomic) NSString *themeString;
+@property (strong, nonatomic) NSString *themeHash;
+@property (strong, nonatomic) NSDate *date;
+
+- (instancetype) initWithDictionary:(NSDictionary *)dictionary;
+
 @end
