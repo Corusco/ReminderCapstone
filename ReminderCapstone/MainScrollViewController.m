@@ -56,39 +56,59 @@
     
     self.scrollView = [[UIScrollView alloc] init];
     self.scrollView.pagingEnabled = YES;
+    self.scrollView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:self.scrollView];
     [self.scrollView alignLeading:@"0" trailing:@"0" toView:self.view];
     [self.scrollView alignTopEdgeWithView:self.view predicate:@"50"];
     [self.scrollView alignBottomEdgeWithView:self.view predicate:@"0"];
     
     self.dayBeforeFeed = [[MainFeedViewController alloc] init];
+    self.dayBeforeFeed.introLabelText = @"The day before was:";
+    self.dayBeforeFeed.headerThemeText = @"Life Really Didn't Wait";
+    self.dayBeforeFeed.view.translatesAutoresizingMaskIntoConstraints = NO;
     [self addChildViewController:self.dayBeforeFeed];
     [self.dayBeforeFeed didMoveToParentViewController:self];
     [self.scrollView addSubview:self.dayBeforeFeed.view];
+    
+    self.yesterdayFeed = [[MainFeedViewController alloc] init];
+    self.yesterdayFeed.introLabelText = @"Yesterday's theme was:";
+    self.yesterdayFeed.headerThemeText = @"Life Didn't Wait";
+    self.yesterdayFeed.view.translatesAutoresizingMaskIntoConstraints = NO;
+    [self addChildViewController:self.yesterdayFeed];
+    [self.yesterdayFeed didMoveToParentViewController:self];
+    [self.scrollView addSubview:self.yesterdayFeed.view];
+
+    self.todayFeed = [[MainFeedViewController alloc] init];
+    self.todayFeed.introLabelText = @"Todays theme is:";
+    self.todayFeed.headerThemeText = @"Life Won't Wait";
+    self.todayFeed.view.translatesAutoresizingMaskIntoConstraints = NO;
+    [self addChildViewController:self.todayFeed];
+    [self.todayFeed didMoveToParentViewController:self];
+    [self.scrollView addSubview:self.todayFeed.view];
+    
+    [self layoutDayFeeds];
+    
+
+}
+
+- (void)layoutDayFeeds {
+    
     [self.dayBeforeFeed.view alignLeadingEdgeWithView:self.scrollView predicate:@"0"];
     [self.dayBeforeFeed.view alignTopEdgeWithView:self.scrollView predicate:@"0"];
     [self.dayBeforeFeed.view constrainWidthToView:self.scrollView predicate:@"0"];
     [self.dayBeforeFeed.view constrainHeightToView:self.scrollView predicate:@"0"];
     
-    self.yesterdayFeed = [[MainFeedViewController alloc] init];
-    [self addChildViewController:self.yesterdayFeed];
-    [self.yesterdayFeed didMoveToParentViewController:self];
-    [self.scrollView addSubview:self.yesterdayFeed.view];
     [self.yesterdayFeed.view constrainLeadingSpaceToView:self.dayBeforeFeed.view predicate:@"0"];
     [self.yesterdayFeed.view alignTopEdgeWithView:self.scrollView predicate:@"0"];
     [self.yesterdayFeed.view constrainWidthToView:self.scrollView predicate:@"0"];
     [self.yesterdayFeed.view constrainHeightToView:self.scrollView predicate:@"0"];
-//
-//    MainFeedViewController *todayFeed = [[MainFeedViewController alloc] init];
-//    [self.scrollView addSubview:todayFeed.view];
-//    [todayFeed.view constrainLeadingSpaceToView:yesterdayFeed.view predicate:@"0"];
-//    [todayFeed.view alignTopEdgeWithView:self.scrollView predicate:@"0"];
-//    
     
+    [self.todayFeed.view constrainLeadingSpaceToView:self.yesterdayFeed.view predicate:@"0"];
+    [self.todayFeed.view alignTopEdgeWithView:self.scrollView predicate:@"0"];
+    [self.todayFeed.view constrainHeightToView:self.scrollView predicate:@"0"];
+    [self.todayFeed.view constrainWidthToView:self.scrollView predicate:@"0"];
+    [self.todayFeed.view alignTrailingEdgeWithView:self.scrollView predicate:@"0"];
     
-    
-
-
 }
 
 - (void)checkForCamera {

@@ -17,4 +17,8 @@
 
 @interface MainFeedViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIDocumentInteractionControllerDelegate>
 
+@property (strong, nonatomic) NSString *headerThemeText;
+@property (strong, nonatomic) NSString *introLabelText;
+
+
 @end

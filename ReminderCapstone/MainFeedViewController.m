@@ -37,14 +37,14 @@
     self.headerTheme = [[UILabel alloc] init];
     self.headerTheme.textColor = [UIColor whiteColor];
     self.headerTheme.font = [UIFont fontWithName:@"Lobster 1.4" size:40];
-    self.headerTheme.text = @"Life Won't Wait";
+    self.headerTheme.text = self.headerThemeText;
     [self.headerView addSubview:self.headerTheme];  
     [self.headerTheme constrainWidth:@"400" height:@"44"];
     [self.headerTheme alignLeadingEdgeWithView:self.headerView predicate:@"20"];
     [self.headerTheme alignBottomEdgeWithView:self.headerView predicate:@"-20"];
     
     self.introLabel = [[UILabel alloc] init];
-    self.introLabel.text = @"Today's theme is:";
+    self.introLabel.text = self.introLabelText;
     self.introLabel.font = [UIFont fontWithName:@"Raleway-Regular" size:15];
     self.introLabel.textColor = [UIColor whiteColor];
     [self.headerView addSubview:self.introLabel];
@@ -115,8 +115,7 @@
                                     [self.friendFeedChild.view alignBottomEdgeWithView:self.view predicate:@"0"];
                                     self.currentChild = self.friendFeedChild;
                                     
-                                    [self.friendFeedChild.collectionView constrainBottomSpaceToView:self.friendFeedChild.bottomLayoutGuide predicate:@"0"];
-                                    
+                                    [self.friendFeedChild.collectionView alignBottomEdgeWithView:self.friendFeedChild.view predicate:@"0"];
                                     [self.friendFeedChild.collectionView constrainHeightToView:self.friendFeedChild.view predicate:@"0"];
                                     [self.friendFeedChild.collectionView constrainWidthToView:self.friendFeedChild.view predicate:@"0"];
                                     
@@ -152,8 +151,7 @@
                                     [self.globalFeedChild.view alignBottomEdgeWithView:self.view predicate:@"0"];
                                     self.currentChild = self.globalFeedChild;
                                     
-                                    [self.globalFeedChild.collectionView constrainBottomSpaceToView:self.globalFeedChild.bottomLayoutGuide predicate:@"0"];
-                                    
+                                    [self.globalFeedChild.collectionView alignBottomEdgeWithView:self.globalFeedChild.view predicate:@"0"];
                                     [self.globalFeedChild.collectionView constrainHeightToView:self.globalFeedChild.view predicate:@"0"];
                                     [self.globalFeedChild.collectionView constrainWidthToView:self.globalFeedChild.view predicate:@"0"];
                                     
