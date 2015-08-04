@@ -22,6 +22,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 static NSString * const kInstagramSearchFinished = @"instagramSearchFinished";
 static NSString * const kInstagramLoginFinished = @"instagramLoginFinished";
+static NSString * const kThemesLoadFinished = @"themeLoadFinished";
 
 //****Instagram****
 #pragma mark - Instagram BASE

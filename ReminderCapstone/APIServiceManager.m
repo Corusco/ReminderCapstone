@@ -13,6 +13,8 @@
 
 @implementation APIServiceManager
 
+#pragma mark - Instagram API Goods
+
 + (AFHTTPSessionManager *)instaAPI {
     
     static AFHTTPSessionManager *instaAPI = nil;
@@ -26,7 +28,7 @@
     return instaAPI;
 }
 
-+ (void) getWithClientID:(NSString *)URLString
++ (void)getWithClientID:(NSString *)URLString
                   parameters:(id)parameters
                      success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
                      failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure {
@@ -49,7 +51,7 @@
 
 }
 
-+ (void) getWithAccessToken:(NSString *)URLString
++ (void)getWithAccessToken:(NSString *)URLString
               parameters:(id)parameters
                  success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
                  failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure {
@@ -70,6 +72,26 @@
     }
     
     
+}
+
+#pragma mark - Theme Database API Goods
+
++ (AFHTTPSessionManager *)themeAPI {
+    static AFHTTPSessionManager *themeAPI = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        themeAPI = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:@"http://www.ourcavalcade.com/service.php"]];
+        themeAPI.requestSerializer = [AFJSONRequestSerializer serializer];
+        themeAPI.responseSerializer = [AFJSONResponseSerializer serializer];
+    });
+    return themeAPI;
+}
+
++ (void)getThemeWithParameters:(id)parameters
+                       success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
+                       failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure {
+    
+    [[self themeAPI] GET:@"" parameters:parameters success:success failure:failure];
 }
 
 

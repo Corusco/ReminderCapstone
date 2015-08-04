@@ -7,7 +7,7 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>07398C19-C59D-4991-9D59-AACAF4952C53</string>
 	<key>IDESourceControlProjectName</key>
-	<string>ReminderCapstone</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>8126FE61D487FB6973BA67CC7796BDB6F4175517</key>
@@ -16,7 +16,7 @@
 		<string>https://github.com/AFNetworking/AFNetworking</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>ReminderCapstone.xcodeproj</string>
+	<string>ReminderCapstone.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>8126FE61D487FB6973BA67CC7796BDB6F4175517</key>

@@ -1,5 +1,5 @@
 //
-//  ConceptModel.h
+//  Theme.h
 //  ReminderCapstone
 //
 //  Created by Justin Huntington on 6/9/15.
@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ConceptModel : NSObject
+@interface Theme : NSObject
 
 @end
