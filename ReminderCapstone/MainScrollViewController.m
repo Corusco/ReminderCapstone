@@ -88,6 +88,14 @@
     
     [self layoutDayFeeds];
     
+    
+
+}
+
+- (void)viewDidLayoutSubviews {
+    CGPoint pageThreePoint = CGPointMake(self.scrollView.bounds.size.width*2, 0);
+    
+    [self.scrollView setContentOffset:pageThreePoint animated:NO];
 
 }
 
