@@ -24,7 +24,6 @@
 @property (strong, nonatomic) NSString *postedTime;
 @property (strong, nonatomic) NSString *caption;
 
-
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary fromSource:(NSString *)source;
 
 @end

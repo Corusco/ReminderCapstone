@@ -19,6 +19,7 @@
 @property (strong, nonatomic) MainFeedViewController *todayFeed;
 @property (strong, nonatomic) MainFeedViewController *yesterdayFeed;
 @property (strong, nonatomic) MainFeedViewController *dayBeforeFeed;
+@property (strong, nonatomic) ThemeQueryController *themeQueryController;
 
 @end
 
@@ -61,6 +62,9 @@
     [self.scrollView alignLeading:@"0" trailing:@"0" toView:self.view];
     [self.scrollView alignTopEdgeWithView:self.view predicate:@"50"];
     [self.scrollView alignBottomEdgeWithView:self.view predicate:@"0"];
+    
+    self.themeQueryController = [ThemeQueryController new];
+    [self.themeQueryController getTodayTheme];
     
     self.dayBeforeFeed = [[MainFeedViewController alloc] init];
     self.dayBeforeFeed.introLabelText = @"The day before was:";
@@ -134,7 +138,7 @@
 
 - (void)cameraAvailableAlertWithPicker:(UIImagePickerController *)picker {
     
-    UIAlertController *availableAlert = [UIAlertController alertControllerWithTitle:@"Would you like to use the camera or an choose from your gallery?" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *availableAlert = [UIAlertController alertControllerWithTitle:@"Would you like to use the camera or choose from your gallery?" message:nil preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction *cameraAction = [UIAlertAction actionWithTitle:@"Camera" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         dispatch_async(dispatch_get_main_queue(), ^{

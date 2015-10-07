@@ -16,7 +16,7 @@
 		D020FF8A1B2784CD0046282D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D020FF891B2784CD0046282D /* Images.xcassets */; };
 		D020FF8D1B2784CD0046282D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D020FF8B1B2784CD0046282D /* LaunchScreen.xib */; };
 		D020FF991B2784CD0046282D /* ReminderCapstoneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D020FF981B2784CD0046282D /* ReminderCapstoneTests.m */; };
-		D020FFA41B2785B90046282D /* ConceptModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D020FFA31B2785B90046282D /* ConceptModel.m */; };
+		D020FFA41B2785B90046282D /* ThemeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D020FFA31B2785B90046282D /* ThemeModel.m */; };
 		D020FFAA1B2786900046282D /* MainFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D020FFA91B2786900046282D /* MainFeedViewController.m */; };
 		D020FFB01B27912C0046282D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D020FFAF1B27912C0046282D /* LoginViewController.m */; };
 		D026A73B1B3DD259006DE87F /* PhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D026A73A1B3DD259006DE87F /* PhotoDetailViewController.m */; };
@@ -69,6 +69,7 @@
 		D0AE53901B45B4C100897A95 /* Raleway-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0AE537D1B45B4C100897A95 /* Raleway-ThinItalic.ttf */; };
 		D0AE53911B45B4C100897A95 /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = D0AE537E1B45B4C100897A95 /* SIL Open Font License.txt */; };
 		D0AE53931B45B79800897A95 /* Lobster 1.4.otf in Resources */ = {isa = PBXBuildFile; fileRef = D0AE53921B45B79800897A95 /* Lobster 1.4.otf */; };
+		D0CD495B1BBC64B800B8D3C3 /* ThemeQueryController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CD495A1BBC64B800B8D3C3 /* ThemeQueryController.m */; };
 		D0E12F591B389BF2001BC006 /* GlobalFeedChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E12F581B389BF2001BC006 /* GlobalFeedChildViewController.m */; };
 		D0E12F5C1B389C3F001BC006 /* FriendFeedChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E12F5B1B389C3F001BC006 /* FriendFeedChildViewController.m */; };
 		D0E12F631B389D7C001BC006 /* FLKAutoLayoutPredicateList.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E12F5E1B389D7C001BC006 /* FLKAutoLayoutPredicateList.m */; };
@@ -127,8 +128,8 @@
 		D020FF921B2784CD0046282D /* ReminderCapstoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReminderCapstoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D020FF971B2784CD0046282D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D020FF981B2784CD0046282D /* ReminderCapstoneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReminderCapstoneTests.m; sourceTree = "<group>"; };
-		D020FFA21B2785B90046282D /* ConceptModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConceptModel.h; sourceTree = "<group>"; };
-		D020FFA31B2785B90046282D /* ConceptModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConceptModel.m; sourceTree = "<group>"; };
+		D020FFA21B2785B90046282D /* ThemeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeModel.h; sourceTree = "<group>"; };
+		D020FFA31B2785B90046282D /* ThemeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeModel.m; sourceTree = "<group>"; };
 		D020FFA81B2786900046282D /* MainFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainFeedViewController.h; sourceTree = "<group>"; };
 		D020FFA91B2786900046282D /* MainFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainFeedViewController.m; sourceTree = "<group>"; };
 		D020FFAE1B27912C0046282D /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -192,6 +193,8 @@
 		D0AE537D1B45B4C100897A95 /* Raleway-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ThinItalic.ttf"; sourceTree = "<group>"; };
 		D0AE537E1B45B4C100897A95 /* SIL Open Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SIL Open Font License.txt"; sourceTree = "<group>"; };
 		D0AE53921B45B79800897A95 /* Lobster 1.4.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lobster 1.4.otf"; path = "DesignAssets/Lobster 1.4.otf"; sourceTree = SOURCE_ROOT; };
+		D0CD49591BBC64B800B8D3C3 /* ThemeQueryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThemeQueryController.h; path = ReminderCapstone/ThemeQueryController.h; sourceTree = "<group>"; };
+		D0CD495A1BBC64B800B8D3C3 /* ThemeQueryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThemeQueryController.m; path = ReminderCapstone/ThemeQueryController.m; sourceTree = "<group>"; };
 		D0E12F571B389BF2001BC006 /* GlobalFeedChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalFeedChildViewController.h; sourceTree = "<group>"; };
 		D0E12F581B389BF2001BC006 /* GlobalFeedChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalFeedChildViewController.m; sourceTree = "<group>"; };
 		D0E12F5A1B389C3F001BC006 /* FriendFeedChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendFeedChildViewController.h; path = ../FriendFeedChildViewController.h; sourceTree = "<group>"; };
@@ -391,8 +394,8 @@
 				D0E12FB31B39F111001BC006 /* PhotoQueryResult.m */,
 				D02FE4871B2A183D00847DC8 /* User.h */,
 				D02FE4881B2A183D00847DC8 /* User.m */,
-				D020FFA21B2785B90046282D /* ConceptModel.h */,
-				D020FFA31B2785B90046282D /* ConceptModel.m */,
+				D020FFA21B2785B90046282D /* ThemeModel.h */,
+				D020FFA31B2785B90046282D /* ThemeModel.m */,
 			);
 			name = "Model Objects";
 			sourceTree = "<group>";
@@ -515,6 +518,8 @@
 		D0E12FAB1B39D455001BC006 /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
+				D0CD49591BBC64B800B8D3C3 /* ThemeQueryController.h */,
+				D0CD495A1BBC64B800B8D3C3 /* ThemeQueryController.m */,
 				D0E12FA51B39D42D001BC006 /* FriendPhotoQueryController.h */,
 				D0E12FA61B39D42D001BC006 /* FriendPhotoQueryController.m */,
 				D0E12FA71B39D42D001BC006 /* GlobalPhotoQueryController.h */,
@@ -728,12 +733,13 @@
 				D0E12FA91B39D42D001BC006 /* FriendPhotoQueryController.m in Sources */,
 				D0E12FE01B3A026E001BC006 /* AFURLConnectionOperation.m in Sources */,
 				D0E12FEA1B3A026E001BC006 /* UIRefreshControl+AFNetworking.m in Sources */,
+				D0CD495B1BBC64B800B8D3C3 /* ThemeQueryController.m in Sources */,
 				D0979DB11B2B80F40034FECD /* UILoadingView.m in Sources */,
 				D0E12F641B389D7C001BC006 /* UIView+FLKAutoLayout.m in Sources */,
 				D020003E1B28D5EA0046282D /* WebLoginViewController.m in Sources */,
 				D00785851B67C908008B3FC8 /* MainScrollViewController.m in Sources */,
 				D020FF821B2784CD0046282D /* AppDelegate.m in Sources */,
-				D020FFA41B2785B90046282D /* ConceptModel.m in Sources */,
+				D020FFA41B2785B90046282D /* ThemeModel.m in Sources */,
 				D0E12F591B389BF2001BC006 /* GlobalFeedChildViewController.m in Sources */,
 				D0E12FE41B3A026E001BC006 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				D0E12FDB1B3A026E001BC006 /* AFHTTPRequestOperation.m in Sources */,

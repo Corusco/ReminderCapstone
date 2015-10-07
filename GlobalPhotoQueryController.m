@@ -23,9 +23,10 @@
 
 
 - (void)searchForInstagramPhotosWithTheme:(NSString *)theme {
-    [APIServiceManager getWithClientID:@"/v1/tags/lifewontwait/media/recent" parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+    NSString *themeString = [NSString stringWithFormat:@"/v1/tags/%@/media/recent", theme];
+    [APIServiceManager getWithClientID:themeString parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         self.responseArray = responseObject[@"data"];
-        NSLog(@"Items returned by search: %lu", (unsigned long)[self.responseArray count]);
+//        NSLog(@"Items returned by search: %lu", (unsigned long)[self.responseArray count]);
 //        NSLog(@"%@", self.responseArray);
         NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
         [nc postNotificationName:kInstagramSearchFinished object:self];

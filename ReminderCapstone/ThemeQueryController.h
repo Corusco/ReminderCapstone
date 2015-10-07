@@ -7,7 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AFNetworking.h"
+#import "AFHTTPSessionManager.h"
+
 
 @interface ThemeQueryController : NSObject
+
+@property (strong, nonatomic) NSString *todayTheme;
+@property (strong, nonatomic) NSString *yesterdayTheme;
+@property (strong, nonatomic) NSString *dayBeforeTheme;
+
+- (void)getTodayTheme;
 
 @end
