@@ -14,11 +14,12 @@
 @property (strong, nonatomic) NSArray *responseArray;
 @property (strong, nonatomic) NSString *todaysDate;
 
+
 @end
 
 @implementation ThemeQueryController
 
-- (void)getTodayTheme {
+- (void)getTodaysThemes {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd"];
     [dateFormatter setTimeZone:[NSTimeZone localTimeZone]];
@@ -40,6 +41,10 @@
         NSLog(@"%@", error);
     }];
     
+    
+    
 }
+
+
 
 @end

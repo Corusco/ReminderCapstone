@@ -9,14 +9,15 @@
 #import <Foundation/Foundation.h>
 #import "AFNetworking.h"
 #import "AFHTTPSessionManager.h"
+#import "Theme.h"
 
 
 @interface ThemeQueryController : NSObject
 
-@property (strong, nonatomic) NSString *todayTheme;
-@property (strong, nonatomic) NSString *yesterdayTheme;
-@property (strong, nonatomic) NSString *dayBeforeTheme;
+@property (strong, nonatomic) Theme *todayTheme;
+@property (strong, nonatomic) Theme *yesterdayTheme;
+@property (strong, nonatomic) Theme *dayBeforeTheme;
 
-- (void)getTodayTheme;
+- (void)getTodaysThemes;
 
 @end

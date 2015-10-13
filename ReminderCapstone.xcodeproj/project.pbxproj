@@ -16,7 +16,7 @@
 		D020FF8A1B2784CD0046282D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D020FF891B2784CD0046282D /* Images.xcassets */; };
 		D020FF8D1B2784CD0046282D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D020FF8B1B2784CD0046282D /* LaunchScreen.xib */; };
 		D020FF991B2784CD0046282D /* ReminderCapstoneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D020FF981B2784CD0046282D /* ReminderCapstoneTests.m */; };
-		D020FFA41B2785B90046282D /* ThemeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D020FFA31B2785B90046282D /* ThemeModel.m */; };
+		D020FFA41B2785B90046282D /* Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = D020FFA31B2785B90046282D /* Theme.m */; };
 		D020FFAA1B2786900046282D /* MainFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D020FFA91B2786900046282D /* MainFeedViewController.m */; };
 		D020FFB01B27912C0046282D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D020FFAF1B27912C0046282D /* LoginViewController.m */; };
 		D026A73B1B3DD259006DE87F /* PhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D026A73A1B3DD259006DE87F /* PhotoDetailViewController.m */; };
@@ -128,8 +128,8 @@
 		D020FF921B2784CD0046282D /* ReminderCapstoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReminderCapstoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D020FF971B2784CD0046282D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D020FF981B2784CD0046282D /* ReminderCapstoneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReminderCapstoneTests.m; sourceTree = "<group>"; };
-		D020FFA21B2785B90046282D /* ThemeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeModel.h; sourceTree = "<group>"; };
-		D020FFA31B2785B90046282D /* ThemeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeModel.m; sourceTree = "<group>"; };
+		D020FFA21B2785B90046282D /* Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Theme.h; sourceTree = "<group>"; };
+		D020FFA31B2785B90046282D /* Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Theme.m; sourceTree = "<group>"; };
 		D020FFA81B2786900046282D /* MainFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainFeedViewController.h; sourceTree = "<group>"; };
 		D020FFA91B2786900046282D /* MainFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainFeedViewController.m; sourceTree = "<group>"; };
 		D020FFAE1B27912C0046282D /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -394,8 +394,8 @@
 				D0E12FB31B39F111001BC006 /* PhotoQueryResult.m */,
 				D02FE4871B2A183D00847DC8 /* User.h */,
 				D02FE4881B2A183D00847DC8 /* User.m */,
-				D020FFA21B2785B90046282D /* ThemeModel.h */,
-				D020FFA31B2785B90046282D /* ThemeModel.m */,
+				D020FFA21B2785B90046282D /* Theme.h */,
+				D020FFA31B2785B90046282D /* Theme.m */,
 			);
 			name = "Model Objects";
 			sourceTree = "<group>";
@@ -739,7 +739,7 @@
 				D020003E1B28D5EA0046282D /* WebLoginViewController.m in Sources */,
 				D00785851B67C908008B3FC8 /* MainScrollViewController.m in Sources */,
 				D020FF821B2784CD0046282D /* AppDelegate.m in Sources */,
-				D020FFA41B2785B90046282D /* ThemeModel.m in Sources */,
+				D020FFA41B2785B90046282D /* Theme.m in Sources */,
 				D0E12F591B389BF2001BC006 /* GlobalFeedChildViewController.m in Sources */,
 				D0E12FE41B3A026E001BC006 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				D0E12FDB1B3A026E001BC006 /* AFHTTPRequestOperation.m in Sources */,

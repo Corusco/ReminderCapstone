@@ -1,5 +1,5 @@
 //
-//  ThemeModel.h
+//  Theme.h
 //  ReminderCapstone
 //
 //  Created by Justin Huntington on 6/9/15.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ThemeModel : NSObject
+@interface Theme : NSObject
 
 @property (strong, nonatomic) NSString *themeName;
 @property (strong, nonatomic) NSString *themeHash;
