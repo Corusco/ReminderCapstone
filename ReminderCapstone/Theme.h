@@ -13,4 +13,6 @@
 @property (strong, nonatomic) NSString *themeName;
 @property (strong, nonatomic) NSString *themeHash;
 
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+
 @end

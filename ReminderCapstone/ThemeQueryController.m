@@ -35,11 +35,18 @@
     NSString *getString = [NSString stringWithFormat:@"todaysThemes/%@", dummyDate];
     
     [sessionManager GET:getString parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-        NSLog(@"%@", responseObject[0]);
         self.responseArray = responseObject;
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         NSLog(@"%@", error);
     }];
+    
+    if (self.responseArray.count > 0) {
+        self.todayTheme = [[Theme alloc] initWithDictionary:self.responseArray[0]];
+        self.yesterdayTheme = [[Theme alloc] initWithDictionary:self.responseArray[1]];
+        self.dayBeforeTheme = [[Theme alloc] initWithDictionary:self.responseArray[2]];
+        
+        NSLog(@"Made it Through!");
+    }
     
     
     

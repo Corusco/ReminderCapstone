@@ -64,7 +64,7 @@
     [self.scrollView alignBottomEdgeWithView:self.view predicate:@"0"];
     
     self.themeQueryController = [ThemeQueryController new];
-    [self.themeQueryController getTodayTheme];
+    [self.themeQueryController getTodaysThemes];
     
     self.dayBeforeFeed = [[MainFeedViewController alloc] init];
     self.dayBeforeFeed.introLabelText = @"The day before was:";
