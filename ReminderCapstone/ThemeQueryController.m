@@ -35,7 +35,8 @@
     NSString *getString = [NSString stringWithFormat:@"todaysThemes/%@", dummyDate];
     
     [sessionManager GET:getString parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-        self.responseArray = responseObject;
+        self.responseArray = [[NSArray alloc] initWithArray:responseObject];
+        NSLog(@"%@", responseObject);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         NSLog(@"%@", error);
     }];
