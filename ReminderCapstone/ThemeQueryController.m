@@ -37,20 +37,22 @@
     [sessionManager GET:getString parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         self.responseArray = [[NSArray alloc] initWithArray:responseObject];
         NSLog(@"%@", responseObject);
+        [self assignThemes];
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         NSLog(@"%@", error);
     }];
     
+    
+}
+
+- (void)assignThemes {
     if (self.responseArray.count > 0) {
-        self.todayTheme = [[Theme alloc] initWithDictionary:self.responseArray[0]];
-        self.yesterdayTheme = [[Theme alloc] initWithDictionary:self.responseArray[1]];
-        self.dayBeforeTheme = [[Theme alloc] initWithDictionary:self.responseArray[2]];
+        self.todayTheme = [[Theme alloc] initWithDictionary:self.responseArray[0][0]];
+        self.yesterdayTheme = [[Theme alloc] initWithDictionary:self.responseArray[1][0]];
+        self.dayBeforeTheme = [[Theme alloc] initWithDictionary:self.responseArray[2][0]];
         
         NSLog(@"Made it Through!");
     }
-    
-    
-    
 }
 
 

@@ -10,7 +10,7 @@
 
 @interface Theme : NSObject
 
-@property (strong, nonatomic) NSString *themeName;
+@property (strong, nonatomic) NSString *themeTitle;
 @property (strong, nonatomic) NSString *themeHash;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;

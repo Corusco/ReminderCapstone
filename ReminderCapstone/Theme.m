@@ -12,8 +12,8 @@
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
     self = [super init];
-    self.themeName = dictionary[@""];
-    self.themeHash = dictionary[@""];
+    self.themeTitle = dictionary[@"ThemeTitle"];
+    self.themeHash = dictionary[@"ThemeHash"];
     
     return self;
 }
