@@ -51,7 +51,8 @@
         self.yesterdayTheme = [[Theme alloc] initWithDictionary:self.responseArray[1][0]];
         self.dayBeforeTheme = [[Theme alloc] initWithDictionary:self.responseArray[2][0]];
         
-        NSLog(@"Made it Through!");
+        NSNotificationCenter *nc =  [NSNotificationCenter defaultCenter];
+        [nc postNotificationName:kThemeQueryFinished object:self];
     }
 }
 

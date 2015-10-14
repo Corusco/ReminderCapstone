@@ -28,6 +28,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    [nc addObserver:self selector:@selector(assignThemes) name:kThemeQueryFinished object:self];
+    
     self.headerView = [[UIView alloc] init];
     self.headerView.backgroundColor = UIColorFromRGB(0x7FADAD);
     [self.view addSubview:self.headerView];
@@ -68,7 +71,7 @@
     
     self.dayBeforeFeed = [[MainFeedViewController alloc] init];
     self.dayBeforeFeed.introLabelText = @"The day before was:";
-    self.dayBeforeFeed.headerThemeText = @"Life Really Didn't Wait";
+    //self.dayBeforeFeed.headerThemeText = self.themeQueryController.dayBeforeTheme.themeTitle;
     self.dayBeforeFeed.view.translatesAutoresizingMaskIntoConstraints = NO;
     [self addChildViewController:self.dayBeforeFeed];
     [self.dayBeforeFeed didMoveToParentViewController:self];
@@ -76,7 +79,7 @@
     
     self.yesterdayFeed = [[MainFeedViewController alloc] init];
     self.yesterdayFeed.introLabelText = @"Yesterday's theme was:";
-    self.yesterdayFeed.headerThemeText = @"Life Didn't Wait";
+    //self.yesterdayFeed.headerThemeText = self.themeQueryController.yesterdayTheme.themeTitle;
     self.yesterdayFeed.view.translatesAutoresizingMaskIntoConstraints = NO;
     [self addChildViewController:self.yesterdayFeed];
     [self.yesterdayFeed didMoveToParentViewController:self];
@@ -84,7 +87,7 @@
 
     self.todayFeed = [[MainFeedViewController alloc] init];
     self.todayFeed.introLabelText = @"Todays theme is:";
-    self.todayFeed.headerThemeText = @"Life Won't Wait";
+    //self.todayFeed.headerThemeText = self.themeQueryController.todayTheme.themeTitle;
     self.todayFeed.view.translatesAutoresizingMaskIntoConstraints = NO;
     [self addChildViewController:self.todayFeed];
     [self.todayFeed didMoveToParentViewController:self];
@@ -120,6 +123,16 @@
     [self.todayFeed.view constrainHeightToView:self.scrollView predicate:@"0"];
     [self.todayFeed.view constrainWidthToView:self.scrollView predicate:@"0"];
     [self.todayFeed.view alignTrailingEdgeWithView:self.scrollView predicate:@"0"];
+    
+}
+
+- (void)assignThemes {
+    self.dayBeforeFeed.headerThemeText = self.themeQueryController.dayBeforeTheme.themeTitle;
+    self.yesterdayFeed.headerThemeText = self.themeQueryController.yesterdayTheme.themeTitle;
+    self.todayFeed.headerThemeText = self.themeQueryController.todayTheme.themeTitle;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self reloadInputViews];
+    });
     
 }
 

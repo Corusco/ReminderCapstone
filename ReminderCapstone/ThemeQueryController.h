@@ -10,6 +10,7 @@
 #import "AFNetworking.h"
 #import "AFHTTPSessionManager.h"
 #import "Theme.h"
+#import "Defines.h"
 
 
 @interface ThemeQueryController : NSObject
