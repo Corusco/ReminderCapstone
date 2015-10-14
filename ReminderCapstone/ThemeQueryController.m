@@ -28,7 +28,7 @@
     self.todaysDate = [dateFormatter stringFromDate:defaultDate];
     NSString *dummyDate = @"2015-10-02";
     
-    AFHTTPSessionManager *sessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:@"http://www.ourcavalcade.com/api/v1/index.php/"]];
+    AFHTTPSessionManager *sessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:@"https://box1096.bluehost.com/~ourcaval/api/v1/index.php"]];
     sessionManager.requestSerializer = [AFJSONRequestSerializer serializer];
     sessionManager.responseSerializer = [AFJSONResponseSerializer serializer];
     

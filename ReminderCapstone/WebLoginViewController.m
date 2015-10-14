@@ -6,8 +6,6 @@
 //  Copyright (c) 2015 CVLCD. All rights reserved.
 //
 
-#import <FBSDKCoreKit/FBSDKCoreKit.h>
-#import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import "WebLoginViewController.h"
 #import "Defines.h"
 #import "User.h"
@@ -38,12 +36,6 @@
     [nc addObserver:self selector:@selector(popWebLogin) name:kInstagramLoginFinished object:nil];
     
     self.webView = [[UIWebView alloc] initWithFrame:self.view.frame];
-    
-    
-    //Add code for keeping user logged in to facebook when loading app
-    if ([FBSDKAccessToken currentAccessToken]) {
-        
-    }
     
     [self.view addSubview:self.webView];
 }
