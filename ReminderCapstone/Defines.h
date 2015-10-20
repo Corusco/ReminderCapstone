@@ -23,11 +23,15 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 static NSString * const kInstagramSearchFinished = @"instagramSearchFinished";
 static NSString * const kInstagramLoginFinished = @"instagramLoginFinished";
 static NSString * const kThemeQueryFinished = @"ThemeQueryFinished";
+static NSString * const kTodayString = @"Today";
+static NSString * const kYesterdayString = @"Yesterday";
+static NSString * const kDayBeforeString = @"DayBefore";
 
-//****Instagram****
+//****Instagram API****
 #pragma mark - Instagram BASE
 
-#define kInstagramBaseURL @"https://instagram.com/"
+//#define kInstagramBaseURL @"https://instagram.com/"
+static NSString * const kInstagramBaseURL = @"https://instagram.com";
 #define kInstagramAPIBaseURL @"https://api.instagram.com"
 #define kInstagramAuthenticationURL @"oauth/authorize/?client_id=%@&redirect_uri=%@&response_type=token&scope=likes+comments+basic"
 #define kInstagramClientID @"e1d2dfa004db483aa3ec1f201000cd20"

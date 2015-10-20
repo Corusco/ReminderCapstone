@@ -10,16 +10,16 @@
 
 @implementation FriendPhotoQueryController
 
-+ (instancetype)sharedInstance
-{
-    static FriendPhotoQueryController *sharedInstance = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        sharedInstance = [[FriendPhotoQueryController alloc] init];
-    });
-    
-    return sharedInstance;
-}
+//+ (instancetype)sharedInstance
+//{
+//    static FriendPhotoQueryController *sharedInstance = nil;
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken, ^{
+//        sharedInstance = [[FriendPhotoQueryController alloc] init];
+//    });
+//    
+//    return sharedInstance;
+//}
 
 
 - (void)searchForInstagramPhotosWithTheme:(NSString *)theme {

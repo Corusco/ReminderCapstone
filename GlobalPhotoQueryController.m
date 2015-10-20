@@ -10,16 +10,16 @@
 
 @implementation GlobalPhotoQueryController
 
-+ (instancetype)sharedInstance
-{
-    static GlobalPhotoQueryController *sharedInstance = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        sharedInstance = [[GlobalPhotoQueryController alloc] init];
-    });
-                 
-    return sharedInstance;
-}
+//+ (instancetype)sharedInstance
+//{
+//    static GlobalPhotoQueryController *sharedInstance = nil;
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken, ^{
+//        sharedInstance = [[GlobalPhotoQueryController alloc] init];
+//    });
+//                 
+//    return sharedInstance;
+//}
 
 
 - (void)searchForInstagramPhotosWithTheme:(NSString *)theme {

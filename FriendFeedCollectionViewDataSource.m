@@ -7,19 +7,24 @@
 //
 
 #import "FriendFeedCollectionViewDataSource.h"
-#import "FriendPhotoQueryController.h"
-#import "GlobalFeedChildViewController.h"
-#import "PhotoQueryResult.h"
-#import "UIImageView+AFNetworking.h"
 
 static NSString * const cellIDkey = @"cellID";
 
 @implementation FriendFeedCollectionViewDataSource
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.friendPhotoQueryController = [[FriendPhotoQueryController alloc] init];
+    }
+    return self;
+}
+
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIDkey forIndexPath:indexPath];
     
-    PhotoQueryResult *photo = [[PhotoQueryResult alloc] initWithDictionary:([FriendPhotoQueryController sharedInstance].responseArray[indexPath.row]) fromSource:@"instagram"];
+    PhotoQueryResult *photo = [[PhotoQueryResult alloc] initWithDictionary:(self.friendPhotoQueryController.responseArray[indexPath.row]) fromSource:@"instagram"];
     UIImageView *photoView = [[UIImageView alloc] init];
     photoView.frame = cell.contentView.bounds;
     [photoView setImageWithURL:[NSURL URLWithString:photo.photoURL]];
@@ -28,7 +33,7 @@ static NSString * const cellIDkey = @"cellID";
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return [[FriendPhotoQueryController sharedInstance].responseArray count];
+    return [self.friendPhotoQueryController.responseArray count];
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {

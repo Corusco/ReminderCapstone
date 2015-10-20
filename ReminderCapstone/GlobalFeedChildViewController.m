@@ -23,7 +23,8 @@ static NSString * const cellIDkey = @"cellID";
     NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
     [nc addObserver:self selector:@selector(reloadCollectionView) name:kInstagramSearchFinished object:nil];
     
-    [[GlobalPhotoQueryController sharedInstance] searchForInstagramPhotosWithTheme:@"lifewontwait"];
+    self.globalPhotoQueryController = [[GlobalPhotoQueryController alloc] init];
+    [self.globalPhotoQueryController searchForInstagramPhotosWithTheme:@"lifewontwait"];
     
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:flowLayout];
@@ -68,7 +69,7 @@ static NSString * const cellIDkey = @"cellID";
     
     PhotoDetailViewController *detailView = [[PhotoDetailViewController alloc] init];
     
-    detailView.detailPhotoIndex = indexPath;
+    detailView.selectedPhoto = [[PhotoQueryResult alloc] initWithDictionary:(self.globalPhotoQueryController.responseArray[indexPath.row]) fromSource:@"instagram"];
     
     [self presentViewController:detailView animated:YES completion:nil];
 }

@@ -8,9 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "FriendPhotoQueryController.h"
+#import "GlobalFeedChildViewController.h"
+#import "PhotoQueryResult.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface FriendFeedCollectionViewDataSource : NSObject <UICollectionViewDataSource>
 
-
+@property (strong, nonatomic) FriendPhotoQueryController *friendPhotoQueryController;
 
 @end

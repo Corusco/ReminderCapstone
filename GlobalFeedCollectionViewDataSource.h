@@ -8,7 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "GlobalPhotoQueryController.h"
+#import "GlobalFeedChildViewController.h"
+#import "PhotoQueryResult.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface GlobalFeedCollectionViewDataSource : NSObject <UICollectionViewDataSource>
+
+@property (strong, nonatomic) GlobalPhotoQueryController *globalPhotoQueryController;
 
 @end

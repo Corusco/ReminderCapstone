@@ -9,13 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "APIServiceManager.h"
 #import "Defines.h"
-#import "GlobalFeedChildViewController.h"
 
 @interface GlobalPhotoQueryController : NSObject
 
 @property (strong, nonatomic) NSArray *responseArray;
 
-+ (instancetype)sharedInstance;
+//+ (instancetype)sharedInstance;
 
 - (void)searchForInstagramPhotosWithTheme:(NSString *)theme;
 

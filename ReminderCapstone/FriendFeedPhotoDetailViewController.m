@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    PhotoQueryResult *selectedPhoto = [[PhotoQueryResult alloc] initWithDictionary:([FriendPhotoQueryController sharedInstance].responseArray[self.detailPhotoIndex.row]) fromSource:@"instagram"];
+    //PhotoQueryResult *selectedPhoto = [[PhotoQueryResult alloc] initWithDictionary:([FriendPhotoQueryController sharedInstance].responseArray[self.detailPhotoIndex.row]) fromSource:@"instagram"];
     
     self.view.backgroundColor = [UIColor whiteColor];
     
@@ -31,7 +31,7 @@
     backButton.tintColor = [UIColor whiteColor];
     
     UINavigationItem *navigationItem = [[UINavigationItem alloc] init];
-    navigationItem.title = [NSString stringWithFormat:@"@%@", selectedPhoto.user];
+    navigationItem.title = [NSString stringWithFormat:@"@%@", self.selectedPhoto.user];
     [navBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     navigationItem.leftBarButtonItem = backButton;
     
@@ -50,7 +50,7 @@
     
     self.photoView = [[UIImageView alloc] init];
     //UIImageView *photoView = [UIImageView new];
-    [self.photoView setImageWithURL:[NSURL URLWithString:selectedPhoto.photoURL]];
+    [self.photoView setImageWithURL:[NSURL URLWithString:self.selectedPhoto.photoURL]];
     [self.scrollView addSubview:self.photoView];
     [self.photoView constrainWidthToView:self.scrollView predicate:@"0"];
     [self.photoView constrainAspectRatio:@"0"];
@@ -68,7 +68,7 @@
     
     self.likesLabel = [[UILabel alloc] init];
     self.likesLabel.font = [UIFont fontWithName:@"Raleway-Bold" size:28];
-    self.likesLabel.text = [NSString stringWithFormat:@"%@", selectedPhoto.likes];
+    self.likesLabel.text = [NSString stringWithFormat:@"%@", self.selectedPhoto.likes];
     self.likesLabel.backgroundColor = [UIColor whiteColor];
     [self.scrollView addSubview:self.likesLabel];
     [self.likesLabel constrainTopSpaceToView:self.photoView predicate:@"5"];
@@ -80,7 +80,7 @@
     self.dateLabel.font = [UIFont fontWithName:@"RaleWay-Bold" size:28];
     self.dateLabel.textColor = [UIColor lightGrayColor];
     self.dateLabel.backgroundColor = [UIColor whiteColor];
-    self.dateLabel.text = selectedPhoto.postedTime;
+    self.dateLabel.text = self.selectedPhoto.postedTime;
     self.dateLabel.textAlignment = NSTextAlignmentRight;
     [self.dateLabel sizeToFit];
     [self.scrollView addSubview:self.dateLabel];
@@ -91,7 +91,7 @@
     
     self.captionLabel = [[UILabel alloc] init];
     self.captionLabel.font = [UIFont fontWithName:@"Raleway-Regular" size:14];
-    self.captionLabel.text = [NSString stringWithFormat:@"%@", selectedPhoto.caption];
+    self.captionLabel.text = [NSString stringWithFormat:@"%@", self.selectedPhoto.caption];
     self.captionLabel.backgroundColor = [UIColor whiteColor];
     [self.scrollView addSubview:self.captionLabel];
     [self.captionLabel constrainTopSpaceToView:self.likesLabel predicate:@"5"];

@@ -26,7 +26,9 @@ static NSString * const cellIDkey = @"cellID";
     [nc addObserver:self selector:@selector(reloadView) name:kInstagramLoginFinished object:nil];
     
     if ([UserController sharedInstance].currentUser.instagramAccessToken) {
-        [[FriendPhotoQueryController sharedInstance] searchForInstagramPhotosWithTheme:@"ldslife"];
+        
+        self.friendPhotoQueryController = [[FriendPhotoQueryController alloc] init];
+        [self.friendPhotoQueryController searchForInstagramPhotosWithTheme:@"ldslife"];
         
         UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
         self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:flowLayout];
@@ -85,9 +87,9 @@ static NSString * const cellIDkey = @"cellID";
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
     
-    FriendFeedPhotoDetailViewController *detailView = [[FriendFeedPhotoDetailViewController alloc] init];
+    PhotoDetailViewController *detailView = [[PhotoDetailViewController alloc] init];
     
-    detailView.detailPhotoIndex = indexPath;
+    detailView.selectedPhoto = [[PhotoQueryResult alloc] initWithDictionary:(self.friendPhotoQueryController.responseArray[indexPath.row]) fromSource:@"instagram"];
     
     [self presentViewController:detailView animated:YES completion:nil];
 }

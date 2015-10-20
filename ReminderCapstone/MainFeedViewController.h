@@ -21,6 +21,4 @@
 @property (strong, nonatomic) NSString *headerThemeText;
 @property (strong, nonatomic) NSString *introLabelText;
 
-- (void)updateLabelWithTheme:(NSString *)theme;
-
 @end

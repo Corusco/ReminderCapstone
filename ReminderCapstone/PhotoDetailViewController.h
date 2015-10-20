@@ -15,6 +15,7 @@
 @interface PhotoDetailViewController : UIViewController
 
 @property (strong, nonatomic) UIScrollView *scrollView;
+@property (strong, nonatomic) PhotoQueryResult *selectedPhoto;
 @property (assign, nonatomic) NSIndexPath *detailPhotoIndex;
 @property (strong, nonatomic) UIImageView *photoView;
 @property (strong, nonatomic) UILabel *userLabel;

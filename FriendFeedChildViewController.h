@@ -15,12 +15,13 @@
 #import "PhotoQueryResult.h"
 #import "PhotoDetailViewController.h"
 #import "Defines.h"
-#import "FriendFeedPhotoDetailViewController.h"
+//#import "FriendFeedPhotoDetailViewController.h"
 
 @interface FriendFeedChildViewController : UIViewController <UICollectionViewDelegateFlowLayout>
 
 @property (strong, nonatomic) UICollectionView *collectionView;
 @property (strong, nonatomic) UILabel *viewDesignator;
 @property (strong, nonatomic) FriendFeedCollectionViewDataSource *datasource;
+@property (strong, nonatomic) FriendPhotoQueryController *friendPhotoQueryController;
 
 @end
