@@ -10,6 +10,7 @@
 #import "MainFeedViewController.h"
 #import "UIView+FLKAutoLayout.h"
 #import "ThemeQueryController.h"
+#import "Defines.h"
 
 
 @interface MainScrollViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIDocumentInteractionControllerDelegate>

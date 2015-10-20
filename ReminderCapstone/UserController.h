@@ -18,7 +18,6 @@
 @interface UserController : NSObject
 
 @property (strong, nonatomic) User *currentUser;
-
 @property (strong, nonatomic) NSDictionary *userDictionary;
 
 + (instancetype)sharedInstance;

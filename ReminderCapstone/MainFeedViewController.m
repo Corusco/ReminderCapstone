@@ -12,7 +12,6 @@
 
 @property (strong, nonatomic) UILabel *introLabel;
 @property (strong, nonatomic) UIView *headerView;
-@property (strong, nonatomic) UILabel *headerTheme;
 @property (strong, nonatomic) UIView *segmentView;
 @property (strong, nonatomic) UISegmentedControl *segmentedControl;
 @property (strong, nonatomic) FriendFeedChildViewController *friendFeedChild;
