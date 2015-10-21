@@ -13,7 +13,7 @@
 #import "PhotoDetailViewController.h"
 #import "Defines.h"
 #import "ThemeQueryController.h"
-#import "GlobalFeedCollectionViewDataSource.h"
+
 
 
 @interface GlobalFeedChildViewController : UIViewController <UICollectionViewDelegateFlowLayout>
@@ -21,6 +21,8 @@
 @property (strong, nonatomic) UICollectionView *collectionView;
 @property (strong, nonatomic) UILabel *viewDesignator;
 @property (strong, nonatomic) GlobalPhotoQueryController *globalPhotoQueryController;
-@property (strong, nonatomic) GlobalFeedCollectionViewDataSource *datasource;
+@property (strong, nonatomic) Theme *thisDaysTheme;
+
+- (void)assignTheme:(Theme *)theme;
 
 @end

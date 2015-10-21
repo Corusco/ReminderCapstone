@@ -66,8 +66,7 @@
     [self.scrollView alignTopEdgeWithView:self.view predicate:@"50"];
     [self.scrollView alignBottomEdgeWithView:self.view predicate:@"0"];
     
-    self.themeQueryController = [ThemeQueryController new];
-    [self.themeQueryController getTodaysThemes];
+    [[ThemeQueryController sharedInstance] getTodaysThemes];
     
     self.dayBeforeFeed = [[MainFeedViewController alloc] init];
     self.dayBeforeFeed.introLabelText = @"The day before was:";
@@ -124,9 +123,16 @@
 
 
 - (void)assignThemes {
-    self.dayBeforeFeed.headerTheme.text = self.themeQueryController.dayBeforeTheme.themeTitle;
-    self.yesterdayFeed.headerTheme.text = self.themeQueryController.yesterdayTheme.themeTitle;
-    self.todayFeed.headerTheme.text = self.themeQueryController.todayTheme.themeTitle;
+    self.dayBeforeFeed.headerTheme.text = [ThemeQueryController sharedInstance].dayBeforeTheme.themeTitle;
+    self.yesterdayFeed.headerTheme.text = [ThemeQueryController sharedInstance].yesterdayTheme.themeTitle;
+    self.todayFeed.headerTheme.text = [ThemeQueryController sharedInstance].todayTheme.themeTitle;
+    
+    [self.dayBeforeFeed.globalFeedChild assignTheme:[ThemeQueryController sharedInstance].dayBeforeTheme];
+    [self.yesterdayFeed.globalFeedChild assignTheme:[ThemeQueryController sharedInstance].yesterdayTheme];
+    [self.todayFeed.globalFeedChild assignTheme:[ThemeQueryController sharedInstance].yesterdayTheme];
+    
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    [nc postNotificationName:kThemesAssigned object:self];
 }
 
 
@@ -250,7 +256,7 @@
     self.documentInteractionController = [UIDocumentInteractionController interactionControllerWithURL:[NSURL fileURLWithPath:imageLocationString]];
     self.documentInteractionController.delegate = self;
     self.documentInteractionController.UTI = @"com.instagram.exclusivegram";
-    NSString *annotationString = [NSString stringWithFormat: @"#lifewontwait, #globalthread"];
+    NSString *annotationString = [NSString stringWithFormat: @"#%@, #globalthread", [ThemeQueryController sharedInstance].todayTheme.themeHash];
     self.documentInteractionController.annotation = [NSDictionary dictionaryWithObject:annotationString forKey:@"InstagramCaption"];
     [self.documentInteractionController presentOpenInMenuFromRect:CGRectZero inView:self.view animated:YES];
 }

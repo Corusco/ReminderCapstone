@@ -7,10 +7,13 @@
 //
 
 #import "GlobalFeedChildViewController.h"
+#import "GlobalFeedCollectionViewDataSource.h"
 
 static NSString * const cellIDkey = @"cellID";
 
 @interface GlobalFeedChildViewController ()
+
+@property (strong, nonatomic) GlobalFeedCollectionViewDataSource *datasource;
 
 @end
 
@@ -21,10 +24,11 @@ static NSString * const cellIDkey = @"cellID";
     [super viewDidLoad];
     
     NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    [nc addObserver:self selector:@selector(searchForThemes) name:kThemeQueryFinished object:nil];
     [nc addObserver:self selector:@selector(reloadCollectionView) name:kInstagramSearchFinished object:nil];
     
     self.globalPhotoQueryController = [[GlobalPhotoQueryController alloc] init];
-    [self.globalPhotoQueryController searchForInstagramPhotosWithTheme:@"lifewontwait"];
+    //[self.globalPhotoQueryController searchForInstagramPhotosWithTheme: [NSString stringWithFormat:@"%@", self.thisDaysTheme.themeHash]];
     
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:flowLayout];
@@ -43,6 +47,13 @@ static NSString * const cellIDkey = @"cellID";
 
 }
 
+- (void)assignTheme:(Theme *)theme {
+    self.thisDaysTheme = theme;
+}
+
+- (void)searchForThemes {
+    [self.globalPhotoQueryController searchForInstagramPhotosWithTheme:[NSString stringWithFormat:@"%@", self.thisDaysTheme.themeHash]];
+}
      
 - (void)reloadCollectionView {
     [self.collectionView reloadData];

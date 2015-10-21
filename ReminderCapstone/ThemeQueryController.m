@@ -19,6 +19,17 @@
 
 @implementation ThemeQueryController
 
++ (instancetype)sharedInstance {
+    static ThemeQueryController *sharedInstance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [[ThemeQueryController alloc] init];
+    });
+    
+    return sharedInstance;
+}
+
+
 - (void)getTodaysThemes {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd"];

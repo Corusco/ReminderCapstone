@@ -19,6 +19,8 @@
 @property (strong, nonatomic) Theme *yesterdayTheme;
 @property (strong, nonatomic) Theme *dayBeforeTheme;
 
++ (instancetype)sharedInstance;
+
 - (void)getTodaysThemes;
 
 @end

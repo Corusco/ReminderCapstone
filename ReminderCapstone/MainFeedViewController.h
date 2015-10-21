@@ -20,5 +20,7 @@
 @property (strong, nonatomic) UILabel *headerTheme;
 @property (strong, nonatomic) NSString *headerThemeText;
 @property (strong, nonatomic) NSString *introLabelText;
+@property (strong, nonatomic) FriendFeedChildViewController *friendFeedChild;
+@property (strong, nonatomic) GlobalFeedChildViewController *globalFeedChild;
 
 @end

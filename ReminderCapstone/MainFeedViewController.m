@@ -14,8 +14,6 @@
 @property (strong, nonatomic) UIView *headerView;
 @property (strong, nonatomic) UIView *segmentView;
 @property (strong, nonatomic) UISegmentedControl *segmentedControl;
-@property (strong, nonatomic) FriendFeedChildViewController *friendFeedChild;
-@property (strong, nonatomic) GlobalFeedChildViewController *globalFeedChild;
 @property (strong, nonatomic) UIViewController *currentChild;
 @property (strong, nonatomic) NSString *dailyThemeString;
 
