@@ -28,12 +28,10 @@ static NSString * const cellIDkey = @"cellID";
     [nc addObserver:self selector:@selector(reloadCollectionView) name:kInstagramSearchFinished object:nil];
     
     self.globalPhotoQueryController = [[GlobalPhotoQueryController alloc] init];
-    //[self.globalPhotoQueryController searchForInstagramPhotosWithTheme: [NSString stringWithFormat:@"%@", self.thisDaysTheme.themeHash]];
     
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:flowLayout];
-    self.datasource = [[GlobalFeedCollectionViewDataSource alloc] init];
-    self.collectionView.dataSource = self.datasource;
+    self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
 
     self.collectionView.contentSize = CGSizeMake(self.view.frame.size.width/2, self.view.frame.size
@@ -84,5 +82,29 @@ static NSString * const cellIDkey = @"cellID";
     
     [self presentViewController:detailView animated:YES completion:nil];
 }
+
+# pragma mark - datasource
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIDkey forIndexPath:indexPath];
+    
+    PhotoQueryResult *photo = [[PhotoQueryResult alloc] initWithDictionary:(self.globalPhotoQueryController.responseArray[indexPath.row]) fromSource:@"instagram"];
+    UIImageView *photoView = [[UIImageView alloc] init];
+    photoView.frame = cell.contentView.bounds;
+    [photoView setImageWithURL:[NSURL URLWithString:photo.photoURL]];
+    [cell.contentView addSubview:photoView];
+    return cell;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return [self.globalPhotoQueryController.responseArray count];
+}
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
+}
+
+
+
 
 @end

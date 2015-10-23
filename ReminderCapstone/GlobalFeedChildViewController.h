@@ -16,7 +16,7 @@
 
 
 
-@interface GlobalFeedChildViewController : UIViewController <UICollectionViewDelegateFlowLayout>
+@interface GlobalFeedChildViewController : UIViewController <UICollectionViewDelegateFlowLayout, UICollectionViewDataSource>
 
 @property (strong, nonatomic) UICollectionView *collectionView;
 @property (strong, nonatomic) UILabel *viewDesignator;

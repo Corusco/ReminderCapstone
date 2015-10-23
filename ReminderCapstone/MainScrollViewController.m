@@ -129,7 +129,7 @@
     
     [self.dayBeforeFeed.globalFeedChild assignTheme:[ThemeQueryController sharedInstance].dayBeforeTheme];
     [self.yesterdayFeed.globalFeedChild assignTheme:[ThemeQueryController sharedInstance].yesterdayTheme];
-    [self.todayFeed.globalFeedChild assignTheme:[ThemeQueryController sharedInstance].yesterdayTheme];
+    [self.todayFeed.globalFeedChild assignTheme:[ThemeQueryController sharedInstance].todayTheme];
     
     NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
     [nc postNotificationName:kThemesAssigned object:self];
