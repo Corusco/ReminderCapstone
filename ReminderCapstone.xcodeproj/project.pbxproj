@@ -69,7 +69,6 @@
 		D0AE53931B45B79800897A95 /* Lobster 1.4.otf in Resources */ = {isa = PBXBuildFile; fileRef = D0AE53921B45B79800897A95 /* Lobster 1.4.otf */; };
 		D0CD495B1BBC64B800B8D3C3 /* ThemeQueryController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CD495A1BBC64B800B8D3C3 /* ThemeQueryController.m */; };
 		D0E12F591B389BF2001BC006 /* GlobalFeedChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E12F581B389BF2001BC006 /* GlobalFeedChildViewController.m */; };
-		D0E12F5C1B389C3F001BC006 /* FriendFeedChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E12F5B1B389C3F001BC006 /* FriendFeedChildViewController.m */; };
 		D0E12F631B389D7C001BC006 /* FLKAutoLayoutPredicateList.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E12F5E1B389D7C001BC006 /* FLKAutoLayoutPredicateList.m */; };
 		D0E12F641B389D7C001BC006 /* UIView+FLKAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E12F601B389D7C001BC006 /* UIView+FLKAutoLayout.m */; };
 		D0E12F651B389D7C001BC006 /* UIView+FLKAutoLayoutPredicate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E12F621B389D7C001BC006 /* UIView+FLKAutoLayoutPredicate.m */; };
@@ -193,8 +192,6 @@
 		D0CD495A1BBC64B800B8D3C3 /* ThemeQueryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThemeQueryController.m; path = ReminderCapstone/ThemeQueryController.m; sourceTree = "<group>"; };
 		D0E12F571B389BF2001BC006 /* GlobalFeedChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalFeedChildViewController.h; sourceTree = "<group>"; };
 		D0E12F581B389BF2001BC006 /* GlobalFeedChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalFeedChildViewController.m; sourceTree = "<group>"; };
-		D0E12F5A1B389C3F001BC006 /* FriendFeedChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendFeedChildViewController.h; path = ../FriendFeedChildViewController.h; sourceTree = "<group>"; };
-		D0E12F5B1B389C3F001BC006 /* FriendFeedChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendFeedChildViewController.m; path = ../FriendFeedChildViewController.m; sourceTree = "<group>"; };
 		D0E12F5D1B389D7C001BC006 /* FLKAutoLayoutPredicateList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLKAutoLayoutPredicateList.h; sourceTree = "<group>"; };
 		D0E12F5E1B389D7C001BC006 /* FLKAutoLayoutPredicateList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLKAutoLayoutPredicateList.m; sourceTree = "<group>"; };
 		D0E12F5F1B389D7C001BC006 /* UIView+FLKAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FLKAutoLayout.h"; sourceTree = "<group>"; };
@@ -355,8 +352,6 @@
 				D020FFAF1B27912C0046282D /* LoginViewController.m */,
 				D020003C1B28D5EA0046282D /* WebLoginViewController.h */,
 				D020003D1B28D5EA0046282D /* WebLoginViewController.m */,
-				D0E12F5A1B389C3F001BC006 /* FriendFeedChildViewController.h */,
-				D0E12F5B1B389C3F001BC006 /* FriendFeedChildViewController.m */,
 				D0E12F571B389BF2001BC006 /* GlobalFeedChildViewController.h */,
 				D0E12F581B389BF2001BC006 /* GlobalFeedChildViewController.m */,
 				D026A7391B3DD259006DE87F /* PhotoDetailViewController.h */,
@@ -756,7 +751,6 @@
 				D0E12FEB1B3A026E001BC006 /* UIWebView+AFNetworking.m in Sources */,
 				D02FE4891B2A183D00847DC8 /* User.m in Sources */,
 				D0E12FE51B3A026E001BC006 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
-				D0E12F5C1B389C3F001BC006 /* FriendFeedChildViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
