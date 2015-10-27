@@ -10,7 +10,6 @@
 
 #import "Defines.h"
 #import "GlobalFeedChildViewController.h"
-#import "FriendFeedChildViewController.h"
 #import "UIView+FLKAutoLayout.h"
 #import "SettingsViewController.h"
 
@@ -20,7 +19,6 @@
 @property (strong, nonatomic) UILabel *headerTheme;
 @property (strong, nonatomic) NSString *headerThemeText;
 @property (strong, nonatomic) NSString *introLabelText;
-@property (strong, nonatomic) FriendFeedChildViewController *friendFeedChild;
 @property (strong, nonatomic) GlobalFeedChildViewController *globalFeedChild;
 
 @end
