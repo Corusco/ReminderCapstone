@@ -30,19 +30,21 @@ static NSString * const cellIDkey = @"cellID";
     self.globalPhotoQueryController = [[GlobalPhotoQueryController alloc] init];
     
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:flowLayout];
+    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowLayout];
+    self.collectionView.collectionViewLayout = flowLayout;
+    self.collectionView.translatesAutoresizingMaskIntoConstraints = false;
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
-
-    self.collectionView.contentSize = CGSizeMake(self.view.frame.size.width/2, self.view.frame.size
-                                                  .width/2);
+    
+    self.collectionView.contentSize = CGSizeMake(self.view.frame.size.width/2, self.view.frame.size.width);
     
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:cellIDkey];
     
     self.collectionView.backgroundColor = [UIColor colorWithWhite:1 alpha:1];
     
     [self.view addSubview:self.collectionView];
-
+    
+    [self.collectionView alignTop:@"0" leading:@"0" bottom:@"0" trailing:@"0" toView:self.view];
 }
 
 - (void)assignTheme:(Theme *)theme {

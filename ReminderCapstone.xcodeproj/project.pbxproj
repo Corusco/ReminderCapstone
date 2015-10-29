@@ -10,7 +10,6 @@
 		D00785851B67C908008B3FC8 /* MainScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D00785841B67C908008B3FC8 /* MainScrollViewController.m */; };
 		D008C6FB1B587B820082828D /* FriendFeedCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D008C6FA1B587B820082828D /* FriendFeedCollectionViewDataSource.m */; };
 		D01122D21BD7088000902F5A /* GlobalFeedCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D01122D11BD7088000902F5A /* GlobalFeedCollectionViewDataSource.m */; settings = {ASSET_TAGS = (); }; };
-		D020003E1B28D5EA0046282D /* WebLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D020003D1B28D5EA0046282D /* WebLoginViewController.m */; };
 		D020FF7F1B2784CD0046282D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D020FF7E1B2784CD0046282D /* main.m */; };
 		D020FF821B2784CD0046282D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D020FF811B2784CD0046282D /* AppDelegate.m */; };
 		D020FF881B2784CD0046282D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D020FF861B2784CD0046282D /* Main.storyboard */; };
@@ -19,7 +18,6 @@
 		D020FF991B2784CD0046282D /* ReminderCapstoneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D020FF981B2784CD0046282D /* ReminderCapstoneTests.m */; };
 		D020FFA41B2785B90046282D /* Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = D020FFA31B2785B90046282D /* Theme.m */; };
 		D020FFAA1B2786900046282D /* MainFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D020FFA91B2786900046282D /* MainFeedViewController.m */; };
-		D020FFB01B27912C0046282D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D020FFAF1B27912C0046282D /* LoginViewController.m */; };
 		D026A73B1B3DD259006DE87F /* PhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D026A73A1B3DD259006DE87F /* PhotoDetailViewController.m */; };
 		D02FE4891B2A183D00847DC8 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = D02FE4881B2A183D00847DC8 /* User.m */; };
 		D02FE48C1B2A1C5F00847DC8 /* UserController.m in Sources */ = {isa = PBXBuildFile; fileRef = D02FE48B1B2A1C5F00847DC8 /* UserController.m */; };
@@ -46,7 +44,6 @@
 		D0979DAC1B2B80A10034FECD /* WebServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D0979DAB1B2B80A10034FECD /* WebServiceManager.m */; };
 		D0979DB11B2B80F40034FECD /* UILoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0979DAF1B2B80F40034FECD /* UILoadingView.m */; };
 		D0979DB21B2B80F40034FECD /* UILoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0979DB01B2B80F40034FECD /* UILoadingView.xib */; };
-		D0AC80C11B5EDDD10043EB76 /* FriendFeedPhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AC80C01B5EDDD10043EB76 /* FriendFeedPhotoDetailViewController.m */; };
 		D0AE537F1B45B4C100897A95 /* Raleway-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0AE536C1B45B4C100897A95 /* Raleway-Black.ttf */; };
 		D0AE53801B45B4C100897A95 /* Raleway-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0AE536D1B45B4C100897A95 /* Raleway-BlackItalic.ttf */; };
 		D0AE53811B45B4C100897A95 /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0AE536E1B45B4C100897A95 /* Raleway-Bold.ttf */; };
@@ -113,8 +110,6 @@
 		D01122D01BD7088000902F5A /* GlobalFeedCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GlobalFeedCollectionViewDataSource.h; path = ReminderCapstone/GlobalFeedCollectionViewDataSource.h; sourceTree = "<group>"; };
 		D01122D11BD7088000902F5A /* GlobalFeedCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GlobalFeedCollectionViewDataSource.m; path = ReminderCapstone/GlobalFeedCollectionViewDataSource.m; sourceTree = "<group>"; };
 		D02000351B28C6F10046282D /* Defines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
-		D020003C1B28D5EA0046282D /* WebLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebLoginViewController.h; sourceTree = "<group>"; };
-		D020003D1B28D5EA0046282D /* WebLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebLoginViewController.m; sourceTree = "<group>"; };
 		D020FF791B2784CD0046282D /* ReminderCapstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReminderCapstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D020FF7D1B2784CD0046282D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D020FF7E1B2784CD0046282D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -130,10 +125,9 @@
 		D020FFA31B2785B90046282D /* Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Theme.m; sourceTree = "<group>"; };
 		D020FFA81B2786900046282D /* MainFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainFeedViewController.h; sourceTree = "<group>"; };
 		D020FFA91B2786900046282D /* MainFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainFeedViewController.m; sourceTree = "<group>"; };
-		D020FFAE1B27912C0046282D /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		D020FFAF1B27912C0046282D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		D026A7391B3DD259006DE87F /* PhotoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoDetailViewController.h; sourceTree = "<group>"; };
 		D026A73A1B3DD259006DE87F /* PhotoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoDetailViewController.m; sourceTree = "<group>"; };
+		D02BF5EB1BE041DB00D7F4D1 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reveal.framework; path = "../../../Downloads/Reveal.app/Contents/SharedSupport/iOS-Libraries/Reveal.framework"; sourceTree = "<group>"; };
 		D02FE4871B2A183D00847DC8 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		D02FE4881B2A183D00847DC8 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		D02FE48A1B2A1C5F00847DC8 /* UserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserController.h; sourceTree = "<group>"; };
@@ -166,8 +160,6 @@
 		D0979DAE1B2B80F40034FECD /* UILoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILoadingView.h; sourceTree = "<group>"; };
 		D0979DAF1B2B80F40034FECD /* UILoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UILoadingView.m; sourceTree = "<group>"; };
 		D0979DB01B2B80F40034FECD /* UILoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UILoadingView.xib; sourceTree = "<group>"; };
-		D0AC80BF1B5EDDD10043EB76 /* FriendFeedPhotoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendFeedPhotoDetailViewController.h; sourceTree = "<group>"; };
-		D0AC80C01B5EDDD10043EB76 /* FriendFeedPhotoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendFeedPhotoDetailViewController.m; sourceTree = "<group>"; };
 		D0AE536C1B45B4C100897A95 /* Raleway-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Black.ttf"; sourceTree = "<group>"; };
 		D0AE536D1B45B4C100897A95 /* Raleway-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-BlackItalic.ttf"; sourceTree = "<group>"; };
 		D0AE536E1B45B4C100897A95 /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
@@ -348,16 +340,10 @@
 				D020FFA91B2786900046282D /* MainFeedViewController.m */,
 				D00785831B67C908008B3FC8 /* MainScrollViewController.h */,
 				D00785841B67C908008B3FC8 /* MainScrollViewController.m */,
-				D020FFAE1B27912C0046282D /* LoginViewController.h */,
-				D020FFAF1B27912C0046282D /* LoginViewController.m */,
-				D020003C1B28D5EA0046282D /* WebLoginViewController.h */,
-				D020003D1B28D5EA0046282D /* WebLoginViewController.m */,
 				D0E12F571B389BF2001BC006 /* GlobalFeedChildViewController.h */,
 				D0E12F581B389BF2001BC006 /* GlobalFeedChildViewController.m */,
 				D026A7391B3DD259006DE87F /* PhotoDetailViewController.h */,
 				D026A73A1B3DD259006DE87F /* PhotoDetailViewController.m */,
-				D0AC80BF1B5EDDD10043EB76 /* FriendFeedPhotoDetailViewController.h */,
-				D0AC80C01B5EDDD10043EB76 /* FriendFeedPhotoDetailViewController.m */,
 				D08ED2DC1B4B1C9600AB2078 /* SettingsViewController.h */,
 				D08ED2DD1B4B1C9600AB2078 /* SettingsViewController.m */,
 			);
@@ -433,6 +419,7 @@
 		D0979DF41B2F60230034FECD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D02BF5EB1BE041DB00D7F4D1 /* Reveal.framework */,
 				D0E12FC91B3A026E001BC006 /* UIKit+AFNetworking */,
 				D0E12FB51B3A026D001BC006 /* AFNetworking */,
 				D0E12F661B389D8A001BC006 /* FLKAutoLayout */,
@@ -719,7 +706,6 @@
 				D0CD495B1BBC64B800B8D3C3 /* ThemeQueryController.m in Sources */,
 				D0979DB11B2B80F40034FECD /* UILoadingView.m in Sources */,
 				D0E12F641B389D7C001BC006 /* UIView+FLKAutoLayout.m in Sources */,
-				D020003E1B28D5EA0046282D /* WebLoginViewController.m in Sources */,
 				D00785851B67C908008B3FC8 /* MainScrollViewController.m in Sources */,
 				D020FF821B2784CD0046282D /* AppDelegate.m in Sources */,
 				D020FFA41B2785B90046282D /* Theme.m in Sources */,
@@ -730,9 +716,7 @@
 				D0E12FDE1B3A026E001BC006 /* AFNetworkReachabilityManager.m in Sources */,
 				D026A73B1B3DD259006DE87F /* PhotoDetailViewController.m in Sources */,
 				D0E12FE61B3A026E001BC006 /* UIAlertView+AFNetworking.m in Sources */,
-				D020FFB01B27912C0046282D /* LoginViewController.m in Sources */,
 				D0E12FE31B3A026E001BC006 /* AFURLSessionManager.m in Sources */,
-				D0AC80C11B5EDDD10043EB76 /* FriendFeedPhotoDetailViewController.m in Sources */,
 				D0E12FAA1B39D42D001BC006 /* GlobalPhotoQueryController.m in Sources */,
 				D0E12FDC1B3A026E001BC006 /* AFHTTPRequestOperationManager.m in Sources */,
 				D0E12FDD1B3A026E001BC006 /* AFHTTPSessionManager.m in Sources */,
@@ -880,8 +864,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Reveal.app/Contents/SharedSupport/iOS-Libraries\"",
+				);
 				INFOPLIST_FILE = ReminderCapstone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lz",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "CVLCD.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -893,6 +887,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Reveal.app/Contents/SharedSupport/iOS-Libraries\"",
+				);
 				INFOPLIST_FILE = ReminderCapstone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "CVLCD.$(PRODUCT_NAME:rfc1034identifier)";

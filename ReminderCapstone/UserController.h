@@ -9,11 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "User.h"
 #import "Defines.h"
-#import "WebLoginViewController.h"
 #import "WebServiceManager.h"
 #import "UIPrefix.h"
 #import "CustomUIUtils.h"
-#import "WebLoginViewController.h"
+
 
 @interface UserController : NSObject
 

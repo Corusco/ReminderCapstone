@@ -8,7 +8,7 @@
         <!--Main Scroll View Controller-->
         <scene sceneID="gfz-31-vTu">
             <objects>
-                <viewController storyboardIdentifier="MainScrollViewController" id="d09-GC-Rhe" customClass="MainScrollViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainScrollViewController" automaticallyAdjustsScrollViewInsets="NO" id="d09-GC-Rhe" customClass="MainScrollViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3uc-bw-NYr"/>
                         <viewControllerLayoutGuide type="bottom" id="n2q-U5-Se3"/>
@@ -26,7 +26,7 @@
         <!--Main Feed View Controller-->
         <scene sceneID="7hn-W0-Yb7">
             <objects>
-                <viewController storyboardIdentifier="MainFeedViewController" id="cTW-8t-VTi" customClass="MainFeedViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainFeedViewController" automaticallyAdjustsScrollViewInsets="NO" id="cTW-8t-VTi" customClass="MainFeedViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QFz-QS-Soi"/>
                         <viewControllerLayoutGuide type="bottom" id="Gzo-ay-Pvc"/>
@@ -44,7 +44,7 @@
         <!--Photo Detail View Controller-->
         <scene sceneID="lLg-be-SNF">
             <objects>
-                <viewController storyboardIdentifier="PhotoDetailViewController" id="nB8-c5-tAf" customClass="PhotoDetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PhotoDetailViewController" automaticallyAdjustsScrollViewInsets="NO" id="nB8-c5-tAf" customClass="PhotoDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gzG-va-Ug4"/>
                         <viewControllerLayoutGuide type="bottom" id="zKT-fE-S7v"/>
