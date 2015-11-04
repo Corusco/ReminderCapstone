@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MainFeedViewController.h"
+#import "UIKit+AFNetworking.h"
+#import "UIView+FLKAutoLayout.h"
+#import "ThemeQueryController.h"
+#import "Defines.h"
 
-@interface MainFeedPageViewController : UIViewController
+@interface MainFeedPageViewController : UIViewController <UIPageViewControllerDataSource>
+
+@property (strong, nonatomic) UIPageViewController *pageController;
 
 @end
