@@ -31,8 +31,6 @@
     NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
     [nc addObserver:self selector:@selector(assignThemes) name:kThemeQueryFinished object:nil];
     
-    self.automaticallyAdjustsScrollViewInsets = NO;
-    
     self.headerView = [[UIView alloc] init];
     self.headerView.backgroundColor = UIColorFromRGB(0x7FADAD);
     [self.view addSubview:self.headerView];

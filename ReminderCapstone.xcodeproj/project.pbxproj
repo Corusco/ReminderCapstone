@@ -10,6 +10,7 @@
 		D00785851B67C908008B3FC8 /* MainScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D00785841B67C908008B3FC8 /* MainScrollViewController.m */; };
 		D008C6FB1B587B820082828D /* FriendFeedCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D008C6FA1B587B820082828D /* FriendFeedCollectionViewDataSource.m */; };
 		D01122D21BD7088000902F5A /* GlobalFeedCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D01122D11BD7088000902F5A /* GlobalFeedCollectionViewDataSource.m */; settings = {ASSET_TAGS = (); }; };
+		D020708D1BE9793B0065261C /* MainFeedPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D020708C1BE9793B0065261C /* MainFeedPageViewController.m */; settings = {ASSET_TAGS = (); }; };
 		D020FF7F1B2784CD0046282D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D020FF7E1B2784CD0046282D /* main.m */; };
 		D020FF821B2784CD0046282D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D020FF811B2784CD0046282D /* AppDelegate.m */; };
 		D020FF881B2784CD0046282D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D020FF861B2784CD0046282D /* Main.storyboard */; };
@@ -110,6 +111,8 @@
 		D01122D01BD7088000902F5A /* GlobalFeedCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GlobalFeedCollectionViewDataSource.h; path = ReminderCapstone/GlobalFeedCollectionViewDataSource.h; sourceTree = "<group>"; };
 		D01122D11BD7088000902F5A /* GlobalFeedCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GlobalFeedCollectionViewDataSource.m; path = ReminderCapstone/GlobalFeedCollectionViewDataSource.m; sourceTree = "<group>"; };
 		D02000351B28C6F10046282D /* Defines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
+		D020708B1BE9793B0065261C /* MainFeedPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainFeedPageViewController.h; sourceTree = "<group>"; };
+		D020708C1BE9793B0065261C /* MainFeedPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainFeedPageViewController.m; sourceTree = "<group>"; };
 		D020FF791B2784CD0046282D /* ReminderCapstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReminderCapstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D020FF7D1B2784CD0046282D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D020FF7E1B2784CD0046282D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -336,6 +339,8 @@
 		D0540A9F1B2B632500D8586E /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D020708B1BE9793B0065261C /* MainFeedPageViewController.h */,
+				D020708C1BE9793B0065261C /* MainFeedPageViewController.m */,
 				D020FFA81B2786900046282D /* MainFeedViewController.h */,
 				D020FFA91B2786900046282D /* MainFeedViewController.m */,
 				D00785831B67C908008B3FC8 /* MainScrollViewController.h */,
@@ -720,6 +725,7 @@
 				D0E12FAA1B39D42D001BC006 /* GlobalPhotoQueryController.m in Sources */,
 				D0E12FDC1B3A026E001BC006 /* AFHTTPRequestOperationManager.m in Sources */,
 				D0E12FDD1B3A026E001BC006 /* AFHTTPSessionManager.m in Sources */,
+				D020708D1BE9793B0065261C /* MainFeedPageViewController.m in Sources */,
 				D0E12FAE1B39D5BB001BC006 /* APIServiceManager.m in Sources */,
 				D0E12FE21B3A026E001BC006 /* AFURLResponseSerialization.m in Sources */,
 				D08ED2DE1B4B1C9600AB2078 /* SettingsViewController.m in Sources */,
