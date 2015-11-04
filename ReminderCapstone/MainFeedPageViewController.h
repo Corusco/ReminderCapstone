@@ -13,7 +13,7 @@
 #import "ThemeQueryController.h"
 #import "Defines.h"
 
-@interface MainFeedPageViewController : UIViewController <UIPageViewControllerDataSource>
+@interface MainFeedPageViewController : UIViewController <UIPageViewControllerDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIDocumentInteractionControllerDelegate>
 
 @property (strong, nonatomic) UIPageViewController *pageController;
 
