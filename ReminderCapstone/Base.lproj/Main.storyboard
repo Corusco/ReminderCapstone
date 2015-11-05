@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--Main Scroll View Controller-->
+        <!--Main Feed Page View Controller-->
         <scene sceneID="gfz-31-vTu">
             <objects>
-                <viewController storyboardIdentifier="MainScrollViewController" automaticallyAdjustsScrollViewInsets="NO" id="d09-GC-Rhe" customClass="MainScrollViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainScrollViewController" automaticallyAdjustsScrollViewInsets="NO" id="d09-GC-Rhe" customClass="MainFeedPageViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3uc-bw-NYr"/>
                         <viewControllerLayoutGuide type="bottom" id="n2q-U5-Se3"/>

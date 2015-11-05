@@ -62,6 +62,7 @@
                                                           navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal
                                                                         options:nil];
     self.pageController.dataSource = self;
+    self.pageController.dataSource = self;
     
     [[ThemeQueryController sharedInstance] getTodaysThemes];
     
@@ -76,6 +77,17 @@
     self.todayFeed = [[MainFeedViewController alloc] init];
     self.todayFeed.introLabelText = @"Todays theme is:";
     self.todayFeed.view.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    NSArray *feedVCArray = [NSArray arrayWithObject:self.todayFeed];
+    
+    [self.pageController setViewControllers:feedVCArray direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:nil];
+    
+    [self addChildViewController:self.pageController];
+    [self.view addSubview:self.pageController.view];
+    [self.pageController didMoveToParentViewController:self];
+    [self.pageController.view alignLeading:@"0" trailing:@"0" toView:self.view];
+    [self.pageController.view alignTopEdgeWithView:self.view predicate:@"50"];
+    [self.pageController.view alignBottomEdgeWithView:self.view predicate:@"0"];
     
 }
 
@@ -154,6 +166,8 @@
 - (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController {
     return 0;
 }
+
+#pragma mark - UI Data Methods
 
 - (void)assignThemes {
     self.dayBeforeFeed.headerTheme.text = [ThemeQueryController sharedInstance].dayBeforeTheme.themeTitle;
