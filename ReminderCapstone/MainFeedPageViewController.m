@@ -62,7 +62,7 @@
                                                           navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal
                                                                         options:nil];
     self.pageController.dataSource = self;
-    self.pageController.dataSource = self;
+    //self.pageController.delegate = self;
     
     [[ThemeQueryController sharedInstance] getTodaysThemes];
     
@@ -78,16 +78,24 @@
     self.todayFeed.introLabelText = @"Todays theme is:";
     self.todayFeed.view.translatesAutoresizingMaskIntoConstraints = NO;
     
-    NSArray *feedVCArray = [NSArray arrayWithObject:self.todayFeed];
+    UIViewController *dummyViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DummyViewController"];
+    
+    NSArray *feedVCArray = [NSArray arrayWithObject:dummyViewController];
     
     [self.pageController setViewControllers:feedVCArray direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:nil];
-    
+    self.pageController.view.frame = self.view.bounds;
     [self addChildViewController:self.pageController];
     [self.view addSubview:self.pageController.view];
     [self.pageController didMoveToParentViewController:self];
     [self.pageController.view alignLeading:@"0" trailing:@"0" toView:self.view];
     [self.pageController.view alignTopEdgeWithView:self.view predicate:@"50"];
     [self.pageController.view alignBottomEdgeWithView:self.view predicate:@"0"];
+    
+//    [self.yesterdayFeed.view alignLeadingEdgeWithView:self.pageController.view predicate:@"0"];
+//    [self.yesterdayFeed.view alignTopEdgeWithView:self.pageController.view predicate:@"0"];
+//    [self.yesterdayFeed.view constrainWidthToView:self.pageController.view predicate:@"0"];
+//    [self.yesterdayFeed.view constrainHeightToView:self.pageController.view predicate:@"0"];
+
     
 }
 
