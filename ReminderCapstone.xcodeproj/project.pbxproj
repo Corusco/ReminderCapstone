@@ -91,6 +91,7 @@
 		D0E12FE91B3A026E001BC006 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E12FD61B3A026E001BC006 /* UIProgressView+AFNetworking.m */; };
 		D0E12FEA1B3A026E001BC006 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E12FD81B3A026E001BC006 /* UIRefreshControl+AFNetworking.m */; };
 		D0E12FEB1B3A026E001BC006 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E12FDA1B3A026E001BC006 /* UIWebView+AFNetworking.m */; };
+		D0E540CE1C0519BE00423126 /* DummyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E540CD1C0519BE00423126 /* DummyViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -237,6 +238,8 @@
 		D0E12FD81B3A026E001BC006 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		D0E12FD91B3A026E001BC006 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		D0E12FDA1B3A026E001BC006 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		D0E540CC1C0519BE00423126 /* DummyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyViewController.h; sourceTree = "<group>"; };
+		D0E540CD1C0519BE00423126 /* DummyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummyViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -343,6 +346,8 @@
 				D020708C1BE9793B0065261C /* MainFeedPageViewController.m */,
 				D020FFA81B2786900046282D /* MainFeedViewController.h */,
 				D020FFA91B2786900046282D /* MainFeedViewController.m */,
+				D0E540CC1C0519BE00423126 /* DummyViewController.h */,
+				D0E540CD1C0519BE00423126 /* DummyViewController.m */,
 				D00785831B67C908008B3FC8 /* MainScrollViewController.h */,
 				D00785841B67C908008B3FC8 /* MainScrollViewController.m */,
 				D0E12F571B389BF2001BC006 /* GlobalFeedChildViewController.h */,
@@ -717,6 +722,7 @@
 				D0E12F591B389BF2001BC006 /* GlobalFeedChildViewController.m in Sources */,
 				D0E12FE41B3A026E001BC006 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				D0E12FDB1B3A026E001BC006 /* AFHTTPRequestOperation.m in Sources */,
+				D0E540CE1C0519BE00423126 /* DummyViewController.m in Sources */,
 				D0E12F631B389D7C001BC006 /* FLKAutoLayoutPredicateList.m in Sources */,
 				D0E12FDE1B3A026E001BC006 /* AFNetworkReachabilityManager.m in Sources */,
 				D026A73B1B3DD259006DE87F /* PhotoDetailViewController.m in Sources */,
