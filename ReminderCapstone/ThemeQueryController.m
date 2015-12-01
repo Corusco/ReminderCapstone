@@ -14,7 +14,6 @@
 @property (strong, nonatomic) NSArray *responseArray;
 @property (strong, nonatomic) NSString *todaysDate;
 
-
 @end
 
 @implementation ThemeQueryController

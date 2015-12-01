@@ -26,6 +26,7 @@ static NSString * const cellIDkey = @"cellID";
     NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
     [nc addObserver:self selector:@selector(searchForThemes) name:kThemeQueryFinished object:nil];
     [nc addObserver:self selector:@selector(reloadCollectionView) name:kInstagramSearchFinished object:nil];
+    [nc addObserver:self selector:@selector(searchForThemes) name:@"pageViewWillTransition" object:nil];
     
     self.globalPhotoQueryController = [[GlobalPhotoQueryController alloc] init];
     

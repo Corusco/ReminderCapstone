@@ -12,8 +12,10 @@
 #import "UIView+FLKAutoLayout.h"
 #import "ThemeQueryController.h"
 #import "Defines.h"
+#import "DummyViewController.h"
 
-@interface MainFeedPageViewController : UIViewController <UIPageViewControllerDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIDocumentInteractionControllerDelegate>
+
+@interface MainFeedPageViewController : UIViewController <UIPageViewControllerDataSource, UIPageViewControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIDocumentInteractionControllerDelegate>
 
 @property (strong, nonatomic) UIPageViewController *pageController;
 

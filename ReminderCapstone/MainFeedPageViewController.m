@@ -16,10 +16,13 @@
 @property (strong, nonatomic) UIImagePickerController *imagePicker;
 @property (strong, nonatomic) UIDocumentInteractionController *documentInteractionController;
 @property (strong, nonatomic) UIImage *imageToShare;
-@property (strong, nonatomic) MainFeedViewController *todayFeed;
-@property (strong, nonatomic) MainFeedViewController *yesterdayFeed;
-@property (strong, nonatomic) MainFeedViewController *dayBeforeFeed;
-@property (strong, nonatomic) ThemeQueryController *themeQueryController;
+//@property (strong, nonatomic) MainFeedViewController *todayFeed;
+//@property (strong, nonatomic) MainFeedViewController *yesterdayFeed;
+//@property (strong, nonatomic) MainFeedViewController *dayBeforeFeed;
+@property (strong, nonatomic) DummyViewController *todayFeed;
+@property (strong, nonatomic) DummyViewController *yesterdayFeed;
+@property (strong, nonatomic) DummyViewController *dayBeforeFeed;
+//@property (strong, nonatomic) ThemeQueryController *themeQueryController;
 
 @end
 
@@ -62,25 +65,13 @@
                                                           navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal
                                                                         options:nil];
     self.pageController.dataSource = self;
-    //self.pageController.delegate = self;
+    self.pageController.delegate = self;
     
     [[ThemeQueryController sharedInstance] getTodaysThemes];
     
-    self.dayBeforeFeed = [[MainFeedViewController alloc] init];
-    self.dayBeforeFeed.introLabelText = @"The day before was:";
-    self.dayBeforeFeed.view.translatesAutoresizingMaskIntoConstraints = NO;
+    self.todayFeed = [self.storyboard instantiateViewControllerWithIdentifier:@"DummyViewController"];
     
-    self.yesterdayFeed = [[MainFeedViewController alloc] init];
-    self.yesterdayFeed.introLabelText = @"Yesterday's theme was:";
-    self.yesterdayFeed.view.translatesAutoresizingMaskIntoConstraints = NO;
-    
-    self.todayFeed = [[MainFeedViewController alloc] init];
-    self.todayFeed.introLabelText = @"Todays theme is:";
-    self.todayFeed.view.translatesAutoresizingMaskIntoConstraints = NO;
-    
-    UIViewController *dummyViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DummyViewController"];
-    
-    NSArray *feedVCArray = [NSArray arrayWithObject:dummyViewController];
+    NSArray *feedVCArray = [NSArray arrayWithObject:self.todayFeed];
     
     [self.pageController setViewControllers:feedVCArray direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:nil];
     self.pageController.view.frame = self.view.bounds;
@@ -90,48 +81,44 @@
     [self.pageController.view alignLeading:@"0" trailing:@"0" toView:self.view];
     [self.pageController.view alignTopEdgeWithView:self.view predicate:@"50"];
     [self.pageController.view alignBottomEdgeWithView:self.view predicate:@"0"];
-    
-//    [self.yesterdayFeed.view alignLeadingEdgeWithView:self.pageController.view predicate:@"0"];
-//    [self.yesterdayFeed.view alignTopEdgeWithView:self.pageController.view predicate:@"0"];
-//    [self.yesterdayFeed.view constrainWidthToView:self.pageController.view predicate:@"0"];
-//    [self.yesterdayFeed.view constrainHeightToView:self.pageController.view predicate:@"0"];
-
+    self.yesterdayFeed.introLabel.text = @"Yesterday's theme was:";
     
 }
 
-- (MainFeedViewController *)viewControllerAtIndex:(NSUInteger)index {
+- (DummyViewController *)viewControllerAtIndex:(NSUInteger)index {
     
     switch (index) {
         case 0:
             if (!self.todayFeed) {
-                self.todayFeed = [[MainFeedViewController alloc] init];
-                self.todayFeed.introLabelText = @"Todays theme is:";
-                self.todayFeed.view.translatesAutoresizingMaskIntoConstraints = NO;
+                self.todayFeed = [self.storyboard instantiateViewControllerWithIdentifier:@"DummyViewController"];
+                //self.todayFeed.introLabel.text = @"Todays theme is:";
                 
                 return self.todayFeed;
             } else {
+                
+                //self.todayFeed.introLabel.text = @"Today's theme is:";
                 return self.todayFeed;
             }
             break;
         case 1:
             if (!self.yesterdayFeed) {
-                self.yesterdayFeed = [[MainFeedViewController alloc] init];
-                self.yesterdayFeed.introLabelText = @"Yesterday's theme was:";
-                self.yesterdayFeed.view.translatesAutoresizingMaskIntoConstraints = NO;
+                self.yesterdayFeed = [self.storyboard instantiateViewControllerWithIdentifier:@"DummyViewController"];
+                //self.yesterdayFeed.introLabel.text = @"Yesterday's theme was:";
                 
                 return self.yesterdayFeed;
             } else {
+                //self.yesterdayFeed.introLabel.text = @"Yesterday's theme was:";
                 return self.yesterdayFeed;
             }
             break;
         case 2:
             if (!self.dayBeforeFeed) {
-                self.dayBeforeFeed = [[MainFeedViewController alloc] init];
-                self.dayBeforeFeed.introLabelText = @"The day before was:";
-                self.dayBeforeFeed.view.translatesAutoresizingMaskIntoConstraints = NO;
+                self.dayBeforeFeed = [self.storyboard instantiateViewControllerWithIdentifier:@"DummyViewController"];
+                //self.dayBeforeFeed.introLabel.text = @"The day before was:";
                 
                 return self.dayBeforeFeed;
             } else {
+                //self.dayBeforeFeed.introLabelText = @"The day before was:";
                 return self.dayBeforeFeed;
             }
             break;
@@ -175,16 +162,27 @@
     return 0;
 }
 
+- (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray<UIViewController *> *)pendingViewControllers {
+    
+    [self assignThemes];
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    [nc postNotificationName:@"pageViewWillTransition" object:self];
+}
+
 #pragma mark - UI Data Methods
 
 - (void)assignThemes {
-    self.dayBeforeFeed.headerTheme.text = [ThemeQueryController sharedInstance].dayBeforeTheme.themeTitle;
-    self.yesterdayFeed.headerTheme.text = [ThemeQueryController sharedInstance].yesterdayTheme.themeTitle;
-    self.todayFeed.headerTheme.text = [ThemeQueryController sharedInstance].todayTheme.themeTitle;
+    self.dayBeforeFeed.themeLabel.text = [ThemeQueryController sharedInstance].dayBeforeTheme.themeTitle;
+    self.yesterdayFeed.themeLabel.text = [ThemeQueryController sharedInstance].yesterdayTheme.themeTitle;
+    self.todayFeed.themeLabel.text = [ThemeQueryController sharedInstance].todayTheme.themeTitle;
     
     [self.dayBeforeFeed.globalFeedChild assignTheme:[ThemeQueryController sharedInstance].dayBeforeTheme];
     [self.yesterdayFeed.globalFeedChild assignTheme:[ThemeQueryController sharedInstance].yesterdayTheme];
     [self.todayFeed.globalFeedChild assignTheme:[ThemeQueryController sharedInstance].todayTheme];
+    
+    self.todayFeed.introLabel.text = @"Today's theme is:";
+    self.yesterdayFeed.introLabel.text = @"Yesterday's theme was:";
+    self.dayBeforeFeed.introLabel.text = @"The day before was:";
     
     NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
     [nc postNotificationName:kThemesAssigned object:self];

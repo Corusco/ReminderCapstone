@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GlobalFeedChildViewController.h"
 
 @interface DummyViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *introLabel;
 @property (weak, nonatomic) IBOutlet UILabel *themeLabel;
-
+@property (strong, nonatomic) NSString *introLabelText;
+@property (strong, nonatomic) GlobalFeedChildViewController *globalFeedChild;
 
 @end
