@@ -17,8 +17,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //PhotoQueryResult *selectedPhoto = [[PhotoQueryResult alloc] initWithDictionary:([GlobalPhotoQueryController sharedInstance].responseArray[self.detailPhotoIndex.row]) fromSource:@"instagram"];
-    
     self.view.backgroundColor = [UIColor whiteColor];
     
     UINavigationBar *navBar = [[UINavigationBar alloc] init];
@@ -49,7 +47,6 @@
     [self.scrollView alignBottomEdgeWithView:self.view predicate:@"0"];
 
     self.photoView = [[UIImageView alloc] init];
-    //UIImageView *photoView = [UIImageView new];
     [self.photoView setImageWithURL:[NSURL URLWithString:self.selectedPhoto.photoURL]];
     [self.scrollView addSubview:self.photoView];
     [self.photoView constrainWidthToView:self.scrollView predicate:@"0"];
@@ -73,7 +70,6 @@
     [self.scrollView addSubview:self.likesLabel];
     [self.likesLabel constrainTopSpaceToView:self.photoView predicate:@"5"];
     [self.likesLabel constrainLeadingSpaceToView:self.likeButton predicate:@"5"];
-//    [self.likesLabel constrainTrailingSpaceToView:self.view predicate:@"-93"];
     [self.likesLabel constrainHeight:@"44"];
     
     self.dateLabel = [[UILabel alloc] init];
@@ -87,7 +83,6 @@
     [self.dateLabel constrainTopSpaceToView:self.photoView predicate:@"5"];
     [self.dateLabel alignTrailingEdgeWithView:self.view predicate:@"-10"];
     [self.dateLabel constrainHeight:@"44"];
-
     
     self.captionLabel = [[UILabel alloc] init];
     self.captionLabel.font = [UIFont fontWithName:@"Raleway-Regular" size:14];

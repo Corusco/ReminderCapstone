@@ -71,9 +71,6 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eB3-dv-7hI">
                                         <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                         <animations/>
-                                        <accessibility key="accessibilityConfiguration">
-                                            <accessibilityTraits key="traits" none="YES"/>
-                                        </accessibility>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="18" id="CLK-A3-UQj">
                                                 <variation key="heightClass=regular" constant="20"/>
@@ -130,10 +127,8 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="eB3-dv-7hI" firstAttribute="leading" secondItem="mjG-t1-o9u" secondAttribute="leading" id="FbS-rc-OWe"/>
-                                    <constraint firstAttribute="height" constant="226" id="OcB-SK-b6C">
-                                        <variation key="heightClass=regular" constant="75"/>
-                                    </constraint>
-                                    <constraint firstAttribute="bottom" secondItem="mjG-t1-o9u" secondAttribute="bottom" constant="5" id="UaS-yM-mlk"/>
+                                    <constraint firstAttribute="height" constant="105" id="OcB-SK-b6C"/>
+                                    <constraint firstAttribute="bottom" secondItem="mjG-t1-o9u" secondAttribute="bottom" constant="35" id="UaS-yM-mlk"/>
                                     <constraint firstItem="mjG-t1-o9u" firstAttribute="leading" secondItem="Q1H-O8-LIv" secondAttribute="leading" constant="20" id="WfC-0q-szt"/>
                                     <constraint firstItem="mjG-t1-o9u" firstAttribute="top" secondItem="eB3-dv-7hI" secondAttribute="bottom" constant="4" id="fUO-xd-YAG"/>
                                 </constraints>

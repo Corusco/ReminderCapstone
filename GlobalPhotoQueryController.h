@@ -14,8 +14,6 @@
 
 @property (strong, nonatomic) NSArray *responseArray;
 
-//+ (instancetype)sharedInstance;
-
 - (void)searchForInstagramPhotosWithTheme:(NSString *)theme;
 
 @end

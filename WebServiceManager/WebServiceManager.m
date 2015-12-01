@@ -2,8 +2,8 @@
 //  WebServiceManager.m
 //  NetworkTestApp
 //
-//  Created by Waseem Ahmad on 22/03/13.
-//  Copyright (c) 2013 __MyCompanyName__. All rights reserved.
+//  Created by Justin Huntington on 6/12/15.
+//  Copyright (c) 2015 CVLCD. All rights reserved.
 //
 
 #import "WebServiceManager.h"

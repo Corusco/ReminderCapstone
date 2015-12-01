@@ -27,11 +27,11 @@ static NSString * const kThemesAssigned = @"ThemesAssigned";
 static NSString * const kTodayString = @"Today";
 static NSString * const kYesterdayString = @"Yesterday";
 static NSString * const kDayBeforeString = @"DayBefore";
+static NSString * const kPageViewWillTransition = @"pageViewWillTransition";
 
 //****Instagram API****
 #pragma mark - Instagram BASE
 
-//#define kInstagramBaseURL @"https://instagram.com/"
 static NSString * const kInstagramBaseURL = @"https://instagram.com";
 #define kInstagramAPIBaseURL @"https://api.instagram.com"
 #define kInstagramAuthenticationURL @"oauth/authorize/?client_id=%@&redirect_uri=%@&response_type=token&scope=likes+comments+basic"

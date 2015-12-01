@@ -19,7 +19,3 @@ void AssertMsg(const char* msg, const char* fname, int line)
 	[CustomUIUtils conditionFailedMsg:msgStr filename:fnameStr line:line];
 	
 }
-
-
-#pragma mark "ObjC"
-#pragma mark -

@@ -20,6 +20,9 @@
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
+    UIPageControl *pagecontrol = [UIPageControl appearance];
+    pagecontrol.backgroundColor = [UIColor clearColor];
+    
     return YES;
 }
 

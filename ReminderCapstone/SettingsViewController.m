@@ -39,7 +39,7 @@ static NSString * const kCellID = @"cellID";
     self.versionCell = [[UITableViewCell alloc] init];
     self.versionCell.backgroundColor = [UIColor lightGrayColor];
     self.versionCell.selectionStyle = UITableViewCellSelectionStyleNone;
-    self.versionCell.textLabel.text = @"version 0.5 (UltraBeta)";
+    self.versionCell.textLabel.text = @"version 1.0";
     self.versionCell.textLabel.textAlignment = NSTextAlignmentRight;
     self.versionCell.textLabel.textColor = [UIColor darkGrayColor];
     
@@ -116,7 +116,6 @@ static NSString * const kCellID = @"cellID";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath == [NSIndexPath indexPathForRow:1 inSection:0]) {
-//        CGFloat height = [self.privacyCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
         
         return 200;
     } else {

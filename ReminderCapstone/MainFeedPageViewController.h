@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MainFeedViewController.h"
 #import "UIKit+AFNetworking.h"
 #import "UIView+FLKAutoLayout.h"
 #import "ThemeQueryController.h"
 #import "Defines.h"
 #import "DummyViewController.h"
+#import "SettingsViewController.h"
 
 
 @interface MainFeedPageViewController : UIViewController <UIPageViewControllerDataSource, UIPageViewControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIDocumentInteractionControllerDelegate>

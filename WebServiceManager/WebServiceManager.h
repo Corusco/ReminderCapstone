@@ -2,8 +2,8 @@
 //  WebServiceManager.h
 //  NetworkTestApp
 //
-//  Created by Waseem Ahmad on 22/03/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Created by Justin Huntington on 6/12/15.
+//  Copyright (c) 2015 CVLCD. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -18,6 +18,7 @@
 
 
 + (NSURLRequest*) requestWithService:(NSString*)service;
+
 + (NSMutableURLRequest*) requestWithUrlString:(NSString*)urlString; // in case base url are not same
 
 + (NSURLRequest*) postRequestWithService:(NSString*)service
@@ -29,8 +30,6 @@
 + (void) sendRequest:(NSURLRequest*)request
 		  completion:(void (^)(NSData*, NSError*)) callback;
 
-
-//+ (NSXMLElement*) xmlRootElement:(NSData*)data;
 + (id) JSONData:(NSData*)data;
 
 @end

@@ -16,13 +16,10 @@
 @property (strong, nonatomic) UIImagePickerController *imagePicker;
 @property (strong, nonatomic) UIDocumentInteractionController *documentInteractionController;
 @property (strong, nonatomic) UIImage *imageToShare;
-//@property (strong, nonatomic) MainFeedViewController *todayFeed;
-//@property (strong, nonatomic) MainFeedViewController *yesterdayFeed;
-//@property (strong, nonatomic) MainFeedViewController *dayBeforeFeed;
 @property (strong, nonatomic) DummyViewController *todayFeed;
 @property (strong, nonatomic) DummyViewController *yesterdayFeed;
 @property (strong, nonatomic) DummyViewController *dayBeforeFeed;
-//@property (strong, nonatomic) ThemeQueryController *themeQueryController;
+
 
 @end
 
@@ -39,7 +36,7 @@
     [self.view addSubview:self.headerView];
     [self.headerView alignLeading:@"0" trailing:@"0" toView:self.view];
     [self.headerView alignTopEdgeWithView:self.view predicate:@"0"];
-    [self.headerView constrainHeight:@"165"];
+    [self.headerView constrainHeight:@"155"];
     
     self.settingsButton = [[UIButton alloc] init];
     UIImage *buttonImage = [UIImage imageNamed:@"basic-settings-iconWhite.png"];
@@ -50,6 +47,13 @@
     [self.settingsButton constrainAspectRatio:@"0"];
     [self.settingsButton alignTrailingEdgeWithView:self.headerView predicate:@"-10"];
     [self.settingsButton alignTopEdgeWithView:self.headerView predicate:@"25"];
+    
+    UIPageControl *pageControl = [[UIPageControl alloc] init];
+    [self.headerView addSubview:pageControl];
+    [pageControl alignLeading:@"0" trailing:@"0" toView:self.headerView];
+    [pageControl alignBottomEdgeWithView:self.headerView predicate:@"0"];
+    [pageControl constrainHeight:@"30"];
+    
     
     self.cameraButton = [[UIButton alloc] init];
     UIImage *cameraImage = [UIImage imageNamed:@"CameraIconTight40.png"];
@@ -83,7 +87,32 @@
     [self.pageController.view alignBottomEdgeWithView:self.view predicate:@"0"];
     self.yesterdayFeed.introLabel.text = @"Yesterday's theme was:";
     
+    [self.view bringSubviewToFront:pageControl];
+    
 }
+
+
+#pragma mark - UI Data Methods
+
+- (void)assignThemes {
+    self.dayBeforeFeed.themeLabel.text = [ThemeQueryController sharedInstance].dayBeforeTheme.themeTitle;
+    self.yesterdayFeed.themeLabel.text = [ThemeQueryController sharedInstance].yesterdayTheme.themeTitle;
+    self.todayFeed.themeLabel.text = [ThemeQueryController sharedInstance].todayTheme.themeTitle;
+    
+    [self.dayBeforeFeed.globalFeedChild assignTheme:[ThemeQueryController sharedInstance].dayBeforeTheme];
+    [self.yesterdayFeed.globalFeedChild assignTheme:[ThemeQueryController sharedInstance].yesterdayTheme];
+    [self.todayFeed.globalFeedChild assignTheme:[ThemeQueryController sharedInstance].todayTheme];
+    
+    self.todayFeed.introLabel.text = @"Today's theme is:";
+    self.yesterdayFeed.introLabel.text = @"Yesterday's theme was:";
+    self.dayBeforeFeed.introLabel.text = @"The day before was:";
+    
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    [nc postNotificationName:kThemesAssigned object:self];
+}
+
+
+#pragma mark - PageViewDataSource Methods
 
 - (DummyViewController *)viewControllerAtIndex:(NSUInteger)index {
     
@@ -128,22 +157,7 @@
 }
 
 
-#pragma mark - PageViewDataSource Methods
-
-
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
-    
-    if (viewController == self.dayBeforeFeed) {
-        return [self viewControllerAtIndex:1];
-    } else if (viewController == self.yesterdayFeed) {
-        return [self viewControllerAtIndex:0];
-    } else {
-        return nil;
-    }
-}
-
-
-- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
     
     if (viewController == self.todayFeed) {
         return [self viewControllerAtIndex:1];
@@ -154,40 +168,35 @@
     }
 }
 
-- (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController {
-    return 3;
+
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
+    
+    if (viewController == self.dayBeforeFeed) {
+        return [self viewControllerAtIndex:1];
+    } else if (viewController == self.yesterdayFeed) {
+        return [self viewControllerAtIndex:0];
+    } else {
+        return nil;
+    }
 }
 
-- (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController {
-    return 0;
-}
+//- (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController {
+   // return 3;
+//}
+
+//- (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController {
+   // return 2;
+//}
 
 - (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray<UIViewController *> *)pendingViewControllers {
     
     [self assignThemes];
     NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
-    [nc postNotificationName:@"pageViewWillTransition" object:self];
+    [nc postNotificationName:kPageViewWillTransition object:self];
 }
 
-#pragma mark - UI Data Methods
 
-- (void)assignThemes {
-    self.dayBeforeFeed.themeLabel.text = [ThemeQueryController sharedInstance].dayBeforeTheme.themeTitle;
-    self.yesterdayFeed.themeLabel.text = [ThemeQueryController sharedInstance].yesterdayTheme.themeTitle;
-    self.todayFeed.themeLabel.text = [ThemeQueryController sharedInstance].todayTheme.themeTitle;
-    
-    [self.dayBeforeFeed.globalFeedChild assignTheme:[ThemeQueryController sharedInstance].dayBeforeTheme];
-    [self.yesterdayFeed.globalFeedChild assignTheme:[ThemeQueryController sharedInstance].yesterdayTheme];
-    [self.todayFeed.globalFeedChild assignTheme:[ThemeQueryController sharedInstance].todayTheme];
-    
-    self.todayFeed.introLabel.text = @"Today's theme is:";
-    self.yesterdayFeed.introLabel.text = @"Yesterday's theme was:";
-    self.dayBeforeFeed.introLabel.text = @"The day before was:";
-    
-    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
-    [nc postNotificationName:kThemesAssigned object:self];
-}
-
+#pragma mark - Camera and Instagram
 
 - (void)checkForCamera {
     
@@ -248,21 +257,6 @@
 }
 
 
-- (void)settingsButtonTapped {
-    
-    SettingsViewController *settingsViewController = [[SettingsViewController alloc] init];
-    UINavigationController *settingsNavController = [[UINavigationController alloc] initWithRootViewController:settingsViewController];
-    
-    
-    [self showViewController:settingsNavController sender:nil];
-}
-
-
-- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
     NSString *mediaType = [info objectForKey: UIImagePickerControllerMediaType];
@@ -315,7 +309,20 @@
 }
 
 
+#pragma mark - Settings
 
+- (void)settingsButtonTapped {
+    
+    SettingsViewController *settingsViewController = [[SettingsViewController alloc] init];
+    UINavigationController *settingsNavController = [[UINavigationController alloc] initWithRootViewController:settingsViewController];
+    
+    [self showViewController:settingsNavController sender:nil];
+}
+
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 
 @end
