@@ -95,7 +95,7 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ThemeLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mjG-t1-o9u" userLabel="Theme Label">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="500" verticalCompressionResistancePriority="500" text="Check Connection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mjG-t1-o9u" userLabel="Theme Label">
                                         <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                         <animations/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -103,7 +103,6 @@
                                             <accessibilityTraits key="traits" none="YES"/>
                                         </accessibility>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="400" id="KR9-wD-Pmg"/>
                                             <constraint firstAttribute="height" constant="44" id="t5S-Fo-psK"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Lobster1.4" family="Lobster 1.4" pointSize="40"/>
@@ -111,13 +110,11 @@
                                         <nil key="highlightedColor"/>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="KR9-wD-Pmg"/>
                                                 <exclude reference="t5S-Fo-psK"/>
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=regular">
                                             <mask key="constraints">
-                                                <include reference="KR9-wD-Pmg"/>
                                                 <include reference="t5S-Fo-psK"/>
                                             </mask>
                                         </variation>
@@ -127,9 +124,13 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="eB3-dv-7hI" firstAttribute="leading" secondItem="mjG-t1-o9u" secondAttribute="leading" id="FbS-rc-OWe"/>
+                                    <constraint firstAttribute="trailing" secondItem="mjG-t1-o9u" secondAttribute="trailing" constant="-20" id="HaK-hj-Uj6">
+                                        <variation key="heightClass=regular" constant="20"/>
+                                    </constraint>
                                     <constraint firstAttribute="height" constant="105" id="OcB-SK-b6C"/>
                                     <constraint firstAttribute="bottom" secondItem="mjG-t1-o9u" secondAttribute="bottom" constant="35" id="UaS-yM-mlk"/>
                                     <constraint firstItem="mjG-t1-o9u" firstAttribute="leading" secondItem="Q1H-O8-LIv" secondAttribute="leading" constant="20" id="WfC-0q-szt"/>
+                                    <constraint firstItem="mjG-t1-o9u" firstAttribute="width" secondItem="Q1H-O8-LIv" secondAttribute="width" id="cnU-Ry-Xs2"/>
                                     <constraint firstItem="mjG-t1-o9u" firstAttribute="top" secondItem="eB3-dv-7hI" secondAttribute="bottom" constant="4" id="fUO-xd-YAG"/>
                                 </constraints>
                                 <variation key="default">
@@ -140,8 +141,10 @@
                                     <mask key="constraints">
                                         <exclude reference="OcB-SK-b6C"/>
                                         <exclude reference="FbS-rc-OWe"/>
+                                        <exclude reference="HaK-hj-Uj6"/>
                                         <exclude reference="UaS-yM-mlk"/>
                                         <exclude reference="WfC-0q-szt"/>
+                                        <exclude reference="cnU-Ry-Xs2"/>
                                         <exclude reference="fUO-xd-YAG"/>
                                     </mask>
                                 </variation>
@@ -153,8 +156,10 @@
                                     <mask key="constraints">
                                         <include reference="OcB-SK-b6C"/>
                                         <include reference="FbS-rc-OWe"/>
+                                        <include reference="HaK-hj-Uj6"/>
                                         <include reference="UaS-yM-mlk"/>
                                         <include reference="WfC-0q-szt"/>
+                                        <exclude reference="cnU-Ry-Xs2"/>
                                         <include reference="fUO-xd-YAG"/>
                                     </mask>
                                 </variation>
@@ -188,13 +193,13 @@
                                 <exclude reference="eSc-TO-daK"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="auJ-T3-7oz"/>
                                 <exclude reference="67m-L8-TJx"/>
                                 <exclude reference="BTE-FZ-kfc"/>
                                 <exclude reference="wmc-pZ-bZl"/>
                                 <exclude reference="BRZ-hu-WAe"/>
                                 <exclude reference="YpS-Sm-CUd"/>
                                 <exclude reference="v8I-uC-pd8"/>
-                                <exclude reference="auJ-T3-7oz"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -203,13 +208,13 @@
                                 <include reference="eSc-TO-daK"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="auJ-T3-7oz"/>
                                 <include reference="67m-L8-TJx"/>
                                 <include reference="BTE-FZ-kfc"/>
                                 <include reference="wmc-pZ-bZl"/>
                                 <include reference="BRZ-hu-WAe"/>
                                 <include reference="YpS-Sm-CUd"/>
                                 <include reference="v8I-uC-pd8"/>
-                                <include reference="auJ-T3-7oz"/>
                             </mask>
                         </variation>
                     </view>
@@ -262,29 +267,16 @@
             </objects>
             <point key="canvasLocation" x="2297" y="-193.5"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="ra3-M2-FAQ">
-            <objects>
-                <viewController id="b1e-3s-V6R" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="3If-tK-frJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="uJN-gG-Npr"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="UDe-jn-Gis">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="062-Mo-vuO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
         <!--Global Feed Child View Controller-->
         <scene sceneID="aWe-PU-aeK">
             <objects>
                 <viewController id="6vi-p1-3Nh" customClass="GlobalFeedChildViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4wP-j6-Nld"/>
+                        <viewControllerLayoutGuide type="bottom" id="oCU-ob-NCE"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="pl8-qi-RAJ">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

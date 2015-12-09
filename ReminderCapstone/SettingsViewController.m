@@ -21,7 +21,7 @@ static NSString * const kCellID = @"cellID";
 - (void)viewDidLoad {
     [super viewDidLoad];
         
-    self.navigationController.navigationBar.barTintColor = UIColorFromRGB(0x7FADAD);
+    self.navigationController.navigationBar.barTintColor = UIColorFromRGB(kPrimaryUIColor);
     
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Feed" style:UIBarButtonItemStyleDone target:self action:@selector(backButtonTapped)];
     backButton.tintColor = [UIColor whiteColor];

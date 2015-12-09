@@ -34,7 +34,7 @@
     navigationItem.leftBarButtonItem = backButton;
     
     navBar.items = @[navigationItem];
-    navBar.barTintColor = UIColorFromRGB(0x7FADAD);
+    navBar.barTintColor = UIColorFromRGB(kPrimaryUIColor);
     
     CGRect imageRect = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     

@@ -32,7 +32,7 @@
     [nc addObserver:self selector:@selector(assignThemes) name:kThemeQueryFinished object:nil];
     
     self.headerView = [[UIView alloc] init];
-    self.headerView.backgroundColor = UIColorFromRGB(0x7FADAD);
+    self.headerView.backgroundColor = UIColorFromRGB(kPrimaryUIColor);
     [self.view addSubview:self.headerView];
     [self.headerView alignLeading:@"0" trailing:@"0" toView:self.view];
     [self.headerView alignTopEdgeWithView:self.view predicate:@"0"];
@@ -47,13 +47,6 @@
     [self.settingsButton constrainAspectRatio:@"0"];
     [self.settingsButton alignTrailingEdgeWithView:self.headerView predicate:@"-10"];
     [self.settingsButton alignTopEdgeWithView:self.headerView predicate:@"25"];
-    
-    UIPageControl *pageControl = [[UIPageControl alloc] init];
-    [self.headerView addSubview:pageControl];
-    [pageControl alignLeading:@"0" trailing:@"0" toView:self.headerView];
-    [pageControl alignBottomEdgeWithView:self.headerView predicate:@"0"];
-    [pageControl constrainHeight:@"30"];
-    
     
     self.cameraButton = [[UIButton alloc] init];
     UIImage *cameraImage = [UIImage imageNamed:@"CameraIconTight40.png"];
@@ -86,9 +79,6 @@
     [self.pageController.view alignTopEdgeWithView:self.view predicate:@"50"];
     [self.pageController.view alignBottomEdgeWithView:self.view predicate:@"0"];
     self.yesterdayFeed.introLabel.text = @"Yesterday's theme was:";
-    
-    [self.view bringSubviewToFront:pageControl];
-    
 }
 
 
@@ -180,13 +170,6 @@
     }
 }
 
-//- (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController {
-   // return 3;
-//}
-
-//- (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController {
-   // return 2;
-//}
 
 - (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray<UIViewController *> *)pendingViewControllers {
     

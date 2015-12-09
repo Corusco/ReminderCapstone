@@ -36,13 +36,12 @@
     
     NSDate *defaultDate = [NSDate date];
     self.todaysDate = [dateFormatter stringFromDate:defaultDate];
-    NSString *dummyDate = @"2015-10-02";
     
     AFHTTPSessionManager *sessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:@"https://box1096.bluehost.com/~ourcaval/api/v1/index.php"]];
     sessionManager.requestSerializer = [AFJSONRequestSerializer serializer];
     sessionManager.responseSerializer = [AFJSONResponseSerializer serializer];
     
-    NSString *getString = [NSString stringWithFormat:@"todaysThemes/%@", dummyDate];
+    NSString *getString = [NSString stringWithFormat:@"todaysThemes/%@", self.todaysDate];
     
     [sessionManager GET:getString parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         self.responseArray = [[NSArray alloc] initWithArray:responseObject];
