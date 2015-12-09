@@ -3,8 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Lobster 1.4.otf">
@@ -103,7 +101,9 @@
                                             <accessibilityTraits key="traits" none="YES"/>
                                         </accessibility>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="t5S-Fo-psK"/>
+                                            <constraint firstAttribute="height" constant="44" id="t5S-Fo-psK">
+                                                <variation key="heightClass=regular" constant="50"/>
+                                            </constraint>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Lobster1.4" family="Lobster 1.4" pointSize="40"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -127,11 +127,11 @@
                                     <constraint firstAttribute="trailing" secondItem="mjG-t1-o9u" secondAttribute="trailing" constant="-20" id="HaK-hj-Uj6">
                                         <variation key="heightClass=regular" constant="20"/>
                                     </constraint>
-                                    <constraint firstAttribute="height" constant="105" id="OcB-SK-b6C"/>
-                                    <constraint firstAttribute="bottom" secondItem="mjG-t1-o9u" secondAttribute="bottom" constant="35" id="UaS-yM-mlk"/>
+                                    <constraint firstAttribute="height" constant="85" id="OcB-SK-b6C"/>
+                                    <constraint firstAttribute="bottom" secondItem="mjG-t1-o9u" secondAttribute="bottom" constant="15" id="UaS-yM-mlk"/>
                                     <constraint firstItem="mjG-t1-o9u" firstAttribute="leading" secondItem="Q1H-O8-LIv" secondAttribute="leading" constant="20" id="WfC-0q-szt"/>
                                     <constraint firstItem="mjG-t1-o9u" firstAttribute="width" secondItem="Q1H-O8-LIv" secondAttribute="width" id="cnU-Ry-Xs2"/>
-                                    <constraint firstItem="mjG-t1-o9u" firstAttribute="top" secondItem="eB3-dv-7hI" secondAttribute="bottom" constant="4" id="fUO-xd-YAG"/>
+                                    <constraint firstItem="mjG-t1-o9u" firstAttribute="top" secondItem="eB3-dv-7hI" secondAttribute="bottom" id="fUO-xd-YAG"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="subviews">
@@ -175,12 +175,10 @@
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Q1H-O8-LIv" firstAttribute="leading" secondItem="5a7-oG-dmm" secondAttribute="leadingMargin" id="67m-L8-TJx">
-                                <variation key="heightClass=regular" constant="-20"/>
-                            </constraint>
                             <constraint firstItem="eSc-TO-daK" firstAttribute="trailing" secondItem="Q1H-O8-LIv" secondAttribute="trailing" id="BRZ-hu-WAe"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Q1H-O8-LIv" secondAttribute="trailing" constant="-20" id="BTE-FZ-kfc"/>
+                            <constraint firstItem="Q1H-O8-LIv" firstAttribute="width" secondItem="5a7-oG-dmm" secondAttribute="width" id="Jko-BR-d1s"/>
                             <constraint firstItem="eSc-TO-daK" firstAttribute="leading" secondItem="Q1H-O8-LIv" secondAttribute="leading" id="YpS-Sm-CUd"/>
+                            <constraint firstItem="Q1H-O8-LIv" firstAttribute="centerX" secondItem="5a7-oG-dmm" secondAttribute="centerX" id="a56-OB-QYh"/>
                             <constraint firstItem="Vaa-RI-EpW" firstAttribute="top" secondItem="eSc-TO-daK" secondAttribute="bottom" constant="322" id="auJ-T3-7oz">
                                 <variation key="heightClass=regular" constant="0.0"/>
                             </constraint>
@@ -193,13 +191,13 @@
                                 <exclude reference="eSc-TO-daK"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="auJ-T3-7oz"/>
-                                <exclude reference="67m-L8-TJx"/>
-                                <exclude reference="BTE-FZ-kfc"/>
+                                <exclude reference="Jko-BR-d1s"/>
+                                <exclude reference="a56-OB-QYh"/>
                                 <exclude reference="wmc-pZ-bZl"/>
                                 <exclude reference="BRZ-hu-WAe"/>
                                 <exclude reference="YpS-Sm-CUd"/>
                                 <exclude reference="v8I-uC-pd8"/>
+                                <exclude reference="auJ-T3-7oz"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -208,13 +206,13 @@
                                 <include reference="eSc-TO-daK"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="auJ-T3-7oz"/>
-                                <include reference="67m-L8-TJx"/>
-                                <include reference="BTE-FZ-kfc"/>
+                                <include reference="Jko-BR-d1s"/>
+                                <include reference="a56-OB-QYh"/>
                                 <include reference="wmc-pZ-bZl"/>
                                 <include reference="BRZ-hu-WAe"/>
                                 <include reference="YpS-Sm-CUd"/>
                                 <include reference="v8I-uC-pd8"/>
+                                <include reference="auJ-T3-7oz"/>
                             </mask>
                         </variation>
                     </view>

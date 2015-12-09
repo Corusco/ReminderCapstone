@@ -36,7 +36,7 @@
     [self.view addSubview:self.headerView];
     [self.headerView alignLeading:@"0" trailing:@"0" toView:self.view];
     [self.headerView alignTopEdgeWithView:self.view predicate:@"0"];
-    [self.headerView constrainHeight:@"155"];
+    [self.headerView constrainHeight:@"135"];
     
     self.settingsButton = [[UIButton alloc] init];
     UIImage *buttonImage = [UIImage imageNamed:@"basic-settings-iconWhite.png"];

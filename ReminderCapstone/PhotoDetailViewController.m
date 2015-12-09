@@ -35,6 +35,7 @@
     
     navBar.items = @[navigationItem];
     navBar.barTintColor = UIColorFromRGB(kPrimaryUIColor);
+    navBar.alpha = 1.0;
     
     CGRect imageRect = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     

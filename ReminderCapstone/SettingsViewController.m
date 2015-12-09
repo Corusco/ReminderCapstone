@@ -61,7 +61,7 @@ static NSString * const kCellID = @"cellID";
     [self.privacyText alignLeadingEdgeWithView:self.privacyCell.contentView predicate:@"20"];
     [self.privacyText alignTrailingEdgeWithView:self.privacyCell.contentView predicate:@"-20"];
     
-    self.privacyText.text = @"THREADS AND YOUR PRIVACY: We, the developers of Threads, are completely committed to you maintaining the level of privacy you desire and being transparent about what information we collect and why. Right now, we have access to your Instagram account details excluding your password. We record only these details on your device and on our server for the purposes of keeping you logged in and having a good user experience. Any photos or other content that you publish to instagram is subject to their privacy policy. If you refrain from posting to social media, anything that you do with this app is completely yours and stays strictly with you.";
+    self.privacyText.text = @"THREADS AND YOUR PRIVACY: We, the developers of Threads, are completely committed to you maintaining the level of privacy you desire and being transparent about what information is collected and why. We collect none of your information currently. Any photos or other content that you publish to linked apps is subject to their privacy policy. If you refrain from posting to social media, anything that you do with this app is completely yours and stays strictly with you.";
     
     [self.view addSubview:self.tableView];
 

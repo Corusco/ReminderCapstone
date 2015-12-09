@@ -28,7 +28,7 @@ static NSString * const kTodayString = @"Today";
 static NSString * const kYesterdayString = @"Yesterday";
 static NSString * const kDayBeforeString = @"DayBefore";
 static NSString * const kPageViewWillTransition = @"pageViewWillTransition";
-static int const kPrimaryUIColor = 0x57ACEE;
+static int const kPrimaryUIColor = 0x808080;
 
 //****Instagram API****
 #pragma mark - Instagram BASE
