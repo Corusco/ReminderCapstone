@@ -13,6 +13,9 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *introLabel;
 @property (weak, nonatomic) IBOutlet UILabel *themeLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *reverseArrow;
+@property (weak, nonatomic) IBOutlet UIImageView *forwardArrow;
+
 @property (strong, nonatomic) NSString *introLabelText;
 @property (strong, nonatomic) GlobalFeedChildViewController *globalFeedChild;
 

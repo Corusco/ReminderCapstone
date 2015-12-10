@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Lobster 1.4.otf">
@@ -119,24 +120,81 @@
                                             </mask>
                                         </variation>
                                     </label>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reverseArrow" translatesAutoresizingMaskIntoConstraints="NO" id="89G-bU-Wh6">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="89G-bU-Wh6" secondAttribute="height" multiplier="1:1" id="RjO-UC-uhr"/>
+                                            <constraint firstAttribute="height" constant="35" id="ghD-70-1w7">
+                                                <variation key="heightClass=regular" constant="10"/>
+                                            </constraint>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="RjO-UC-uhr"/>
+                                                <exclude reference="ghD-70-1w7"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular" misplaced="YES">
+                                            <rect key="frame" x="4" y="25" width="15" height="15"/>
+                                            <mask key="constraints">
+                                                <include reference="RjO-UC-uhr"/>
+                                                <include reference="ghD-70-1w7"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="forwardArrow" translatesAutoresizingMaskIntoConstraints="NO" id="7AD-fh-c6o">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="9Ta-OR-MTw">
+                                                <variation key="heightClass=regular" constant="10"/>
+                                            </constraint>
+                                            <constraint firstAttribute="width" secondItem="7AD-fh-c6o" secondAttribute="height" multiplier="1:1" id="a9C-8s-bok"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="9Ta-OR-MTw"/>
+                                                <exclude reference="a9C-8s-bok"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="9Ta-OR-MTw"/>
+                                                <include reference="a9C-8s-bok"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="89G-bU-Wh6" firstAttribute="centerY" secondItem="Q1H-O8-LIv" secondAttribute="centerY" id="4SN-JO-iKw"/>
                                     <constraint firstItem="eB3-dv-7hI" firstAttribute="leading" secondItem="mjG-t1-o9u" secondAttribute="leading" id="FbS-rc-OWe"/>
                                     <constraint firstAttribute="trailing" secondItem="mjG-t1-o9u" secondAttribute="trailing" constant="-20" id="HaK-hj-Uj6">
-                                        <variation key="heightClass=regular" constant="20"/>
+                                        <variation key="heightClass=regular" constant="25"/>
                                     </constraint>
+                                    <constraint firstItem="7AD-fh-c6o" firstAttribute="centerY" secondItem="Q1H-O8-LIv" secondAttribute="centerY" id="McN-by-And"/>
                                     <constraint firstAttribute="height" constant="85" id="OcB-SK-b6C"/>
                                     <constraint firstAttribute="bottom" secondItem="mjG-t1-o9u" secondAttribute="bottom" constant="15" id="UaS-yM-mlk"/>
-                                    <constraint firstItem="mjG-t1-o9u" firstAttribute="leading" secondItem="Q1H-O8-LIv" secondAttribute="leading" constant="20" id="WfC-0q-szt"/>
+                                    <constraint firstItem="mjG-t1-o9u" firstAttribute="leading" secondItem="Q1H-O8-LIv" secondAttribute="leading" constant="20" id="WfC-0q-szt">
+                                        <variation key="heightClass=regular" constant="25"/>
+                                    </constraint>
                                     <constraint firstItem="mjG-t1-o9u" firstAttribute="width" secondItem="Q1H-O8-LIv" secondAttribute="width" id="cnU-Ry-Xs2"/>
                                     <constraint firstItem="mjG-t1-o9u" firstAttribute="top" secondItem="eB3-dv-7hI" secondAttribute="bottom" id="fUO-xd-YAG"/>
+                                    <constraint firstAttribute="trailing" secondItem="7AD-fh-c6o" secondAttribute="trailing" constant="121" id="ut9-Ms-3Jl">
+                                        <variation key="heightClass=regular" constant="4"/>
+                                    </constraint>
+                                    <constraint firstItem="89G-bU-Wh6" firstAttribute="leading" secondItem="Q1H-O8-LIv" secondAttribute="leading" id="wPA-Ol-GQR">
+                                        <variation key="heightClass=regular" constant="4"/>
+                                    </constraint>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="subviews">
                                         <exclude reference="eB3-dv-7hI"/>
                                         <exclude reference="mjG-t1-o9u"/>
+                                        <exclude reference="89G-bU-Wh6"/>
+                                        <exclude reference="7AD-fh-c6o"/>
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="OcB-SK-b6C"/>
@@ -146,12 +204,18 @@
                                         <exclude reference="WfC-0q-szt"/>
                                         <exclude reference="cnU-Ry-Xs2"/>
                                         <exclude reference="fUO-xd-YAG"/>
+                                        <exclude reference="4SN-JO-iKw"/>
+                                        <exclude reference="wPA-Ol-GQR"/>
+                                        <exclude reference="McN-by-And"/>
+                                        <exclude reference="ut9-Ms-3Jl"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular">
                                     <mask key="subviews">
                                         <include reference="eB3-dv-7hI"/>
                                         <include reference="mjG-t1-o9u"/>
+                                        <include reference="89G-bU-Wh6"/>
+                                        <include reference="7AD-fh-c6o"/>
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="OcB-SK-b6C"/>
@@ -161,6 +225,10 @@
                                         <include reference="WfC-0q-szt"/>
                                         <exclude reference="cnU-Ry-Xs2"/>
                                         <include reference="fUO-xd-YAG"/>
+                                        <include reference="4SN-JO-iKw"/>
+                                        <include reference="wPA-Ol-GQR"/>
+                                        <include reference="McN-by-And"/>
+                                        <include reference="ut9-Ms-3Jl"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -217,14 +285,16 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="forwardArrow" destination="7AD-fh-c6o" id="KwU-Km-yDn"/>
                         <outlet property="headerView" destination="Q1H-O8-LIv" id="raP-dU-ka0"/>
                         <outlet property="introLabel" destination="eB3-dv-7hI" id="rE4-As-yUP"/>
+                        <outlet property="reverseArrow" destination="89G-bU-Wh6" id="hk4-SE-Ri5"/>
                         <outlet property="themeLabel" destination="mjG-t1-o9u" id="JTV-jn-jfO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="chU-sd-ua1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1555" y="489.75"/>
+            <point key="canvasLocation" x="1563" y="480.75"/>
         </scene>
         <!--Photo Detail View Controller-->
         <scene sceneID="lLg-be-SNF">
@@ -285,4 +355,8 @@
             <point key="canvasLocation" x="2283" y="489.375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="forwardArrow" width="495" height="495"/>
+        <image name="reverseArrow" width="495" height="495"/>
+    </resources>
 </document>

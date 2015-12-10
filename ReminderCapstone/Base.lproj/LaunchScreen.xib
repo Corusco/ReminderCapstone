@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8191"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -10,23 +11,25 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="globalThreads" translatesAutoresizingMaskIntoConstraints="NO" id="bze-bt-QL1">
-                    <rect key="frame" x="107" y="118" width="267" height="244"/>
-                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ah2-On-cVd">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="135"/>
+                    <animations/>
+                    <color key="backgroundColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="135" id="4HG-AN-SKx"/>
+                    </constraints>
+                </view>
             </subviews>
+            <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="bze-bt-QL1" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="b1L-Zh-R6N"/>
-                <constraint firstItem="bze-bt-QL1" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="pyd-XS-luq"/>
-                <constraint firstItem="bze-bt-QL1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="118" id="ucb-Jc-d6d"/>
-                <constraint firstItem="bze-bt-QL1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="107" id="xxP-Ne-8mr"/>
+                <constraint firstItem="Ah2-On-cVd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="2u7-3W-Ro0"/>
+                <constraint firstAttribute="trailing" secondItem="Ah2-On-cVd" secondAttribute="trailing" id="4kf-LC-JW5"/>
+                <constraint firstItem="Ah2-On-cVd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="6M9-OX-Kmh"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="548" y="455"/>
+            <point key="canvasLocation" x="614" y="417"/>
         </view>
     </objects>
-    <resources>
-        <image name="globalThreads" width="364" height="426"/>
-    </resources>
 </document>

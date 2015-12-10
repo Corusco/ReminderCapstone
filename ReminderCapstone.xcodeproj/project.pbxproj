@@ -119,7 +119,6 @@
 		D020FFA31B2785B90046282D /* Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Theme.m; sourceTree = "<group>"; };
 		D026A7391B3DD259006DE87F /* PhotoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoDetailViewController.h; sourceTree = "<group>"; };
 		D026A73A1B3DD259006DE87F /* PhotoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoDetailViewController.m; sourceTree = "<group>"; };
-		D02BF5EB1BE041DB00D7F4D1 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reveal.framework; path = "../../../Downloads/Reveal.app/Contents/SharedSupport/iOS-Libraries/Reveal.framework"; sourceTree = "<group>"; };
 		D02FE4871B2A183D00847DC8 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		D02FE4881B2A183D00847DC8 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		D02FE48A1B2A1C5F00847DC8 /* UserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserController.h; sourceTree = "<group>"; };
@@ -401,7 +400,6 @@
 		D0979DF41B2F60230034FECD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D02BF5EB1BE041DB00D7F4D1 /* Reveal.framework */,
 				D0E12FC91B3A026E001BC006 /* UIKit+AFNetworking */,
 				D0E12FB51B3A026D001BC006 /* AFNetworking */,
 				D0E12F661B389D8A001BC006 /* FLKAutoLayout */,

@@ -97,6 +97,11 @@
     self.yesterdayFeed.introLabel.text = @"Yesterday's theme was:";
     self.dayBeforeFeed.introLabel.text = @"The day before was:";
     
+    self.todayFeed.reverseArrow.hidden = NO;
+    self.yesterdayFeed.reverseArrow.hidden = NO;
+    self.yesterdayFeed.forwardArrow.hidden = NO;
+    self.dayBeforeFeed.forwardArrow.hidden = NO;
+    
     NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
     [nc postNotificationName:kThemesAssigned object:self];
 }
@@ -110,34 +115,27 @@
         case 0:
             if (!self.todayFeed) {
                 self.todayFeed = [self.storyboard instantiateViewControllerWithIdentifier:@"DummyViewController"];
-                //self.todayFeed.introLabel.text = @"Todays theme is:";
                 
                 return self.todayFeed;
             } else {
                 
-                //self.todayFeed.introLabel.text = @"Today's theme is:";
                 return self.todayFeed;
             }
             break;
         case 1:
             if (!self.yesterdayFeed) {
                 self.yesterdayFeed = [self.storyboard instantiateViewControllerWithIdentifier:@"DummyViewController"];
-                //self.yesterdayFeed.introLabel.text = @"Yesterday's theme was:";
                 
                 return self.yesterdayFeed;
             } else {
-                //self.yesterdayFeed.introLabel.text = @"Yesterday's theme was:";
                 return self.yesterdayFeed;
             }
             break;
         case 2:
             if (!self.dayBeforeFeed) {
                 self.dayBeforeFeed = [self.storyboard instantiateViewControllerWithIdentifier:@"DummyViewController"];
-                //self.dayBeforeFeed.introLabel.text = @"The day before was:";
-                
                 return self.dayBeforeFeed;
             } else {
-                //self.dayBeforeFeed.introLabelText = @"The day before was:";
                 return self.dayBeforeFeed;
             }
             break;
