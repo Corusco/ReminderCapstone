@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D01122D21BD7088000902F5A /* GlobalFeedCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D01122D11BD7088000902F5A /* GlobalFeedCollectionViewDataSource.m */; settings = {ASSET_TAGS = (); }; };
-		D020708D1BE9793B0065261C /* MainFeedPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D020708C1BE9793B0065261C /* MainFeedPageViewController.m */; settings = {ASSET_TAGS = (); }; };
+		D01122D21BD7088000902F5A /* GlobalFeedCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D01122D11BD7088000902F5A /* GlobalFeedCollectionViewDataSource.m */; };
+		D020708D1BE9793B0065261C /* MainFeedPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D020708C1BE9793B0065261C /* MainFeedPageViewController.m */; };
 		D020FF7F1B2784CD0046282D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D020FF7E1B2784CD0046282D /* main.m */; };
 		D020FF821B2784CD0046282D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D020FF811B2784CD0046282D /* AppDelegate.m */; };
 		D020FF881B2784CD0046282D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D020FF861B2784CD0046282D /* Main.storyboard */; };
@@ -85,7 +85,8 @@
 		D0E12FE91B3A026E001BC006 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E12FD61B3A026E001BC006 /* UIProgressView+AFNetworking.m */; };
 		D0E12FEA1B3A026E001BC006 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E12FD81B3A026E001BC006 /* UIRefreshControl+AFNetworking.m */; };
 		D0E12FEB1B3A026E001BC006 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E12FDA1B3A026E001BC006 /* UIWebView+AFNetworking.m */; };
-		D0E540CE1C0519BE00423126 /* DummyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E540CD1C0519BE00423126 /* DummyViewController.m */; settings = {ASSET_TAGS = (); }; };
+		D0E540CE1C0519BE00423126 /* DummyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E540CD1C0519BE00423126 /* DummyViewController.m */; };
+		D0EA01951C19D825006246F8 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EA01941C19D825006246F8 /* StoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -222,6 +223,7 @@
 		D0E12FDA1B3A026E001BC006 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		D0E540CC1C0519BE00423126 /* DummyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyViewController.h; sourceTree = "<group>"; };
 		D0E540CD1C0519BE00423126 /* DummyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummyViewController.m; sourceTree = "<group>"; };
+		D0EA01941C19D825006246F8 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +231,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0EA01951C19D825006246F8 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +403,7 @@
 		D0979DF41B2F60230034FECD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D0EA01941C19D825006246F8 /* StoreKit.framework */,
 				D0E12FC91B3A026E001BC006 /* UIKit+AFNetworking */,
 				D0E12FB51B3A026D001BC006 /* AFNetworking */,
 				D0E12F661B389D8A001BC006 /* FLKAutoLayout */,
@@ -577,6 +581,14 @@
 					D020FF781B2784CD0046282D = {
 						CreatedOnToolsVersion = 6.3.1;
 						DevelopmentTeam = CFVTXS6NX7;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					D020FF911B2784CD0046282D = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -584,7 +596,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D020FF741B2784CD0046282D /* Build configuration list for PBXProject "ReminderCapstone" */;
+			buildConfigurationList = D020FF741B2784CD0046282D /* Build configuration list for PBXProject "Threads" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -832,6 +844,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SYSTEM_APPS_DIR)/Reveal.app/Contents/SharedSupport/iOS-Libraries\"",
@@ -841,11 +854,10 @@
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lz",
-					"-framework",
-					Reveal,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = CVLCD.Threads;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -855,6 +867,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SYSTEM_APPS_DIR)/Reveal.app/Contents/SharedSupport/iOS-Libraries\"",
@@ -863,6 +876,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CVLCD.Threads;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -898,7 +912,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D020FF741B2784CD0046282D /* Build configuration list for PBXProject "ReminderCapstone" */ = {
+		D020FF741B2784CD0046282D /* Build configuration list for PBXProject "Threads" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D020FF9A1B2784CD0046282D /* Debug */,

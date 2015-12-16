@@ -17,7 +17,7 @@
                BlueprintIdentifier = "D020FF781B2784CD0046282D"
                BuildableName = "ReminderCapstone.app"
                BlueprintName = "ReminderCapstone"
-               ReferencedContainer = "container:ReminderCapstone.xcodeproj">
+               ReferencedContainer = "container:Threads.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,7 +31,7 @@
                BlueprintIdentifier = "D020FF911B2784CD0046282D"
                BuildableName = "ReminderCapstoneTests.xctest"
                BlueprintName = "ReminderCapstoneTests"
-               ReferencedContainer = "container:ReminderCapstone.xcodeproj">
+               ReferencedContainer = "container:Threads.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -49,7 +49,7 @@
                BlueprintIdentifier = "D020FF911B2784CD0046282D"
                BuildableName = "ReminderCapstoneTests.xctest"
                BlueprintName = "ReminderCapstoneTests"
-               ReferencedContainer = "container:ReminderCapstone.xcodeproj">
+               ReferencedContainer = "container:Threads.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -59,7 +59,7 @@
             BlueprintIdentifier = "D020FF781B2784CD0046282D"
             BuildableName = "ReminderCapstone.app"
             BlueprintName = "ReminderCapstone"
-            ReferencedContainer = "container:ReminderCapstone.xcodeproj">
+            ReferencedContainer = "container:Threads.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -82,7 +82,7 @@
             BlueprintIdentifier = "D020FF781B2784CD0046282D"
             BuildableName = "ReminderCapstone.app"
             BlueprintName = "ReminderCapstone"
-            ReferencedContainer = "container:ReminderCapstone.xcodeproj">
+            ReferencedContainer = "container:Threads.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -101,7 +101,7 @@
             BlueprintIdentifier = "D020FF781B2784CD0046282D"
             BuildableName = "ReminderCapstone.app"
             BlueprintName = "ReminderCapstone"
-            ReferencedContainer = "container:ReminderCapstone.xcodeproj">
+            ReferencedContainer = "container:Threads.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

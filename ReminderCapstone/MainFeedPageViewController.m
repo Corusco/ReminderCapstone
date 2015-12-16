@@ -78,7 +78,6 @@
     [self.pageController.view alignLeading:@"0" trailing:@"0" toView:self.view];
     [self.pageController.view alignTopEdgeWithView:self.view predicate:@"50"];
     [self.pageController.view alignBottomEdgeWithView:self.view predicate:@"0"];
-    self.yesterdayFeed.introLabel.text = @"Yesterday's theme was:";
 }
 
 
@@ -93,8 +92,8 @@
     [self.yesterdayFeed.globalFeedChild assignTheme:[ThemeQueryController sharedInstance].yesterdayTheme];
     [self.todayFeed.globalFeedChild assignTheme:[ThemeQueryController sharedInstance].todayTheme];
     
-    self.todayFeed.introLabel.text = @"Today's theme is:";
-    self.yesterdayFeed.introLabel.text = @"Yesterday's theme was:";
+    self.todayFeed.introLabel.text = @"Today's thread is:";
+    self.yesterdayFeed.introLabel.text = @"Yesterday's thread was:";
     self.dayBeforeFeed.introLabel.text = @"The day before was:";
     
     self.todayFeed.reverseArrow.hidden = NO;
