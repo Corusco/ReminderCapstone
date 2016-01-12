@@ -23,6 +23,7 @@
 @property (strong, nonatomic) NSString *photoURL;
 @property (strong, nonatomic) NSString *postedTime;
 @property (strong, nonatomic) NSString *caption;
+@property (strong, nonatomic) NSString *photoID;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary fromSource:(NSString *)source;
 

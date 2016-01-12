@@ -28,10 +28,15 @@
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Feed" style:UIBarButtonItemStyleDone target:self action:@selector(backButtonTapped)];
     backButton.tintColor = [UIColor whiteColor];
     
+    UIImage *optionsButtonImage = [UIImage imageNamed:@"threeDots.png"];
+    UIBarButtonItem *options = [[UIBarButtonItem alloc] initWithImage:optionsButtonImage style:UIBarButtonItemStylePlain target:self action:@selector(optionsButtonTapped)];
+    options.tintColor = [UIColor whiteColor];
+    
     UINavigationItem *navigationItem = [[UINavigationItem alloc] init];
     navigationItem.title = [NSString stringWithFormat:@"@%@", self.selectedPhoto.user];
     [navBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     navigationItem.leftBarButtonItem = backButton;
+    navigationItem.rightBarButtonItem = options;
     
     navBar.items = @[navigationItem];
     navBar.barTintColor = UIColorFromRGB(kPrimaryUIColor);
@@ -100,10 +105,91 @@
 
 }
 
-- (void) backButtonTapped {
+- (void)backButtonTapped {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
+- (void)optionsButtonTapped {
+    UIAlertController *optionsAlert = [UIAlertController alertControllerWithTitle:@"Photo Options" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *reportAction = [UIAlertAction actionWithTitle:@"Report Inappropriate Image" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self showReportAlert];
+    }];
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
+    
+    [optionsAlert addAction:reportAction];
+    [optionsAlert addAction:cancelAction];
+    
+    [self presentViewController:optionsAlert animated:YES completion:nil];
+}
+
+- (void)showReportAlert {
+    UIAlertController *reportAlert = [UIAlertController alertControllerWithTitle:@"Report Inappropriate Image" message:@"How is this image inappropriate?" preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *nudityAction = [UIAlertAction actionWithTitle:@"Nudity or Pornography" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self reportInappropriate:@"pornographic"];
+    }];
+    UIAlertAction *bullyingAction = [UIAlertAction actionWithTitle:@"Bullying or Abusive" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self reportInappropriate:@"bullying"];
+    }];
+    
+    UIAlertAction *violenceAction = [UIAlertAction actionWithTitle:@"Graphic Violence" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self reportInappropriate:@"violence"];
+    }];
+    
+    UIAlertAction *hateAction = [UIAlertAction actionWithTitle:@"Hate Speech" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self reportInappropriate:@"hate"];
+    }];
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
+    
+    [reportAlert addAction:nudityAction];
+    [reportAlert addAction:bullyingAction];
+    [reportAlert addAction:violenceAction];
+    [reportAlert addAction:hateAction];
+    [reportAlert addAction:cancelAction];
+    
+    [self presentViewController:reportAlert animated:YES completion:nil];
+}
+
+- (void)showCompletionAlert {
+    
+    UIAlertController *completionAlert = [UIAlertController alertControllerWithTitle:@"Report Sent" message:@"If the image does not meet community guidelines, it will be removed" preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+    
+    [completionAlert addAction:okAction];
+    
+    [self presentViewController:completionAlert animated:YES completion:nil];
+}
+
+- (void)showErrorAlert:(NSString*)error {
+    UIAlertController *errorAlert = [UIAlertController alertControllerWithTitle:@"Error" message:@"There was a problem with the report. Please try again." preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+    
+    [errorAlert addAction:okAction];
+    
+    [self presentViewController:errorAlert animated:YES completion:nil];
+}
+                                
+- (void)reportInappropriate:(NSString*)nature {
+    
+    AFHTTPSessionManager *sessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:@"https://box1096.bluehost.com/~ourcaval/api/v1/index.php"]];
+    
+    sessionManager.requestSerializer = [AFJSONRequestSerializer serializer];
+    sessionManager.responseSerializer = [AFJSONResponseSerializer serializer];
+    
+    NSString *putString = [NSString stringWithFormat:@"report/%@", self.selectedPhoto.photoID];
+    
+    [sessionManager PUT:putString parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+        [self showCompletionAlert];
+    } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+        NSLog(@"that");
+    }];
+
+}
 
 @end

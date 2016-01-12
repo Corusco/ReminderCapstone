@@ -23,6 +23,9 @@
         self.tags = dictionary[@"tags"];
         self.postedTime = [self calculatePostedTime:([dictionary valueForKeyPath:@"created_time"])];
         self.caption = [dictionary valueForKeyPath:@"caption.text"];
+        self.photoID = [dictionary valueForKeyPath:@"id"];
+        
+        NSLog(@"%@",self.photoID );
         
         return self;
         
