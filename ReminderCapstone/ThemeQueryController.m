@@ -45,7 +45,6 @@
     
     [sessionManager GET:getString parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         self.responseArray = [[NSArray alloc] initWithArray:responseObject];
-        NSLog(@"%@", responseObject);
         [self assignThemes];
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         NSLog(@"%@", error);
