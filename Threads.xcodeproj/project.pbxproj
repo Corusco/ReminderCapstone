@@ -19,6 +19,10 @@
 		D026A73B1B3DD259006DE87F /* PhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D026A73A1B3DD259006DE87F /* PhotoDetailViewController.m */; };
 		D02FE4891B2A183D00847DC8 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = D02FE4881B2A183D00847DC8 /* User.m */; };
 		D02FE48C1B2A1C5F00847DC8 /* UserController.m in Sources */ = {isa = PBXBuildFile; fileRef = D02FE48B1B2A1C5F00847DC8 /* UserController.m */; };
+		D04C45C31CA43ACD00D80E75 /* Antonio-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D04C45BF1CA43ACD00D80E75 /* Antonio-Bold.ttf */; };
+		D04C45C41CA43ACD00D80E75 /* Antonio-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D04C45C01CA43ACD00D80E75 /* Antonio-Light.ttf */; };
+		D04C45C51CA43ACD00D80E75 /* Antonio-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D04C45C11CA43ACD00D80E75 /* Antonio-Regular.ttf */; };
+		D04C45C61CA43ACD00D80E75 /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = D04C45C21CA43ACD00D80E75 /* SIL Open Font License.txt */; };
 		D0540A9C1B2B525600D8586E /* UIPrefix.m in Sources */ = {isa = PBXBuildFile; fileRef = D0540A971B2B525600D8586E /* UIPrefix.m */; };
 		D088FE081B4EEAF500069519 /* ProximaNova-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = D088FDF71B4EEAF400069519 /* ProximaNova-Black.otf */; };
 		D088FE091B4EEAF500069519 /* ProximaNova-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D088FDF81B4EEAF400069519 /* ProximaNova-Bold.otf */; };
@@ -124,6 +128,10 @@
 		D02FE4881B2A183D00847DC8 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		D02FE48A1B2A1C5F00847DC8 /* UserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserController.h; sourceTree = "<group>"; };
 		D02FE48B1B2A1C5F00847DC8 /* UserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserController.m; sourceTree = "<group>"; };
+		D04C45BF1CA43ACD00D80E75 /* Antonio-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Antonio-Bold.ttf"; sourceTree = "<group>"; };
+		D04C45C01CA43ACD00D80E75 /* Antonio-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Antonio-Light.ttf"; sourceTree = "<group>"; };
+		D04C45C11CA43ACD00D80E75 /* Antonio-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Antonio-Regular.ttf"; sourceTree = "<group>"; };
+		D04C45C21CA43ACD00D80E75 /* SIL Open Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SIL Open Font License.txt"; sourceTree = "<group>"; };
 		D0540A961B2B525600D8586E /* UIPrefix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPrefix.h; sourceTree = "<group>"; };
 		D0540A971B2B525600D8586E /* UIPrefix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPrefix.m; sourceTree = "<group>"; };
 		D088FDF71B4EEAF400069519 /* ProximaNova-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Black.otf"; sourceTree = "<group>"; };
@@ -308,6 +316,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D04C45BE1CA43ACD00D80E75 /* antonio */ = {
+			isa = PBXGroup;
+			children = (
+				D04C45BF1CA43ACD00D80E75 /* Antonio-Bold.ttf */,
+				D04C45C01CA43ACD00D80E75 /* Antonio-Light.ttf */,
+				D04C45C11CA43ACD00D80E75 /* Antonio-Regular.ttf */,
+				D04C45C21CA43ACD00D80E75 /* SIL Open Font License.txt */,
+			);
+			path = antonio;
+			sourceTree = "<group>";
+		};
 		D0540A8C1B2B4EC100D8586E /* Utility Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -423,6 +442,7 @@
 		D0AE536A1B45B4C100897A95 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				D04C45BE1CA43ACD00D80E75 /* antonio */,
 				D0AE53921B45B79800897A95 /* Lobster 1.4.otf */,
 				D088FE191B4EEB0000069519 /* proximaNova */,
 				D0AE536B1B45B4C100897A95 /* raleway */,
@@ -635,12 +655,15 @@
 				D088FE0E1B4EEAF500069519 /* ProximaNova-RegItalic.otf in Resources */,
 				D0AE538E1B45B4C100897A95 /* Raleway-SemiBoldItalic.ttf in Resources */,
 				D0AE538F1B45B4C100897A95 /* Raleway-Thin.ttf in Resources */,
+				D04C45C51CA43ACD00D80E75 /* Antonio-Regular.ttf in Resources */,
 				D020FF881B2784CD0046282D /* Main.storyboard in Resources */,
 				D088FE0A1B4EEAF500069519 /* ProximaNova-BoldIt.otf in Resources */,
 				D0AE53881B45B4C100897A95 /* Raleway-Light.ttf in Resources */,
 				D0AE53821B45B4C100897A95 /* Raleway-BoldItalic.ttf in Resources */,
 				D0AE53871B45B4C100897A95 /* Raleway-Italic.ttf in Resources */,
+				D04C45C31CA43ACD00D80E75 /* Antonio-Bold.ttf in Resources */,
 				D0AE53801B45B4C100897A95 /* Raleway-BlackItalic.ttf in Resources */,
+				D04C45C61CA43ACD00D80E75 /* SIL Open Font License.txt in Resources */,
 				D020FF8D1B2784CD0046282D /* LaunchScreen.xib in Resources */,
 				D088FE121B4EEAF500069519 /* ProximaNova-SemiboldItalic.otf in Resources */,
 				D088FE0B1B4EEAF500069519 /* ProximaNova-Extrabold.otf in Resources */,
@@ -657,6 +680,7 @@
 				D020FF8A1B2784CD0046282D /* Images.xcassets in Resources */,
 				D0AE537F1B45B4C100897A95 /* Raleway-Black.ttf in Resources */,
 				D0AE538B1B45B4C100897A95 /* Raleway-MediumItalic.ttf in Resources */,
+				D04C45C41CA43ACD00D80E75 /* Antonio-Light.ttf in Resources */,
 				D088FE181B4EEAF500069519 /* ProximaNovaCond-SemiboldIt.otf in Resources */,
 				D088FE0D1B4EEAF500069519 /* ProximaNova-LightItalic.otf in Resources */,
 				D088FE171B4EEAF500069519 /* ProximaNovaCond-Semibold.otf in Resources */,
