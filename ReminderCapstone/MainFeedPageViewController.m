@@ -32,7 +32,7 @@
     [nc addObserver:self selector:@selector(assignThemes) name:kThemeQueryFinished object:nil];
     
     self.headerView = [[UIView alloc] init];
-    self.headerView.backgroundColor = UIColorFromRGB(kPrimaryUIColor);
+    self.headerView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.headerView];
     [self.headerView alignLeading:@"0" trailing:@"0" toView:self.view];
     [self.headerView alignTopEdgeWithView:self.view predicate:@"0"];
@@ -42,6 +42,7 @@
     UIImage *buttonImage = [UIImage imageNamed:@"basic-settings-iconWhite.png"];
     [self.settingsButton addTarget:self action:@selector(settingsButtonTapped) forControlEvents:UIControlEventTouchUpInside];
     [self.settingsButton setImage:buttonImage forState:UIControlStateNormal];
+    self.settingsButton.tintColor = UIColorFromRGB(kPrimaryUIColor);
     [self.headerView addSubview:self.settingsButton];
     [self.settingsButton constrainHeight:@"24"];
     [self.settingsButton constrainAspectRatio:@"0"];
@@ -52,6 +53,7 @@
     UIImage *cameraImage = [UIImage imageNamed:@"CameraIconTight40.png"];
     [self.cameraButton addTarget:self action:@selector(checkForCamera) forControlEvents:UIControlEventTouchUpInside];
     [self.cameraButton setImage:cameraImage forState:UIControlStateNormal];
+    self.cameraButton.tintColor = UIColorFromRGB(kPrimaryUIColor);
     [self.headerView addSubview:self.cameraButton];
     [self.cameraButton constrainHeight:@"24"];
     [self.cameraButton constrainWidth:@"30"];

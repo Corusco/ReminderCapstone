@@ -7,6 +7,7 @@
 //
 
 #import "DummyViewController.h"
+#import "Defines.h"
 
 @interface DummyViewController ()
 
@@ -18,6 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.themeLabel.textColor = [UIColor darkGrayColor];
+    self.introLabel.textColor = [UIColor darkGrayColor];
     
 }
 

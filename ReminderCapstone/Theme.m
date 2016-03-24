@@ -12,7 +12,7 @@
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
     self = [super init];
-    self.themeTitle = dictionary[@"ThemeTitle"];
+    self.themeTitle = [dictionary[@"ThemeTitle"] uppercaseString];
     self.themeHash = dictionary[@"ThemeHash"];
     
     return self;

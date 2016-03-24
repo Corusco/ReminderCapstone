@@ -26,20 +26,20 @@
     [navBar alignTopEdgeWithView:self.view predicate:@"0"];
     
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Feed" style:UIBarButtonItemStyleDone target:self action:@selector(backButtonTapped)];
-    backButton.tintColor = [UIColor whiteColor];
+    backButton.tintColor = UIColorFromRGB(kPrimaryUIColor);
     
     UIImage *optionsButtonImage = [UIImage imageNamed:@"threeDots.png"];
     UIBarButtonItem *options = [[UIBarButtonItem alloc] initWithImage:optionsButtonImage style:UIBarButtonItemStylePlain target:self action:@selector(optionsButtonTapped)];
-    options.tintColor = [UIColor whiteColor];
+    options.tintColor = UIColorFromRGB(kPrimaryUIColor);
     
     UINavigationItem *navigationItem = [[UINavigationItem alloc] init];
     navigationItem.title = [NSString stringWithFormat:@"@%@", self.selectedPhoto.user];
-    [navBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    [navBar setTitleTextAttributes:@{NSForegroundColorAttributeName : UIColorFromRGB(kPrimaryUIColor)}];
     navigationItem.leftBarButtonItem = backButton;
     navigationItem.rightBarButtonItem = options;
     
     navBar.items = @[navigationItem];
-    navBar.barTintColor = UIColorFromRGB(kPrimaryUIColor);
+    navBar.barTintColor = [UIColor whiteColor];
     navBar.alpha = 1.0;
     
     CGRect imageRect = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
