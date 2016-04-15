@@ -105,6 +105,9 @@
 
 }
 
+
+#pragma mark - Button Actions
+
 - (void)backButtonTapped {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -124,6 +127,9 @@
     
     [self presentViewController:optionsAlert animated:YES completion:nil];
 }
+
+
+#pragma mark - UIAlerts
 
 - (void)showReportAlert {
     UIAlertController *reportAlert = [UIAlertController alertControllerWithTitle:@"Report Inappropriate Image" message:@"How is this image inappropriate?" preferredStyle:UIAlertControllerStyleAlert];

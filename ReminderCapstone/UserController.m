@@ -6,6 +6,9 @@
 //  Copyright (c) 2015 CVLCD. All rights reserved.
 //
 
+
+/*---------------Currently Inactive Class---User Login Removed------------------*/
+
 #import "UserController.h"
 
 @implementation UserController
@@ -59,23 +62,19 @@
 }
 
 - (void)saveUserToDefaults {
- //   NSMutableDictionary *userDictionary = [[NSMutableDictionary alloc] init];
-    
-    
-    
-    
+    //TODO:
 }
 
 - (void)loadUserFromDefaults {
-    
+    //TODO:
 }
 
 - (void)logoutFromInstagram {
-    
+    //TODO:
 }
 
 - (void)logoutFromFacebook {
-    
+    //TODO:
 }
 
 @end

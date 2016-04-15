@@ -64,6 +64,9 @@ static NSString * const cellIDkey = @"cellID";
     [self.collectionView reloadData];
 }
 
+
+# pragma mark - CollectionView Layout
+
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     return CGSizeMake(self.view.frame.size.width/2.02, self.view.frame.size.width/2.02);
 }
@@ -76,6 +79,9 @@ static NSString * const cellIDkey = @"cellID";
     return 4;
 }
 
+
+#pragma mark - CollectionView Delegate
+
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
     
@@ -85,6 +91,7 @@ static NSString * const cellIDkey = @"cellID";
     
     [self presentViewController:detailView animated:YES completion:nil];
 }
+
 
 # pragma mark - datasource
 
